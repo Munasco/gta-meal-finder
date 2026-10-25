@@ -193,10 +193,10 @@ export default function MealFinderPage() {
       {/* Sidebar */}
       <aside className="sticky top-0 hidden h-dvh w-56 shrink-0 flex-col border-r bg-sidebar px-3 py-4 md:flex">
         <div className="flex items-center gap-2 px-2 pb-6">
-          <span className="flex size-7 items-center justify-center rounded-lg bg-foreground text-background">
-            <Icon icon="lucide:utensils" className="size-4" />
+          <span className="flex size-7 items-center justify-center rounded-lg border bg-white shadow-xs">
+            <Icon icon="lucide:utensils" className="size-4 text-brand" />
           </span>
-          <span className="text-sm font-semibold tracking-tight">Meal Finder</span>
+          <span className="text-sm font-semibold tracking-tight">Eat Healthier</span>
         </div>
         <nav className="space-y-0.5">
           {NAV.map((n) => (

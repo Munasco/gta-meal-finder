@@ -1,8 +1,8 @@
-# GTA Meal Finder
+# Eat Healthier (GTA Meal Finder)
 
 Type what you feel like eating, in plain words, and get delivery options across the Greater Toronto Area ranked by how well they fit **you**: a biomarker you're watching, a diet, a budget, a craving. Every dish shows a health score, a fit score, a Nutri-Score letter, a Harvard AHEI meal score and Health Canada "high in" warnings, plus the cheapest combo at each restaurant after BOGO deals.
 
-Live: **https://gta-meal-finder.vercel.app**
+Live: **https://eat-healthier.vercel.app**
 
 > "healthy chicken for two under $40, I'm watching my sodium" → 20 restaurants, best combo per restaurant, every dish explained.
 
@@ -96,14 +96,14 @@ tests/                     node:test suites
 ## API
 
 ```bash
-curl -X POST https://gta-meal-finder.vercel.app/api/find \
+curl -X POST https://eat-healthier.vercel.app/api/find \
   -H 'Content-Type: application/json' \
   -d '{"query":"low sodium salmon for 2 under $50","address":"200 Bay St, Toronto"}'
 ```
 
 The response carries the parsed intent, restaurant groups with scored options, each option's indices and evaluation, and the combo per restaurant. `GET /api/find` returns provider status and dataset stats.
 
-MCP: `claude mcp add gta-meals --transport http https://gta-meal-finder.vercel.app/api/mcp`
+MCP: `claude mcp add gta-meals --transport http https://eat-healthier.vercel.app/api/mcp`
 
 ## Configuration
 
