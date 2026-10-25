@@ -1,7 +1,7 @@
 /**
- * Snapshot mode (Vercel / any Node host): the crawl dataset and estimates ship with the build and are
- * searched in-process. Enabled with DATASET_LOCAL=1. Never used on the Cloudflare dev runtime, which
- * has no filesystem and asks the local helper instead.
+ * Snapshot mode (Vercel or any Node host): the crawl dataset and estimates ship with the build and are
+ * searched in-process. Enabled with DATASET_LOCAL=1; `npm run data:pull` fetches the files from Blob.
+ * Leave it unset to search Uber Eats live through the local Chrome helper (bun run bridge).
  */
 import { indexDataset, mergeEstimates, searchDataset, type DatasetQuery, type DsRestaurant } from "./dataset-search";
 

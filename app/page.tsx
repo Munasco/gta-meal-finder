@@ -468,7 +468,7 @@ function DeveloperView() {
         <h2 className="flex items-center gap-2 text-sm font-medium"><Icon icon="lucide:key-round" />Server env</h2>
         <CodeBlock
           code={`AZURE_DECISION_KEY=…        # Microsoft Decision-1 (intent + nutrition estimates)
-DATASET_LOCAL=1             # snapshot mode: search the bundled crawl dataset (Vercel)
+DATASET_LOCAL=1             # snapshot mode: search the crawl dataset (npm run data:pull)
 GOOGLE_MAPS_API_KEY=…       # optional map picker; OpenStreetMap otherwise`}
         />
       </section>

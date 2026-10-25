@@ -1,15 +1,14 @@
 node_modules
 .next
-.vinext
-.wrangler
-.sites-runtime
+out
 .bridge-profile
-examples
-outputs
-work
 tsconfig.tsbuildinfo
 *.log
 .env*
 .dev.vars*
 .vercel
 launch-video
+later
+# Always pulled from Vercel Blob during the build (npm run data:pull)
+data/ubereats-gta.json
+data/health-estimates.json

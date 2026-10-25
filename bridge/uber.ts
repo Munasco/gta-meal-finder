@@ -131,6 +131,7 @@ function collectStores(): StoreLink[] {
       for (const pr of promos) if (!existing.promos.includes(pr)) existing.promos.push(pr);
     }
   });
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars -- strip the helper flag
   return [...byUrl.values()].map(({ fromSlug: _f, ...rest }) => rest);
 }
 

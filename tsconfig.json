@@ -29,7 +29,6 @@
     },
     "types": [
       "node",
-      "@cloudflare/workers-types",
       "google.maps"
     ]
   },
@@ -43,14 +42,9 @@
   ],
   "exclude": [
     "node_modules",
-    "examples",
-    "dist",
-    ".vinext",
-    ".wrangler",
-    ".sites-runtime",
-    "outputs",
-    "work",
     "bridge",
-    "launch-video"
+    "launch-video",
+    "later",
+    "out"
   ]
 }

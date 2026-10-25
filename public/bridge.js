@@ -24,7 +24,7 @@
     var scripts = document.querySelectorAll('script[type="application/ld+json"]');
     for (var i = 0; i < scripts.length; i++) {
       var data;
-      try { data = JSON.parse(scripts[i].textContent); } catch (e) { continue; }
+      try { data = JSON.parse(scripts[i].textContent); } catch { continue; }
       var nodes = Array.isArray(data) ? data : [data];
       nodes.forEach(function (node) {
         if (!node || typeof node !== "object") return;

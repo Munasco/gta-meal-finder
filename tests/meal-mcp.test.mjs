@@ -19,9 +19,9 @@ function fixture() {
 test('discovers and lists only read-only tools', async () => {
   const { send } = fixture();
   const { body } = await send('server/discover');
-  assert.deepEqual(body.result.supportedVersions, ['2026-07-28']);
+  assert.deepEqual(body.result.supportedVersions, ['2026-07-28', '2025-03-26']);
   const list = (await send('tools/list')).body.result.tools;
-  assert.deepEqual(list.map(tool => tool.name), ['search_meals', 'get_meal_details', 'compare_meals']);
+  assert.deepEqual(list.map(tool => tool.name), ['search_meals', 'get_meal_details', 'compare_meals', 'get_biomarker_guidelines', 'find_menu_options']);
   assert.ok(list.every(tool => tool.annotations.readOnlyHint && !tool.annotations.destructiveHint));
 });
 
