@@ -1,0 +1,2064 @@
+{
+ "source": "USDA FoodData Central, SR Legacy (April 2018 release, CSV)",
+ "components": [
+  {
+   "id": "chicken_breast_grilled",
+   "label": "Grilled or roasted chicken breast (skinless)",
+   "fdcId": 171477,
+   "description": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "defaultGrams": 150,
+   "per100g": {
+    "calories": 165.0,
+    "proteinG": 31.02,
+    "fatG": 3.57,
+    "saturatedFatG": 1.01,
+    "transFatG": null,
+    "sodiumMg": 74.0,
+    "fibreG": 0.0,
+    "sugarsG": 0.0,
+    "carbsG": 0.0,
+    "ironMg": 1.04,
+    "potassiumMg": 256.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "chicken_thigh_roasted",
+   "label": "Roasted chicken thigh or leg with skin",
+   "fdcId": 173625,
+   "description": "Chicken, broilers or fryers, thigh, meat and skin, cooked, roasted",
+   "defaultGrams": 160,
+   "per100g": {
+    "calories": 232.0,
+    "proteinG": 23.26,
+    "fatG": 14.71,
+    "saturatedFatG": 4.111,
+    "transFatG": 0.081,
+    "sodiumMg": 102.0,
+    "fibreG": 0.0,
+    "sugarsG": 0.0,
+    "carbsG": 0.0,
+    "ironMg": 1.08,
+    "potassiumMg": 253.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "chicken_fried_battered",
+   "label": "Fried or battered chicken",
+   "fdcId": 171475,
+   "description": "Chicken, broilers or fryers, breast, meat and skin, cooked, fried, batter",
+   "defaultGrams": 150,
+   "per100g": {
+    "calories": 260.0,
+    "proteinG": 24.84,
+    "fatG": 13.2,
+    "saturatedFatG": 3.52,
+    "transFatG": null,
+    "sodiumMg": 275.0,
+    "fibreG": 0.3,
+    "sugarsG": 0.0,
+    "carbsG": 8.99,
+    "ironMg": 1.25,
+    "potassiumMg": 201.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "chicken_wings",
+   "label": "Chicken wings",
+   "fdcId": 173630,
+   "description": "Chicken, broilers or fryers, wing, meat and skin, cooked, roasted",
+   "defaultGrams": 120,
+   "per100g": {
+    "calories": 254.0,
+    "proteinG": 23.79,
+    "fatG": 16.87,
+    "saturatedFatG": 4.976,
+    "transFatG": 0.084,
+    "sodiumMg": 98.0,
+    "fibreG": 0.0,
+    "sugarsG": 0.0,
+    "carbsG": 0.0,
+    "ironMg": 0.84,
+    "potassiumMg": 212.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "turkey_breast",
+   "label": "Turkey breast",
+   "fdcId": 171496,
+   "description": "Turkey, whole, breast, meat only, cooked, roasted",
+   "defaultGrams": 120,
+   "per100g": {
+    "calories": 147.0,
+    "proteinG": 30.13,
+    "fatG": 2.08,
+    "saturatedFatG": 0.593,
+    "transFatG": 0.024,
+    "sodiumMg": 99.0,
+    "fibreG": 0.0,
+    "sugarsG": 0.0,
+    "carbsG": 0.0,
+    "ironMg": 0.71,
+    "potassiumMg": 249.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "beef_steak_grilled",
+   "label": "Grilled steak (lean beef)",
+   "fdcId": 168635,
+   "description": "Beef, top sirloin, steak, separable lean only, trimmed to 0\" fat, choice, cooked, broiled",
+   "defaultGrams": 170,
+   "per100g": {
+    "calories": 188.0,
+    "proteinG": 30.29,
+    "fatG": 6.55,
+    "saturatedFatG": 2.495,
+    "transFatG": null,
+    "sodiumMg": 63.0,
+    "fibreG": 0.0,
+    "sugarsG": 0.0,
+    "carbsG": 0.0,
+    "ironMg": 2.07,
+    "potassiumMg": 380.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": true,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "beef_ground_patty",
+   "label": "Beef burger patty",
+   "fdcId": 171797,
+   "description": "Beef, ground, 80% lean meat / 20% fat, patty, cooked, broiled",
+   "defaultGrams": 110,
+   "per100g": {
+    "calories": 270.0,
+    "proteinG": 25.75,
+    "fatG": 17.78,
+    "saturatedFatG": 6.764,
+    "transFatG": 0.771,
+    "sodiumMg": 75.0,
+    "fibreG": 0.0,
+    "sugarsG": 0.0,
+    "carbsG": 0.0,
+    "ironMg": 2.48,
+    "potassiumMg": 304.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": true,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "lamb_roasted",
+   "label": "Lamb",
+   "fdcId": 172487,
+   "description": "Lamb, leg, shank half, separable lean only, trimmed to 1/4\" fat, choice, cooked, roasted",
+   "defaultGrams": 150,
+   "per100g": {
+    "calories": 180.0,
+    "proteinG": 28.17,
+    "fatG": 6.67,
+    "saturatedFatG": 2.38,
+    "transFatG": null,
+    "sodiumMg": 66.0,
+    "fibreG": 0.0,
+    "sugarsG": null,
+    "carbsG": 0.0,
+    "ironMg": 2.06,
+    "potassiumMg": 342.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": true,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "pork_loin",
+   "label": "Pork chop or loin",
+   "fdcId": 168240,
+   "description": "Pork, fresh, loin, center loin (chops), bone-in, separable lean only, cooked, broiled",
+   "defaultGrams": 150,
+   "per100g": {
+    "calories": 180.0,
+    "proteinG": 26.76,
+    "fatG": 7.29,
+    "saturatedFatG": 2.156,
+    "transFatG": 0.065,
+    "sodiumMg": 56.0,
+    "fibreG": 0.0,
+    "sugarsG": 0.0,
+    "carbsG": 0.0,
+    "ironMg": 0.8,
+    "potassiumMg": 356.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": true,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "bacon",
+   "label": "Bacon",
+   "fdcId": 167914,
+   "description": "Pork, cured, bacon, cooked, baked",
+   "defaultGrams": 30,
+   "per100g": {
+    "calories": 548.0,
+    "proteinG": 35.73,
+    "fatG": 43.27,
+    "saturatedFatG": 14.187,
+    "transFatG": 0.0,
+    "sodiumMg": 2193.0,
+    "fibreG": 0.0,
+    "sugarsG": 0.0,
+    "carbsG": 1.35,
+    "ironMg": 1.49,
+    "potassiumMg": 539.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": true,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "sausage",
+   "label": "Sausage",
+   "fdcId": 174586,
+   "description": "Sausage, Italian, pork, mild, cooked, pan-fried",
+   "defaultGrams": 100,
+   "per100g": {
+    "calories": 324.0,
+    "proteinG": 18.4,
+    "fatG": 26.4,
+    "saturatedFatG": 9.028,
+    "transFatG": 0.096,
+    "sodiumMg": 801.0,
+    "fibreG": 0.0,
+    "sugarsG": 1.42,
+    "carbsG": 1.86,
+    "ironMg": 1.25,
+    "potassiumMg": 339.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": true,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "salmon_cooked",
+   "label": "Salmon",
+   "fdcId": 175168,
+   "description": "Fish, salmon, Atlantic, farmed, cooked, dry heat",
+   "defaultGrams": 150,
+   "per100g": {
+    "calories": 206.0,
+    "proteinG": 22.1,
+    "fatG": 12.35,
+    "saturatedFatG": 2.397,
+    "transFatG": null,
+    "sodiumMg": 61.0,
+    "fibreG": 0.0,
+    "sugarsG": 0.0,
+    "carbsG": 0.0,
+    "ironMg": 0.34,
+    "potassiumMg": 384.0,
+    "vitaminCMg": 3.7
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": true
+   }
+  },
+  {
+   "id": "tuna",
+   "label": "Tuna",
+   "fdcId": 171986,
+   "description": "Fish, tuna, light, canned in water, without salt, drained solids",
+   "defaultGrams": 100,
+   "per100g": {
+    "calories": 116.0,
+    "proteinG": 25.51,
+    "fatG": 0.82,
+    "saturatedFatG": 0.234,
+    "transFatG": null,
+    "sodiumMg": 50.0,
+    "fibreG": 0.0,
+    "sugarsG": 0.0,
+    "carbsG": 0.0,
+    "ironMg": 1.53,
+    "potassiumMg": 237.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": true
+   }
+  },
+  {
+   "id": "shrimp_cooked",
+   "label": "Shrimp or prawns",
+   "fdcId": 175180,
+   "description": "Crustaceans, shrimp, cooked",
+   "defaultGrams": 100,
+   "per100g": {
+    "calories": 99.0,
+    "proteinG": 23.98,
+    "fatG": 0.28,
+    "saturatedFatG": 0.056,
+    "transFatG": 0.002,
+    "sodiumMg": 111.0,
+    "fibreG": null,
+    "sugarsG": null,
+    "carbsG": 0.2,
+    "ironMg": 0.51,
+    "potassiumMg": 259.0,
+    "vitaminCMg": null
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "white_fish_baked",
+   "label": "Baked or grilled white fish (cod, tilapia, haddock)",
+   "fdcId": 171956,
+   "description": "Fish, cod, Atlantic, cooked, dry heat",
+   "defaultGrams": 150,
+   "per100g": {
+    "calories": 105.0,
+    "proteinG": 22.83,
+    "fatG": 0.86,
+    "saturatedFatG": 0.168,
+    "transFatG": null,
+    "sodiumMg": 78.0,
+    "fibreG": 0.0,
+    "sugarsG": 0.0,
+    "carbsG": 0.0,
+    "ironMg": 0.49,
+    "potassiumMg": 244.0,
+    "vitaminCMg": 1.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": true
+   }
+  },
+  {
+   "id": "tofu_firm",
+   "label": "Tofu",
+   "fdcId": 172448,
+   "description": "Tofu, firm, prepared with calcium sulfate and magnesium chloride (nigari)",
+   "defaultGrams": 150,
+   "per100g": {
+    "calories": 78.0,
+    "proteinG": 9.04,
+    "fatG": 4.17,
+    "saturatedFatG": 0.793,
+    "transFatG": 0.0,
+    "sodiumMg": 12.0,
+    "fibreG": 0.9,
+    "sugarsG": 0.6,
+    "carbsG": 2.85,
+    "ironMg": 1.61,
+    "potassiumMg": 148.0,
+    "vitaminCMg": 0.2
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": true,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "tempeh",
+   "label": "Tempeh",
+   "fdcId": 174272,
+   "description": "Tempeh",
+   "defaultGrams": 120,
+   "per100g": {
+    "calories": 192.0,
+    "proteinG": 20.29,
+    "fatG": 10.8,
+    "saturatedFatG": 2.539,
+    "transFatG": 0.0,
+    "sodiumMg": 9.0,
+    "fibreG": null,
+    "sugarsG": null,
+    "carbsG": 7.64,
+    "ironMg": 2.7,
+    "potassiumMg": 412.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": true,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "falafel",
+   "label": "Falafel",
+   "fdcId": 172455,
+   "description": "Falafel, home-prepared",
+   "defaultGrams": 120,
+   "per100g": {
+    "calories": 333.0,
+    "proteinG": 13.31,
+    "fatG": 17.8,
+    "saturatedFatG": 2.383,
+    "transFatG": 0.0,
+    "sodiumMg": 294.0,
+    "fibreG": null,
+    "sugarsG": null,
+    "carbsG": 31.84,
+    "ironMg": 3.42,
+    "potassiumMg": 585.0,
+    "vitaminCMg": 1.6
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": true,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": true,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "lentils_cooked",
+   "label": "Lentils",
+   "fdcId": 172421,
+   "description": "Lentils, mature seeds, cooked, boiled, without salt",
+   "defaultGrams": 180,
+   "per100g": {
+    "calories": 116.0,
+    "proteinG": 9.02,
+    "fatG": 0.38,
+    "saturatedFatG": 0.053,
+    "transFatG": 0.0,
+    "sodiumMg": 2.0,
+    "fibreG": 7.9,
+    "sugarsG": 1.8,
+    "carbsG": 20.13,
+    "ironMg": 3.33,
+    "potassiumMg": 369.0,
+    "vitaminCMg": 1.5
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": true,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": true,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "chickpeas_cooked",
+   "label": "Chickpeas",
+   "fdcId": 173757,
+   "description": "Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt",
+   "defaultGrams": 160,
+   "per100g": {
+    "calories": 164.0,
+    "proteinG": 8.86,
+    "fatG": 2.59,
+    "saturatedFatG": 0.269,
+    "transFatG": 0.0,
+    "sodiumMg": 7.0,
+    "fibreG": 7.6,
+    "sugarsG": 4.8,
+    "carbsG": 27.42,
+    "ironMg": 2.89,
+    "potassiumMg": 291.0,
+    "vitaminCMg": 1.3
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": true,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": true,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "black_beans_cooked",
+   "label": "Black beans or other beans",
+   "fdcId": 173735,
+   "description": "Beans, black, mature seeds, cooked, boiled, without salt",
+   "defaultGrams": 150,
+   "per100g": {
+    "calories": 132.0,
+    "proteinG": 8.86,
+    "fatG": 0.54,
+    "saturatedFatG": 0.139,
+    "transFatG": 0.0,
+    "sodiumMg": 1.0,
+    "fibreG": 8.7,
+    "sugarsG": 0.32,
+    "carbsG": 23.71,
+    "ironMg": 2.1,
+    "potassiumMg": 355.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": true,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": true,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "hummus",
+   "label": "Hummus",
+   "fdcId": 174289,
+   "description": "Hummus, commercial",
+   "defaultGrams": 60,
+   "per100g": {
+    "calories": 237.0,
+    "proteinG": 7.78,
+    "fatG": 17.82,
+    "saturatedFatG": 2.562,
+    "transFatG": 0.019,
+    "sodiumMg": 426.0,
+    "fibreG": 5.5,
+    "sugarsG": 0.62,
+    "carbsG": 15.0,
+    "ironMg": 2.54,
+    "potassiumMg": 312.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": true,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": true,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "egg_cooked",
+   "label": "Eggs",
+   "fdcId": 172187,
+   "description": "Egg, whole, cooked, scrambled",
+   "defaultGrams": 100,
+   "per100g": {
+    "calories": 149.0,
+    "proteinG": 9.99,
+    "fatG": 10.98,
+    "saturatedFatG": 3.331,
+    "transFatG": 0.624,
+    "sodiumMg": 145.0,
+    "fibreG": 0.0,
+    "sugarsG": 1.39,
+    "carbsG": 1.61,
+    "ironMg": 1.31,
+    "potassiumMg": 132.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "cheese",
+   "label": "Cheese",
+   "fdcId": 173414,
+   "description": "Cheese, cheddar (Includes foods for USDA's Food Distribution Program)",
+   "defaultGrams": 40,
+   "per100g": {
+    "calories": 403.0,
+    "proteinG": 22.87,
+    "fatG": 33.31,
+    "saturatedFatG": 18.867,
+    "transFatG": null,
+    "sodiumMg": 653.0,
+    "fibreG": 0.0,
+    "sugarsG": 0.48,
+    "carbsG": 3.37,
+    "ironMg": 0.14,
+    "potassiumMg": 76.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "white_rice_cooked",
+   "label": "White rice or sushi rice",
+   "fdcId": 168878,
+   "description": "Rice, white, long-grain, regular, enriched, cooked",
+   "defaultGrams": 180,
+   "per100g": {
+    "calories": 130.0,
+    "proteinG": 2.69,
+    "fatG": 0.28,
+    "saturatedFatG": 0.077,
+    "transFatG": null,
+    "sodiumMg": 1.0,
+    "fibreG": 0.4,
+    "sugarsG": 0.05,
+    "carbsG": 28.17,
+    "ironMg": 1.2,
+    "potassiumMg": 35.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "brown_rice_cooked",
+   "label": "Brown rice",
+   "fdcId": 169704,
+   "description": "Rice, brown, long-grain, cooked (Includes foods for USDA's Food Distribution Program)",
+   "defaultGrams": 180,
+   "per100g": {
+    "calories": 123.0,
+    "proteinG": 2.74,
+    "fatG": 0.97,
+    "saturatedFatG": 0.26,
+    "transFatG": 0.0,
+    "sodiumMg": 4.0,
+    "fibreG": 1.6,
+    "sugarsG": 0.24,
+    "carbsG": 25.58,
+    "ironMg": 0.56,
+    "potassiumMg": 86.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": true,
+    "wholeGrain": true,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "quinoa_cooked",
+   "label": "Quinoa",
+   "fdcId": 168917,
+   "description": "Quinoa, cooked",
+   "defaultGrams": 180,
+   "per100g": {
+    "calories": 120.0,
+    "proteinG": 4.4,
+    "fatG": 1.92,
+    "saturatedFatG": 0.231,
+    "transFatG": null,
+    "sodiumMg": 7.0,
+    "fibreG": 2.8,
+    "sugarsG": 0.87,
+    "carbsG": 21.3,
+    "ironMg": 1.49,
+    "potassiumMg": 172.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": true,
+    "wholeGrain": true,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "pasta_cooked",
+   "label": "Pasta or noodles",
+   "fdcId": 169737,
+   "description": "Pasta, cooked, enriched, without added salt",
+   "defaultGrams": 200,
+   "per100g": {
+    "calories": 158.0,
+    "proteinG": 5.8,
+    "fatG": 0.93,
+    "saturatedFatG": 0.176,
+    "transFatG": 0.0,
+    "sodiumMg": 1.0,
+    "fibreG": 1.8,
+    "sugarsG": 0.56,
+    "carbsG": 30.86,
+    "ironMg": 1.28,
+    "potassiumMg": 44.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "egg_noodles",
+   "label": "Egg noodles or ramen noodles",
+   "fdcId": 169732,
+   "description": "Noodles, egg, enriched, cooked",
+   "defaultGrams": 200,
+   "per100g": {
+    "calories": 138.0,
+    "proteinG": 4.54,
+    "fatG": 2.07,
+    "saturatedFatG": 0.419,
+    "transFatG": 0.029,
+    "sodiumMg": 5.0,
+    "fibreG": 1.2,
+    "sugarsG": 0.4,
+    "carbsG": 25.16,
+    "ironMg": 1.47,
+    "potassiumMg": 38.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "pita",
+   "label": "Pita bread",
+   "fdcId": 174915,
+   "description": "Bread, pita, white, enriched",
+   "defaultGrams": 60,
+   "per100g": {
+    "calories": 275.0,
+    "proteinG": 9.1,
+    "fatG": 1.2,
+    "saturatedFatG": 0.166,
+    "transFatG": null,
+    "sodiumMg": 536.0,
+    "fibreG": 2.2,
+    "sugarsG": 1.3,
+    "carbsG": 55.7,
+    "ironMg": 2.62,
+    "potassiumMg": 120.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "naan",
+   "label": "Naan",
+   "fdcId": 171845,
+   "description": "Bread, naan, plain, commercially prepared, refrigerated",
+   "defaultGrams": 90,
+   "per100g": {
+    "calories": 291.0,
+    "proteinG": 9.62,
+    "fatG": 5.65,
+    "saturatedFatG": 1.393,
+    "transFatG": 0.042,
+    "sodiumMg": 465.0,
+    "fibreG": 2.2,
+    "sugarsG": 3.55,
+    "carbsG": 50.43,
+    "ironMg": 3.25,
+    "potassiumMg": 125.0,
+    "vitaminCMg": null
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "bun",
+   "label": "Burger bun or white roll",
+   "fdcId": 172796,
+   "description": "Rolls, hamburger or hotdog, plain",
+   "defaultGrams": 50,
+   "per100g": {
+    "calories": 279.0,
+    "proteinG": 9.77,
+    "fatG": 3.91,
+    "saturatedFatG": 0.842,
+    "transFatG": 0.027,
+    "sodiumMg": 494.0,
+    "fibreG": 1.8,
+    "sugarsG": 7.28,
+    "carbsG": 50.12,
+    "ironMg": 3.43,
+    "potassiumMg": 122.0,
+    "vitaminCMg": 1.3
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "tortilla_flour",
+   "label": "Flour tortilla or wrap",
+   "fdcId": 175037,
+   "description": "Tortillas, ready-to-bake or -fry, flour, refrigerated",
+   "defaultGrams": 70,
+   "per100g": {
+    "calories": 306.0,
+    "proteinG": 8.2,
+    "fatG": 7.99,
+    "saturatedFatG": 2.924,
+    "transFatG": 0.052,
+    "sodiumMg": 736.0,
+    "fibreG": 3.5,
+    "sugarsG": 3.71,
+    "carbsG": 49.38,
+    "ironMg": 3.63,
+    "potassiumMg": 125.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "fries",
+   "label": "French fries",
+   "fdcId": 170698,
+   "description": "Fast foods, potato, french fried in vegetable oil",
+   "defaultGrams": 130,
+   "per100g": {
+    "calories": 312.0,
+    "proteinG": 3.43,
+    "fatG": 14.73,
+    "saturatedFatG": 2.336,
+    "transFatG": 0.06,
+    "sodiumMg": 210.0,
+    "fibreG": 3.8,
+    "sugarsG": 0.3,
+    "carbsG": 41.44,
+    "ironMg": 0.81,
+    "potassiumMg": 579.0,
+    "vitaminCMg": 4.7
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "potato_baked",
+   "label": "Baked or roasted potato",
+   "fdcId": 170093,
+   "description": "Potatoes, baked, flesh and skin, without salt",
+   "defaultGrams": 150,
+   "per100g": {
+    "calories": 93.0,
+    "proteinG": 2.5,
+    "fatG": 0.13,
+    "saturatedFatG": 0.034,
+    "transFatG": 0.0,
+    "sodiumMg": 10.0,
+    "fibreG": 2.2,
+    "sugarsG": 1.18,
+    "carbsG": 21.15,
+    "ironMg": 1.08,
+    "potassiumMg": 535.0,
+    "vitaminCMg": 9.6
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "sweet_potato",
+   "label": "Sweet potato",
+   "fdcId": 168483,
+   "description": "Sweet potato, cooked, baked in skin, flesh, without salt",
+   "defaultGrams": 150,
+   "per100g": {
+    "calories": 90.0,
+    "proteinG": 2.01,
+    "fatG": 0.15,
+    "saturatedFatG": 0.052,
+    "transFatG": 0.0,
+    "sodiumMg": 36.0,
+    "fibreG": 3.3,
+    "sugarsG": 6.48,
+    "carbsG": 20.71,
+    "ironMg": 0.69,
+    "potassiumMg": 475.0,
+    "vitaminCMg": 19.6
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": true,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": true,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "salad_greens",
+   "label": "Salad greens or lettuce",
+   "fdcId": 169247,
+   "description": "Lettuce, cos or romaine, raw",
+   "defaultGrams": 80,
+   "per100g": {
+    "calories": 17.0,
+    "proteinG": 1.23,
+    "fatG": 0.3,
+    "saturatedFatG": 0.039,
+    "transFatG": 0.0,
+    "sodiumMg": 8.0,
+    "fibreG": 2.1,
+    "sugarsG": 1.19,
+    "carbsG": 3.29,
+    "ironMg": 0.97,
+    "potassiumMg": 247.0,
+    "vitaminCMg": 4.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": true,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "broccoli_cooked",
+   "label": "Broccoli",
+   "fdcId": 169967,
+   "description": "Broccoli, cooked, boiled, drained, without salt",
+   "defaultGrams": 90,
+   "per100g": {
+    "calories": 35.0,
+    "proteinG": 2.38,
+    "fatG": 0.41,
+    "saturatedFatG": 0.079,
+    "transFatG": 0.0,
+    "sodiumMg": 41.0,
+    "fibreG": 3.3,
+    "sugarsG": 1.39,
+    "carbsG": 7.18,
+    "ironMg": 0.67,
+    "potassiumMg": 293.0,
+    "vitaminCMg": 64.9
+   },
+   "flags": {
+    "cruciferous": true,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": true,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "kale",
+   "label": "Kale, cabbage or slaw",
+   "fdcId": 168421,
+   "description": "Kale, raw",
+   "defaultGrams": 70,
+   "per100g": {
+    "calories": 35.0,
+    "proteinG": 2.92,
+    "fatG": 1.49,
+    "saturatedFatG": 0.178,
+    "transFatG": 0.0,
+    "sodiumMg": 53.0,
+    "fibreG": 4.1,
+    "sugarsG": 0.99,
+    "carbsG": 4.42,
+    "ironMg": 1.6,
+    "potassiumMg": 348.0,
+    "vitaminCMg": 93.4
+   },
+   "flags": {
+    "cruciferous": true,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": true,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "mixed_vegetables",
+   "label": "Mixed cooked vegetables",
+   "fdcId": 170472,
+   "description": "Vegetables, mixed, frozen, cooked, boiled, drained, without salt",
+   "defaultGrams": 100,
+   "per100g": {
+    "calories": 65.0,
+    "proteinG": 2.86,
+    "fatG": 0.15,
+    "saturatedFatG": 0.031,
+    "transFatG": 0.0,
+    "sodiumMg": 35.0,
+    "fibreG": 4.4,
+    "sugarsG": 3.12,
+    "carbsG": 13.09,
+    "ironMg": 0.82,
+    "potassiumMg": 169.0,
+    "vitaminCMg": 3.2
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": true,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "spinach_cooked",
+   "label": "Spinach",
+   "fdcId": 168463,
+   "description": "Spinach, cooked, boiled, drained, without salt",
+   "defaultGrams": 90,
+   "per100g": {
+    "calories": 23.0,
+    "proteinG": 2.97,
+    "fatG": 0.26,
+    "saturatedFatG": 0.043,
+    "transFatG": 0.0,
+    "sodiumMg": 70.0,
+    "fibreG": 2.4,
+    "sugarsG": 0.43,
+    "carbsG": 3.75,
+    "ironMg": 3.57,
+    "potassiumMg": 466.0,
+    "vitaminCMg": 9.8
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": true,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "avocado",
+   "label": "Avocado or guacamole",
+   "fdcId": 171705,
+   "description": "Avocados, raw, all commercial varieties",
+   "defaultGrams": 60,
+   "per100g": {
+    "calories": 160.0,
+    "proteinG": 2.0,
+    "fatG": 14.66,
+    "saturatedFatG": 2.126,
+    "transFatG": 0.0,
+    "sodiumMg": 7.0,
+    "fibreG": 6.7,
+    "sugarsG": 0.66,
+    "carbsG": 8.53,
+    "ironMg": 0.55,
+    "potassiumMg": 485.0,
+    "vitaminCMg": 10.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": true,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": true
+   }
+  },
+  {
+   "id": "corn",
+   "label": "Corn",
+   "fdcId": 169999,
+   "description": "Corn, sweet, yellow, cooked, boiled, drained, without salt",
+   "defaultGrams": 90,
+   "per100g": {
+    "calories": 96.0,
+    "proteinG": 3.41,
+    "fatG": 1.5,
+    "saturatedFatG": 0.197,
+    "transFatG": 0.0,
+    "sodiumMg": 1.0,
+    "fibreG": 2.4,
+    "sugarsG": 4.54,
+    "carbsG": 20.98,
+    "ironMg": 0.45,
+    "potassiumMg": 218.0,
+    "vitaminCMg": 5.5
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": true,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "pizza_cheese",
+   "label": "Pizza",
+   "fdcId": 170317,
+   "description": "Pizza, cheese topping, regular crust, frozen, cooked",
+   "defaultGrams": 120,
+   "per100g": {
+    "calories": 268.0,
+    "proteinG": 10.36,
+    "fatG": 12.28,
+    "saturatedFatG": 4.272,
+    "transFatG": null,
+    "sodiumMg": 447.0,
+    "fibreG": 2.2,
+    "sugarsG": 3.57,
+    "carbsG": 29.02,
+    "ironMg": 2.27,
+    "potassiumMg": 152.0,
+    "vitaminCMg": 1.2
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "burrito_beef_bean",
+   "label": "Burrito",
+   "fdcId": 173277,
+   "description": "Fast foods, burrito, with beans and beef",
+   "defaultGrams": 250,
+   "per100g": {
+    "calories": 191.0,
+    "proteinG": 11.52,
+    "fatG": 7.47,
+    "saturatedFatG": 2.905,
+    "transFatG": null,
+    "sodiumMg": 570.0,
+    "fibreG": 3.0,
+    "sugarsG": 2.19,
+    "carbsG": 19.52,
+    "ironMg": 1.91,
+    "potassiumMg": 269.0,
+    "vitaminCMg": 1.9
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": true,
+    "wholeGrain": false,
+    "hemeRedMeat": true,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "mayo",
+   "label": "Mayonnaise or creamy dressing",
+   "fdcId": 171009,
+   "description": "Salad dressing, mayonnaise, regular",
+   "defaultGrams": 25,
+   "per100g": {
+    "calories": 680.0,
+    "proteinG": 0.96,
+    "fatG": 74.85,
+    "saturatedFatG": 11.703,
+    "transFatG": 0.187,
+    "sodiumMg": 635.0,
+    "fibreG": 0.0,
+    "sugarsG": 0.57,
+    "carbsG": 0.57,
+    "ironMg": 0.21,
+    "potassiumMg": 20.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "bbq_sauce",
+   "label": "BBQ, sweet or glaze sauce",
+   "fdcId": 174523,
+   "description": "Sauce, barbecue",
+   "defaultGrams": 40,
+   "per100g": {
+    "calories": 172.0,
+    "proteinG": 0.82,
+    "fatG": 0.63,
+    "saturatedFatG": 0.045,
+    "transFatG": 0.0,
+    "sodiumMg": 1027.0,
+    "fibreG": 0.9,
+    "sugarsG": 33.24,
+    "carbsG": 40.77,
+    "ironMg": 0.64,
+    "potassiumMg": 232.0,
+    "vitaminCMg": 0.6
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "olive_oil",
+   "label": "Olive oil or vinaigrette",
+   "fdcId": 171413,
+   "description": "Oil, olive, salad or cooking",
+   "defaultGrams": 12,
+   "per100g": {
+    "calories": 884.0,
+    "proteinG": 0.0,
+    "fatG": 100.0,
+    "saturatedFatG": 13.808,
+    "transFatG": null,
+    "sodiumMg": 2.0,
+    "fibreG": 0.0,
+    "sugarsG": 0.0,
+    "carbsG": 0.0,
+    "ironMg": 0.56,
+    "potassiumMg": 1.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": true
+   }
+  },
+  {
+   "id": "butter",
+   "label": "Butter or cream sauce",
+   "fdcId": 173410,
+   "description": "Butter, salted",
+   "defaultGrams": 15,
+   "per100g": {
+    "calories": 717.0,
+    "proteinG": 0.85,
+    "fatG": 81.11,
+    "saturatedFatG": 51.368,
+    "transFatG": 3.278,
+    "sodiumMg": 643.0,
+    "fibreG": 0.0,
+    "sugarsG": 0.06,
+    "carbsG": 0.06,
+    "ironMg": 0.02,
+    "potassiumMg": 24.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "tahini",
+   "label": "Tahini or peanut sauce",
+   "fdcId": 170189,
+   "description": "Seeds, sesame butter, tahini, from roasted and toasted kernels (most common type)",
+   "defaultGrams": 25,
+   "per100g": {
+    "calories": 595.0,
+    "proteinG": 17.0,
+    "fatG": 53.76,
+    "saturatedFatG": 7.529,
+    "transFatG": null,
+    "sodiumMg": 115.0,
+    "fibreG": 9.3,
+    "sugarsG": 0.49,
+    "carbsG": 21.19,
+    "ironMg": 8.95,
+    "potassiumMg": 414.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": true,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "nuts",
+   "label": "Nuts or seeds",
+   "fdcId": 170567,
+   "description": "Nuts, almonds",
+   "defaultGrams": 25,
+   "per100g": {
+    "calories": 579.0,
+    "proteinG": 21.15,
+    "fatG": 49.93,
+    "saturatedFatG": 3.802,
+    "transFatG": 0.015,
+    "sodiumMg": 1.0,
+    "fibreG": 12.5,
+    "sugarsG": 4.35,
+    "carbsG": 21.55,
+    "ironMg": 3.71,
+    "potassiumMg": 733.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": true,
+    "omega3OrMono": true
+   }
+  },
+  {
+   "id": "yogurt",
+   "label": "Yogurt",
+   "fdcId": 171312,
+   "description": "Yogurt, Greek, nonfat, plain, CHOBANI",
+   "defaultGrams": 150,
+   "per100g": {
+    "calories": 54.0,
+    "proteinG": 9.53,
+    "fatG": 0.24,
+    "saturatedFatG": 0.145,
+    "transFatG": 0.009,
+    "sodiumMg": 37.0,
+    "fibreG": 0.2,
+    "sugarsG": null,
+    "carbsG": 3.43,
+    "ironMg": 0.03,
+    "potassiumMg": null,
+    "vitaminCMg": 0.3
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "oats",
+   "label": "Oats or granola",
+   "fdcId": 173905,
+   "description": "Cereals, oats, regular and quick, unenriched, cooked with water (includes boiling and microwaving), without salt",
+   "defaultGrams": 200,
+   "per100g": {
+    "calories": 71.0,
+    "proteinG": 2.54,
+    "fatG": 1.52,
+    "saturatedFatG": 0.31,
+    "transFatG": 0.001,
+    "sodiumMg": 4.0,
+    "fibreG": 1.7,
+    "sugarsG": 0.27,
+    "carbsG": 12.0,
+    "ironMg": 0.9,
+    "potassiumMg": 70.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": true,
+    "wholeGrain": true,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "fruit",
+   "label": "Fruit",
+   "fdcId": 173944,
+   "description": "Bananas, raw",
+   "defaultGrams": 100,
+   "per100g": {
+    "calories": 89.0,
+    "proteinG": 1.09,
+    "fatG": 0.33,
+    "saturatedFatG": 0.112,
+    "transFatG": 0.0,
+    "sodiumMg": 1.0,
+    "fibreG": 2.6,
+    "sugarsG": 12.23,
+    "carbsG": 22.84,
+    "ironMg": 0.26,
+    "potassiumMg": 358.0,
+    "vitaminCMg": 8.7
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": true,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": true,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "soda",
+   "label": "Soda or sweet drink",
+   "fdcId": 174852,
+   "description": "Beverages, carbonated, cola, regular",
+   "defaultGrams": 355,
+   "per100g": {
+    "calories": 42.0,
+    "proteinG": 0.0,
+    "fatG": 0.25,
+    "saturatedFatG": 0.0,
+    "transFatG": 0.0,
+    "sodiumMg": 3.0,
+    "fibreG": 0.0,
+    "sugarsG": 9.94,
+    "carbsG": 10.36,
+    "ironMg": 0.02,
+    "potassiumMg": 5.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "juice",
+   "label": "Juice or smoothie",
+   "fdcId": 169098,
+   "description": "Orange juice, raw (Includes foods for USDA's Food Distribution Program)",
+   "defaultGrams": 300,
+   "per100g": {
+    "calories": 45.0,
+    "proteinG": 0.7,
+    "fatG": 0.2,
+    "saturatedFatG": 0.024,
+    "transFatG": 0.0,
+    "sodiumMg": 1.0,
+    "fibreG": 0.2,
+    "sugarsG": 8.4,
+    "carbsG": 10.4,
+    "ironMg": 0.2,
+    "potassiumMg": 200.0,
+    "vitaminCMg": 50.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "milkshake",
+   "label": "Milkshake",
+   "fdcId": 170884,
+   "description": "Milk shakes, thick vanilla",
+   "defaultGrams": 300,
+   "per100g": {
+    "calories": 112.0,
+    "proteinG": 3.86,
+    "fatG": 3.03,
+    "saturatedFatG": 1.886,
+    "transFatG": null,
+    "sodiumMg": 95.0,
+    "fibreG": 0.0,
+    "sugarsG": 17.75,
+    "carbsG": 17.75,
+    "ironMg": 0.1,
+    "potassiumMg": 183.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "ice_cream",
+   "label": "Ice cream",
+   "fdcId": 167575,
+   "description": "Ice creams, vanilla",
+   "defaultGrams": 120,
+   "per100g": {
+    "calories": 207.0,
+    "proteinG": 3.5,
+    "fatG": 11.0,
+    "saturatedFatG": 6.79,
+    "transFatG": null,
+    "sodiumMg": 80.0,
+    "fibreG": 0.7,
+    "sugarsG": 21.22,
+    "carbsG": 23.6,
+    "ironMg": 0.09,
+    "potassiumMg": 199.0,
+    "vitaminCMg": 0.6
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "brownie",
+   "label": "Brownie or chocolate dessert",
+   "fdcId": 172713,
+   "description": "Cookies, brownies, commercially prepared",
+   "defaultGrams": 60,
+   "per100g": {
+    "calories": 405.0,
+    "proteinG": 4.8,
+    "fatG": 16.3,
+    "saturatedFatG": 4.235,
+    "transFatG": null,
+    "sodiumMg": 286.0,
+    "fibreG": 2.1,
+    "sugarsG": 36.61,
+    "carbsG": 63.9,
+    "ironMg": 2.25,
+    "potassiumMg": 149.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "cookie",
+   "label": "Cookie or pastry",
+   "fdcId": 172716,
+   "description": "Cookies, chocolate chip, commercially prepared, regular, higher fat, enriched",
+   "defaultGrams": 45,
+   "per100g": {
+    "calories": 492.0,
+    "proteinG": 5.1,
+    "fatG": 24.72,
+    "saturatedFatG": 8.091,
+    "transFatG": 0.684,
+    "sodiumMg": 311.0,
+    "fibreG": 2.0,
+    "sugarsG": 32.9,
+    "carbsG": 65.36,
+    "ironMg": 5.58,
+    "potassiumMg": 171.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "cheesecake",
+   "label": "Cheesecake or cake",
+   "fdcId": 172711,
+   "description": "Cake, cheesecake, commercially prepared",
+   "defaultGrams": 100,
+   "per100g": {
+    "calories": 321.0,
+    "proteinG": 5.5,
+    "fatG": 22.5,
+    "saturatedFatG": 9.921,
+    "transFatG": null,
+    "sodiumMg": 438.0,
+    "fibreG": 0.4,
+    "sugarsG": 21.8,
+    "carbsG": 25.5,
+    "ironMg": 0.63,
+    "potassiumMg": 90.0,
+    "vitaminCMg": 0.4
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "donut",
+   "label": "Doughnut",
+   "fdcId": 172758,
+   "description": "Doughnuts, yeast-leavened, glazed, enriched (includes honey buns)",
+   "defaultGrams": 60,
+   "per100g": {
+    "calories": 421.0,
+    "proteinG": 6.14,
+    "fatG": 22.7,
+    "saturatedFatG": 9.453,
+    "transFatG": 0.455,
+    "sodiumMg": 316.0,
+    "fibreG": 2.1,
+    "sugarsG": 22.75,
+    "carbsG": 47.93,
+    "ironMg": 2.38,
+    "potassiumMg": 102.0,
+    "vitaminCMg": 1.2
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "chicken_soup",
+   "label": "Broth-based soup",
+   "fdcId": 172909,
+   "description": "Soup, chicken noodle, canned, prepared with equal volume water",
+   "defaultGrams": 300,
+   "per100g": {
+    "calories": 24.0,
+    "proteinG": 1.16,
+    "fatG": 0.76,
+    "saturatedFatG": 0.191,
+    "transFatG": 0.003,
+    "sodiumMg": 335.0,
+    "fibreG": 0.5,
+    "sugarsG": 0.0,
+    "carbsG": 2.97,
+    "ironMg": 0.33,
+    "potassiumMg": 24.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "refried_beans",
+   "label": "Refried beans",
+   "fdcId": 172438,
+   "description": "Refried beans, canned, traditional style",
+   "defaultGrams": 120,
+   "per100g": {
+    "calories": 90.0,
+    "proteinG": 4.98,
+    "fatG": 2.01,
+    "saturatedFatG": 0.631,
+    "transFatG": 0.016,
+    "sodiumMg": 370.0,
+    "fibreG": 3.7,
+    "sugarsG": 0.54,
+    "carbsG": 13.55,
+    "ironMg": 1.44,
+    "potassiumMg": 319.0,
+    "vitaminCMg": 6.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": true,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": true,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "coleslaw",
+   "label": "Coleslaw",
+   "fdcId": 170300,
+   "description": "Fast foods, coleslaw",
+   "defaultGrams": 100,
+   "per100g": {
+    "calories": 153.0,
+    "proteinG": 0.95,
+    "fatG": 9.91,
+    "saturatedFatG": 1.599,
+    "transFatG": 0.037,
+    "sodiumMg": 203.0,
+    "fibreG": 1.9,
+    "sugarsG": 12.19,
+    "carbsG": 14.89,
+    "ironMg": 0.22,
+    "potassiumMg": 129.0,
+    "vitaminCMg": 14.6
+   },
+   "flags": {
+    "cruciferous": true,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": true,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "edamame",
+   "label": "Edamame or soybeans",
+   "fdcId": 168411,
+   "description": "Edamame, frozen, prepared",
+   "defaultGrams": 110,
+   "per100g": {
+    "calories": 121.0,
+    "proteinG": 11.91,
+    "fatG": 5.2,
+    "saturatedFatG": 0.62,
+    "transFatG": 0.009,
+    "sodiumMg": 6.0,
+    "fibreG": 5.2,
+    "sugarsG": 2.18,
+    "carbsG": 8.91,
+    "ironMg": 2.27,
+    "potassiumMg": 436.0,
+    "vitaminCMg": 6.1
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": true,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": true,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "dumplings",
+   "label": "Dumplings or gyoza",
+   "fdcId": 169779,
+   "description": "Dumpling, potato- or cheese-filled, frozen",
+   "defaultGrams": 120,
+   "per100g": {
+    "calories": 195.0,
+    "proteinG": 5.26,
+    "fatG": 6.14,
+    "saturatedFatG": 1.316,
+    "transFatG": 0.0,
+    "sodiumMg": 474.0,
+    "fibreG": 0.9,
+    "sugarsG": 1.75,
+    "carbsG": 29.64,
+    "ironMg": 1.26,
+    "potassiumMg": 107.0,
+    "vitaminCMg": 5.3
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "roti",
+   "label": "Roti, chapati or flatbread",
+   "fdcId": 171844,
+   "description": "Bread, chapati or roti, plain, commercially prepared",
+   "defaultGrams": 60,
+   "per100g": {
+    "calories": 297.0,
+    "proteinG": 11.25,
+    "fatG": 7.45,
+    "saturatedFatG": 1.953,
+    "transFatG": 0.034,
+    "sodiumMg": 409.0,
+    "fibreG": 4.9,
+    "sugarsG": 2.72,
+    "carbsG": 46.36,
+    "ironMg": 3.01,
+    "potassiumMg": 266.0,
+    "vitaminCMg": null
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "shrimp_breaded",
+   "label": "Breaded or tempura shrimp",
+   "fdcId": 172037,
+   "description": "Fast foods, shrimp, breaded and fried",
+   "defaultGrams": 100,
+   "per100g": {
+    "calories": 308.0,
+    "proteinG": 7.84,
+    "fatG": 18.9,
+    "saturatedFatG": 3.843,
+    "transFatG": 0.011,
+    "sodiumMg": 897.0,
+    "fibreG": 0.7,
+    "sugarsG": 0.1,
+    "carbsG": 27.99,
+    "ironMg": 0.86,
+    "potassiumMg": 82.0,
+    "vitaminCMg": 0.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "coconut_curry",
+   "label": "Coconut curry sauce",
+   "fdcId": 170173,
+   "description": "Nuts, coconut milk, canned (liquid expressed from grated meat and water)",
+   "defaultGrams": 120,
+   "per100g": {
+    "calories": 197.0,
+    "proteinG": 2.02,
+    "fatG": 21.33,
+    "saturatedFatG": 18.915,
+    "transFatG": null,
+    "sodiumMg": 13.0,
+    "fibreG": null,
+    "sugarsG": null,
+    "carbsG": 2.81,
+    "ironMg": 3.3,
+    "potassiumMg": 220.0,
+    "vitaminCMg": 1.0
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": false,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  },
+  {
+   "id": "taco",
+   "label": "Taco",
+   "fdcId": 170689,
+   "description": "Fast foods, taco with beef, cheese and lettuce, hard shell",
+   "defaultGrams": 170,
+   "per100g": {
+    "calories": 226.0,
+    "proteinG": 8.86,
+    "fatG": 12.7,
+    "saturatedFatG": 4.384,
+    "transFatG": 0.467,
+    "sodiumMg": 397.0,
+    "fibreG": 3.9,
+    "sugarsG": 0.9,
+    "carbsG": 19.85,
+    "ironMg": 1.19,
+    "potassiumMg": 209.0,
+    "vitaminCMg": 0.4
+   },
+   "flags": {
+    "cruciferous": false,
+    "solubleFibre": false,
+    "wholeGrain": false,
+    "hemeRedMeat": true,
+    "polyphenol": false,
+    "omega3OrMono": false
+   }
+  }
+ ]
+}
