@@ -39,6 +39,10 @@ export interface MealIntent {
   servings: number;
   restaurantHint: string | null;
   cuisineHint: string | null;
+  /** The literal dish / cuisine word typed ("jerk", "pho"), matched against menu text. */
+  dishWord: string | null;
+  /** 0-1: price matters a lot ("cheap", "budget", "broke"). */
+  valueFocus: number;
   detectedAllergens: AllergenTag[];
   detectedIngredientExclusions: string[];
   /** Short search phrase for Uber Eats, e.g. "nandos grilled chicken". */
@@ -95,6 +99,8 @@ const KNOWN_RESTAURANTS = [
   "wendy's",
   "sweetgreen",
 ];
+
+const CUISINE_ALIASES: Record<string, string> = { jerk: "caribbean", roti: "caribbean", patty: "caribbean", peri: "portuguese", "peri peri": "portuguese", souvlaki: "greek", gyro: "greek", "butter chicken": "indian", biryani: "indian", "pad thai": "thai", "banh mi": "vietnamese", bibimbap: "korean", "dim sum": "chinese", burrito: "mexican", taco: "mexican", falafel: "middle eastern", kebab: "middle eastern", kabab: "middle eastern", ramen: "japanese", poke: "poke", pho: "pho" };
 
 const CUISINES = [
   "portuguese",
@@ -163,8 +169,15 @@ export function detectAllergensAndExclusions(text: string): {
   return { allergens, customExclusions };
 }
 
+/** "under 500 calories", "max 600 kcal", "600 cal or less" → per-item calorie cap. */
+export function parseMaxCalories(text: string): number | null {
+  const m = text.toLowerCase().match(/(?:under|below|max(?:imum)?|less than|no more than|at most|<)\s*(\d{3,4})\s*(?:k?cal(?:orie)?s?)\b|(\d{3,4})\s*(?:k?cal(?:orie)?s?)\s*(?:or less|max|tops|cap)/);
+  const n = m ? Number(m[1] ?? m[2]) : NaN;
+  return Number.isFinite(n) && n >= 200 && n <= 3000 ? n : null;
+}
+
 export function parseBudgetCad(text: string): number | null {
-  const lower = text.toLowerCase();
+  const lower = text.toLowerCase().replace(/\d{3,4}\s*k?cal(?:orie)?s?\b/g, " "); // never read "500 calories" as $500
   const patterns = [
     /\$\s?(\d{1,4}(?:\.\d{1,2})?)/,
     /(\d{1,4}(?:\.\d{1,2})?)\s?(?:dollars|bucks|cad|\$)/,
@@ -182,10 +195,10 @@ export function parseBudgetCad(text: string): number | null {
 
 export function parseServings(text: string): number {
   const lower = text.toLowerCase();
-  const explicit = lower.match(/for\s+(\d{1,2})\s*(?:people|persons|ppl|of us|guests|adults)/);
+  const explicit = lower.match(/for\s+(\d{1,2})\s*(?:people|persons|ppl|of us|guests|adults|friends|$|[,.!?])/);
   if (explicit) return Math.max(1, Number(explicit[1]));
   const words: Record<string, number> = { two: 2, three: 3, four: 4, five: 5, six: 6 };
-  const worded = lower.match(/for\s+(two|three|four|five|six)\s*(?:people|of us|ppl)?/);
+  const worded = lower.match(/for\s+(two|three|four|five|six)\b/);
   if (worded) return words[worded[1]] ?? 1;
   if (/\b(family|group|party|share|sharing)\b/.test(lower)) return 4;
   if (/\b(me and|two of us|both of us|couple|date)\b/.test(lower)) return 2;
@@ -207,6 +220,17 @@ export function parseRestaurantHint(text: string): string | null {
 
 export function parseCuisineHint(text: string): string | null {
   const lower = text.toLowerCase();
+  const direct = CUISINES.find((c) => lower.includes(c));
+  if (direct) return direct;
+  const alias = Object.keys(CUISINE_ALIASES).find((k) => new RegExp(`\\b${k}\\b`).test(lower));
+  return alias ? CUISINE_ALIASES[alias] : null;
+}
+
+/** The dish or cuisine word the user actually typed (e.g. "jerk", "pho"), for matching menu text. */
+export function parseDishWord(text: string): string | null {
+  const lower = text.toLowerCase();
+  const alias = Object.keys(CUISINE_ALIASES).find((k) => new RegExp(`\\b${k}\\b`).test(lower));
+  if (alias) return alias;
   return CUISINES.find((c) => lower.includes(c)) ?? null;
 }
 
@@ -326,6 +350,10 @@ const DECISION_QUESTIONS = {
     type: "noul",
     instructions: "Does the user want spicy or hot food? (0 if they want mild or do not mention it)",
   },
+  wants_cheap: {
+    type: "noul",
+    instructions: "Is low price a priority for this user (cheap, budget, broke, affordable, deal)?",
+  },
   limit_fried: {
     type: "noul",
     instructions: "Should deep-fried, battered, or crispy-fried items be avoided for this user (healthy request or liver / lipid / weight concerns)?",
@@ -399,6 +427,8 @@ export async function analyzeIntent(
   const servings = parseServings(queryText);
   const restaurantHint = parseRestaurantHint(queryText);
   const cuisineHint = parseCuisineHint(queryText);
+  const dishWord = parseDishWord(queryText);
+  const maxCaloriesParsed = parseMaxCalories(queryText);
 
   const t0 = Date.now();
   let raw: Awaited<ReturnType<typeof callDecisionOne>> = null;
@@ -457,10 +487,12 @@ export async function analyzeIntent(
     wantsSpicy: round(a.wants_spicy?.noul ?? (/\bspicy|hot\b|peri|chili/.test(lower) ? 0.8 : 0.2)),
     noulWeights,
     budgetCad,
-    maxCalories: null,
+    maxCalories: maxCaloriesParsed,
     servings,
     restaurantHint,
     cuisineHint,
+    dishWord,
+    valueFocus: round(a.wants_cheap?.noul ?? (/\bcheap|budget|broke|affordable|deal/.test(lower) ? 0.85 : 0.2)),
     detectedAllergens: allergens,
     detectedIngredientExclusions: customExclusions,
     searchTerm: buildSearchTerm({ restaurantHint, cuisineHint, protein, queryText }),
