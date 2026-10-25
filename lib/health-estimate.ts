@@ -238,7 +238,7 @@ export function toSyntheticDish(
     nutrients,
     bioactives: est.bioactives,
     locations: [],
-    nutritionSourceTitle: "Estimate · USDA FoodData Central + Decision-1",
+    nutritionSourceTitle: "Estimate from the menu text and reference foods",
     nutritionSourceUrl: "https://fdc.nal.usda.gov/",
     nutritionVerifiedDate: est.estimatedAt.slice(0, 10),
   };

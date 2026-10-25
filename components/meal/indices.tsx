@@ -117,7 +117,7 @@ export function IndicesPanel({ indices, basis }: { indices: DishIndices; basis: 
         )}
       </Row>
       <p className="text-[11px] text-muted-foreground">
-        {basis === "estimate" ? "Estimated from the USDA components Decision-1 picked for this menu text." : "Nutrients as published; food groups read from the listed ingredients."}
+        {basis === "estimate" ? "Estimated from the foods recognised in this menu item; portions are approximate." : "Nutrients as published; food groups read from the listed ingredients."}
       </p>
     </div>
   );

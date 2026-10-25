@@ -29,9 +29,9 @@ export function IntentStrip({ intent, dealsOnly = false, targetScore = null }: {
     <div className="flex flex-wrap items-center gap-1.5">
       <Pill
         icon={intent.engine === "microsoft-decision-1" ? "lucide:cpu" : "lucide:regex"}
-        tip={intent.engine === "microsoft-decision-1" ? `Microsoft Decision-1 · ${intent.latencyMs} ms` : "Heuristic parse (Decision-1 key not set)"}
+        tip={intent.engine === "microsoft-decision-1" ? `Request understood by the model · ${intent.latencyMs} ms` : "Request parsed from keywords"}
       >
-        {intent.engine === "microsoft-decision-1" ? "Decision-1" : "Heuristic"}
+        {intent.engine === "microsoft-decision-1" ? "Understood" : "Keywords"}
       </Pill>
       <Pill icon={lens.icon} tip={`Lens · ${pct(intent.primaryConfidence)} confidence`}>
         {lens.label}

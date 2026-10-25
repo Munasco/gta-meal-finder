@@ -97,7 +97,7 @@ export function OptionRow({ option, inCombo, onSelect, showRestaurant = false }:
                   <Icon icon="lucide:flame" className="size-3.5" />{option.caloriesEstimated ? "~" : ""}{option.calories}
                 </span>
               </TooltipTrigger>
-              <TooltipContent>{option.caloriesEstimated ? `Estimated by Decision-1 from the menu text (${option.health?.caloriesBand.replace("_", "–")} kcal)` : "Calories as published on the Uber Eats menu"}</TooltipContent>
+              <TooltipContent>{option.caloriesEstimated ? `Estimated from the menu text (${option.health?.caloriesBand.replace("_", "–")} kcal)` : "Calories as published on the Uber Eats menu"}</TooltipContent>
             </Tooltip>
           )}
           {option.evaluated && (

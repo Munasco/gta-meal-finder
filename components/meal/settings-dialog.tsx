@@ -227,7 +227,7 @@ export function SettingsDialog({
           </div>
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             <Icon icon="lucide:cpu" className="size-3.5" />
-            Decision-1
+            Intent model
             <Dot on={Boolean(status?.microsoftDecision1)} tip={status?.microsoftDecision1 ? "Configured on the server" : "AZURE_DECISION_KEY not set; heuristics in use"} />
           </div>
         </div>
