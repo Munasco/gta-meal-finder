@@ -144,7 +144,7 @@ export const mealTools = [
   {
     name: "find_menu_options",
     description:
-      "Compatible with ericzakariasson/uber-eats-mcp-server and Apify Uber Eats Scraper MCP: searches GTA restaurant dishes on Uber Eats & DoorDash with Baseline Health Scores (0-100) and Biomarker Fit Scores.",
+      "Searches GTA restaurant dishes (Uber Eats menus and the verified catalogue) with Baseline Health Scores (0-100) and Biomarker Fit Scores.",
     inputSchema: {
       type: "object",
       properties: {

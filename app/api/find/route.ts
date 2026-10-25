@@ -22,13 +22,6 @@ export interface FindRequest {
   maxCalories?: number;
   /** Optional target health score; results closest to it rank first (Gaussian). */
   targetScore?: number;
-  /** Optional per-request credentials (kept in the browser, never stored server-side). */
-  credentials?: {
-    uberEatsMcpToken?: string;
-    apifyToken?: string;
-    apifyActor?: string;
-    azureDecisionKey?: string;
-  };
 }
 
 export interface FindResponse {
@@ -60,9 +53,6 @@ export async function GET() {
       microsoftDecision1: Boolean(decision.apiKey),
       snapshot: localDatasetEnabled() ? await localDatasetStats().catch(() => null) : null,
       browserBridge: localDatasetEnabled() ? { running: false } : await bridgeHealth(env.bridgeUrl),
-      uberEatsOfficialMcp: Boolean(env.uberEatsMcpToken),
-      apifyUberEats: Boolean(env.apifyToken),
-      apifyActor: env.apifyActor,
       /** Browser-restricted Google Maps key; null falls back to OpenStreetMap. */
       googleMapsKey: process.env.GOOGLE_MAPS_API_KEY || null,
     },
@@ -84,12 +74,7 @@ export async function POST(req: Request) {
   if (loc) setLocationParam(encodeUberLocation({ address, lat: loc.lat, lng: loc.lng }));
 
   const decision = decisionConfigFromEnv();
-  if (body.credentials?.azureDecisionKey?.trim()) decision.apiKey = body.credentials.azureDecisionKey.trim();
-
   const creds = credentialsFromEnv();
-  if (body.credentials?.uberEatsMcpToken?.trim()) creds.uberEatsMcpToken = body.credentials.uberEatsMcpToken.trim();
-  if (body.credentials?.apifyToken?.trim()) creds.apifyToken = body.credentials.apifyToken.trim();
-  if (body.credentials?.apifyActor?.trim()) creds.apifyActor = body.credentials.apifyActor.trim();
 
   const intent = await analyzeIntent(query, decision);
   if (body.lens) intent.primaryLens = body.lens;

@@ -8,7 +8,7 @@ import { IntentStrip } from "@/components/meal/intent-strip";
 import { OptionSheet } from "@/components/meal/option-sheet";
 import { RestaurantCard } from "@/components/meal/restaurant-card";
 import { DishList } from "@/components/meal/dish-list";
-import { EMPTY_CREDENTIALS, SettingsDialog, fetchCaptured, type CapturedSummary, type Credentials, type ProviderStatus } from "@/components/meal/settings-dialog";
+import { SettingsDialog, fetchCaptured, type CapturedSummary, type ProviderStatus } from "@/components/meal/settings-dialog";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -66,7 +66,6 @@ interface Persisted {
   maxCalories: string;
   targetScore: string;
   lens: BiomarkerLensId | "auto";
-  creds: Credentials;
 }
 
 const DEFAULTS: Persisted = {
@@ -78,7 +77,6 @@ const DEFAULTS: Persisted = {
   maxCalories: "",
   targetScore: "",
   lens: "auto",
-  creds: EMPTY_CREDENTIALS,
 };
 
 function load(): Persisted {
@@ -162,7 +160,6 @@ export default function MealFinderPage() {
           dealsOnly: state.bogo,
           maxCalories: state.maxCalories ? Number(state.maxCalories) : undefined,
           targetScore: state.targetScore ? Number(state.targetScore) : undefined,
-          credentials: state.creds,
         }),
       });
       const json = (await res.json()) as FindResponse & { error?: string };
@@ -175,9 +172,7 @@ export default function MealFinderPage() {
     }
   }, [state]);
 
-  const liveConfigured = Boolean(
-    status?.browserBridge?.running || (captured?.items ?? 0) > 0 || state.creds.apifyToken || state.creds.uberEatsMcpToken || status?.apifyUberEats || status?.uberEatsOfficialMcp
-  );
+  const liveConfigured = Boolean(status?.browserBridge?.running || (status?.snapshot?.restaurants ?? 0) > 0 || (captured?.items ?? 0) > 0);
 
   return (
     <TooltipProvider delayDuration={200}>
@@ -352,8 +347,6 @@ export default function MealFinderPage() {
       <SettingsDialog
         open={settingsOpen}
         onOpenChange={setSettingsOpen}
-        creds={state.creds}
-        onChange={(creds) => patch({ creds })}
         status={status}
         captured={captured}
         onCapturedChange={setCaptured}
@@ -457,10 +450,9 @@ function DeveloperView() {
       <section className="space-y-2">
         <h2 className="flex items-center gap-2 text-sm font-medium"><Icon icon="lucide:key-round" />Server env</h2>
         <CodeBlock
-          code={`AZURE_DECISION_KEY=…           # Microsoft Decision-1
-APIFY_API_TOKEN=…              # live Uber Eats menus
-APIFY_UBER_EATS_ACTOR=james.logantech~uber-eats-scraper
-UBER_EATS_MCP_ACCESS_TOKEN=…   # official mcp.ubereats.com (scope eats.3p.mcp)`}
+          code={`AZURE_DECISION_KEY=…        # Microsoft Decision-1 (intent + nutrition estimates)
+DATASET_LOCAL=1             # snapshot mode: search the bundled crawl dataset (Vercel)
+GOOGLE_MAPS_API_KEY=…       # optional map picker; OpenStreetMap otherwise`}
         />
       </section>
     </div>
