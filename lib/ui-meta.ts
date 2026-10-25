@@ -23,8 +23,6 @@ export const PROTEIN_ICON: Record<ProteinPreference, string> = {
 export const SOURCE_META: Record<MenuSource, { label: string; icon: string; live: boolean }> = {
   browser_bridge: { label: "Uber Eats · live via your Chrome", icon: "simple-icons:ubereats", live: true },
   browser_import: { label: "Uber Eats · captured from your browser", icon: "simple-icons:ubereats", live: true },
-  uber_eats_official_mcp: { label: "Uber Eats · official MCP", icon: "simple-icons:ubereats", live: true },
-  apify_uber_eats: { label: "Uber Eats · Apify", icon: "simple-icons:ubereats", live: true },
   catalogue: { label: "Verified GTA catalogue", icon: "lucide:book-open-check", live: false },
 };
 

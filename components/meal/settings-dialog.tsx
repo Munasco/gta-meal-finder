@@ -5,26 +5,15 @@ import { Icon } from "@/components/icon";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Textarea } from "@/components/ui/textarea";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 
-export interface Credentials {
-  apifyToken: string;
-  apifyActor: string;
-  uberEatsMcpToken: string;
-  azureDecisionKey: string;
-}
-
 export interface ProviderStatus {
   microsoftDecision1: boolean;
-  browserBridge?: { running: boolean; browser?: boolean; busy?: boolean; lastError?: string | null };
-  uberEatsOfficialMcp: boolean;
-  apifyUberEats: boolean;
-  apifyActor: string;
+  snapshot?: { restaurants: number; items: number; withHealth: number } | null;
+  browserBridge?: { running: boolean; browser?: boolean; busy?: boolean; lastError?: string | null; dataset?: { restaurants: number; items: number; withHealth: number } | null };
   googleMapsKey?: string | null;
 }
 
@@ -33,8 +22,6 @@ export interface CapturedSummary {
   items: number;
   pl: string | null;
 }
-
-export const EMPTY_CREDENTIALS: Credentials = { apifyToken: "", apifyActor: "", uberEatsMcpToken: "", azureDecisionKey: "" };
 
 export async function fetchCaptured(): Promise<CapturedSummary | null> {
   try {
@@ -64,25 +51,6 @@ function Help({ text }: { text: string }) {
       </TooltipTrigger>
       <TooltipContent className="max-w-64">{text}</TooltipContent>
     </Tooltip>
-  );
-}
-
-function Field({
-  id, icon, label, value, onChange, placeholder, on, help, secret = true,
-}: {
-  id: string; icon: string; label: string; value: string; onChange: (v: string) => void;
-  placeholder: string; on: boolean; help: string; secret?: boolean;
-}) {
-  return (
-    <div className="space-y-1.5">
-      <Label htmlFor={id} className="flex items-center gap-2 text-xs text-muted-foreground">
-        <Icon icon={icon} className="size-3.5" />
-        {label}
-        <Dot on={on} tip={on ? "Configured" : "Not configured"} />
-        <Help text={help} />
-      </Label>
-      <Input id={id} type={secret ? "password" : "text"} value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} autoComplete="off" />
-    </div>
   );
 }
 
@@ -230,17 +198,15 @@ function BrowserBridge({ captured, onChange, status }: { captured: CapturedSumma
 }
 
 export function SettingsDialog({
-  open, onOpenChange, creds, onChange, status, captured, onCapturedChange,
+  open, onOpenChange, status, captured, onCapturedChange,
 }: {
   open: boolean;
   onOpenChange: (o: boolean) => void;
-  creds: Credentials;
-  onChange: (c: Credentials) => void;
   status: ProviderStatus | null;
   captured: CapturedSummary | null;
   onCapturedChange: (c: CapturedSummary | null) => void;
 }) {
-  const set = (k: keyof Credentials) => (v: string) => onChange({ ...creds, [k]: v });
+  const ds = status?.browserBridge?.dataset ?? status?.snapshot ?? null;
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-h-[90dvh] overflow-y-auto sm:max-w-md">
@@ -248,31 +214,22 @@ export function SettingsDialog({
           <DialogTitle className="flex items-center gap-2">
             <Icon icon="lucide:plug" /> Connections
           </DialogTitle>
-          <DialogDescription>Keys stay in this browser. Server env vars apply when a field is empty.</DialogDescription>
+          <DialogDescription>Live menus come from your own Chrome. Keys live on the server, never in the browser.</DialogDescription>
         </DialogHeader>
         <div className="space-y-4">
           <BrowserBridge captured={captured} onChange={onCapturedChange} status={status} />
           <Separator />
-          <Field
-            id="apify" icon="lucide:radio" label="Apify token" value={creds.apifyToken} onChange={set("apifyToken")} placeholder="apify_api_…"
-            on={Boolean(creds.apifyToken) || Boolean(status?.apifyUberEats)}
-            help="Automated live Uber Eats menus near the address. Free Apify account works; actor james.logantech/uber-eats-scraper."
-          />
-          <Field
-            id="actor" icon="lucide:box" label="Apify actor" value={creds.apifyActor} onChange={set("apifyActor")}
-            placeholder={status?.apifyActor ?? "james.logantech~uber-eats-scraper"} on={true}
-            help="Alternative: khadinakbar~uber-eats-scraper (search + menus, CA proxy)." secret={false}
-          />
-          <Field
-            id="uber" icon="simple-icons:ubereats" label="Uber Eats MCP token" value={creds.uberEatsMcpToken} onChange={set("uberEatsMcpToken")}
-            placeholder="OAuth access token" on={Boolean(creds.uberEatsMcpToken) || Boolean(status?.uberEatsOfficialMcp)}
-            help="Official mcp.ubereats.com server. Needs an Uber OAuth access token with scope eats.3p.mcp."
-          />
-          <Field
-            id="azure" icon="lucide:cpu" label="Decision-1 key" value={creds.azureDecisionKey} onChange={set("azureDecisionKey")}
-            placeholder="Azure AI Foundry key" on={Boolean(creds.azureDecisionKey) || Boolean(status?.microsoftDecision1)}
-            help="Microsoft Decision-1 classifies the request (lens, protein, portions). Heuristics are used without it."
-          />
+          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+            <Icon icon="lucide:database" className="size-3.5" />
+            Dataset
+            <Dot on={Boolean(ds && ds.restaurants > 0)} tip={ds ? `${ds.restaurants} restaurants · ${ds.items} items · ${ds.withHealth} with nutrition estimates` : "No dataset loaded"} />
+            {ds && <span className="ml-auto tabular-nums">{ds.restaurants} · {ds.items}</span>}
+          </div>
+          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+            <Icon icon="lucide:cpu" className="size-3.5" />
+            Decision-1
+            <Dot on={Boolean(status?.microsoftDecision1)} tip={status?.microsoftDecision1 ? "Configured on the server" : "AZURE_DECISION_KEY not set; heuristics in use"} />
+          </div>
         </div>
       </DialogContent>
     </Dialog>

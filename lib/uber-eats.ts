@@ -8,7 +8,7 @@ import { COMPONENT_LABEL, readEstimate, toSyntheticDish, type ItemHealthEstimate
 
 /* ---------------------------------- types --------------------------------- */
 
-export type MenuSource = "browser_bridge" | "browser_import" | "uber_eats_official_mcp" | "apify_uber_eats" | "catalogue";
+export type MenuSource = "browser_bridge" | "browser_import" | "catalogue";
 
 export interface MenuOption {
   id: string;
@@ -109,10 +109,6 @@ export interface RestaurantGroup {
 export interface ProviderCredentials {
   /** Local helper (bun run bridge) that drives a real Chrome window. */
   bridgeUrl?: string;
-  uberEatsMcpToken?: string;
-  uberEatsMcpUrl?: string;
-  apifyToken?: string;
-  apifyActor?: string;
 }
 
 export interface ProviderAttempt {
@@ -155,10 +151,6 @@ interface RawRestaurant {
 export function credentialsFromEnv(): ProviderCredentials {
   return {
     bridgeUrl: (process.env.BRIDGE_URL ?? "http://127.0.0.1:5174").replace(/\/$/, ""),
-    uberEatsMcpToken: process.env.UBER_EATS_MCP_ACCESS_TOKEN,
-    uberEatsMcpUrl: process.env.UBER_EATS_MCP_URL ?? "https://mcp.ubereats.com/eats-claude/mcp",
-    apifyToken: process.env.APIFY_API_TOKEN,
-    apifyActor: process.env.APIFY_UBER_EATS_ACTOR ?? "james.logantech~uber-eats-scraper",
   };
 }
 
@@ -600,105 +592,6 @@ function finalizeGroup(
   };
 }
 
-/* ------------------------------- providers -------------------------------- */
-
-function parseSse(text: string): unknown {
-  const events = text.split(/\n\n+/);
-  let last: unknown = null;
-  for (const ev of events) {
-    const data = ev
-      .split("\n")
-      .filter((l) => l.startsWith("data:"))
-      .map((l) => l.slice(5).trim())
-      .join("\n");
-    if (!data) continue;
-    try { last = JSON.parse(data); } catch { /* ignore keepalives */ }
-  }
-  return last;
-}
-
-async function mcpCall(url: string, token: string, method: string, params: unknown, sessionId?: string) {
-  const res = await fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json, text/event-stream",
-      Authorization: `Bearer ${token}`,
-      "MCP-Protocol-Version": "2025-06-18",
-      ...(sessionId ? { "Mcp-Session-Id": sessionId } : {}),
-    },
-    body: JSON.stringify({ jsonrpc: "2.0", id: Date.now(), method, params }),
-  });
-  if (!res.ok) throw new Error(`Uber Eats MCP ${method} HTTP ${res.status}: ${(await res.text()).slice(0, 200)}`);
-  const ct = res.headers.get("content-type") ?? "";
-  const body = ct.includes("text/event-stream") ? parseSse(await res.text()) : await res.json();
-  const msg = body as { result?: unknown; error?: { message?: string } } | null;
-  if (msg?.error) throw new Error(`Uber Eats MCP ${method}: ${msg.error.message ?? "error"}`);
-  return { result: msg?.result, sessionId: res.headers.get("mcp-session-id") ?? sessionId };
-}
-
-function textFromToolResult(result: unknown): string {
-  const r = result as { content?: { type?: string; text?: string }[]; structuredContent?: unknown } | undefined;
-  if (r?.structuredContent) return JSON.stringify(r.structuredContent);
-  return (r?.content ?? []).map((c) => c.text ?? "").join("\n");
-}
-
-/** Last-resort parser for plain-text MCP output like "Grilled Chicken Bowl - $14.99". */
-function restaurantsFromText(text: string, fallbackName: string): RawRestaurant[] {
-  const lines = text.split("\n").map((l) => l.trim()).filter(Boolean);
-  const items: RawRestaurant["items"] = [];
-  for (const line of lines) {
-    const m = line.match(/^[-*•\d.)\s]*(.+?)\s*[-–—:|]\s*(?:CA)?\$\s?(\d+(?:\.\d{1,2})?)/);
-    if (m) items.push({ name: m[1].trim(), description: "", price: Number(m[2]), section: null, imageUrl: null, url: null });
-  }
-  return items.length ? [{ name: fallbackName, url: null, rating: null, etaText: null, items }] : [];
-}
-
-async function searchOfficialMcp(intent: MealIntent, address: string, creds: ProviderCredentials): Promise<RawRestaurant[]> {
-  const url = creds.uberEatsMcpUrl!;
-  const token = creds.uberEatsMcpToken!;
-  const init = await mcpCall(url, token, "initialize", {
-    protocolVersion: "2025-06-18",
-    capabilities: {},
-    clientInfo: { name: "gta-meal-finder", version: "1.0.0" },
-  });
-  const list = await mcpCall(url, token, "tools/list", {}, init.sessionId);
-  const tools = ((list.result as { tools?: { name: string; inputSchema?: { properties?: Record<string, unknown> } }[] })?.tools ?? []);
-  const tool = tools.find((t) => /search/i.test(t.name)) ?? tools[0];
-  if (!tool) throw new Error("Uber Eats MCP exposed no search tool");
-
-  const props = Object.keys(tool.inputSchema?.properties ?? {});
-  const args: Record<string, unknown> = {};
-  const put = (candidates: string[], value: unknown) => {
-    const key = props.find((p) => candidates.some((c) => p.toLowerCase().includes(c)));
-    if (key) args[key] = value;
-  };
-  put(["query", "search", "term", "q", "text", "prompt"], `${intent.searchTerm} ${intent.protein !== "any" ? intent.protein : ""}`.trim());
-  put(["address", "location", "deliver"], address);
-  if (Object.keys(args).length === 0 && props[0]) args[props[0]] = intent.searchTerm;
-
-  const call = await mcpCall(url, token, "tools/call", { name: tool.name, arguments: args }, init.sessionId);
-  const text = textFromToolResult(call.result);
-  let parsed: unknown = null;
-  try { parsed = JSON.parse(text); } catch { parsed = null; }
-  const restaurants = parsed ? normalizeRestaurants(parsed) : [];
-  return restaurants.length ? restaurants : restaurantsFromText(text, intent.restaurantHint ?? "Uber Eats result");
-}
-
-async function searchApify(intent: MealIntent, address: string, creds: ProviderCredentials): Promise<RawRestaurant[]> {
-  const actor = (creds.apifyActor ?? "james.logantech~uber-eats-scraper").replace("/", "~");
-  const query = `${intent.searchTerm}${intent.protein !== "any" && !intent.restaurantHint ? ` ${intent.protein}` : ""}`.trim();
-  const input = actor.startsWith("khadinakbar")
-    ? { location: address, searchQuery: query, enrichMenus: true, maxRestaurants: 6, maxMenusToScrape: 6, localeCode: "en-CA", proxyConfiguration: { useApifyProxy: true, apifyProxyCountry: "CA" } }
-    : { address, query, maxStores: 6 };
-  const res = await fetch(
-    `https://api.apify.com/v2/acts/${actor}/run-sync-get-dataset-items?token=${encodeURIComponent(creds.apifyToken!)}&timeout=120&clean=true`,
-    { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(input) }
-  );
-  if (!res.ok) throw new Error(`Apify ${actor} HTTP ${res.status}: ${(await res.text()).slice(0, 200)}`);
-  return normalizeRestaurants(await res.json());
-}
-
 function searchCatalogue(intent: MealIntent): RestaurantGroup[] {
   const byRestaurant = new Map<string, MenuOption[]>();
   for (const dish of GTA_DISH_CATALOGUE) {
@@ -894,42 +787,6 @@ export async function searchMenus(
     const catalogue = searchCatalogue(intent).sort((a, b) => b.rankScore - a.rankScore);
     attempts.push({ provider: "catalogue", status: "used", detail: `${catalogue.length} GTA restaurants with verified nutrition`, restaurants: catalogue.length });
     return { source: live[0].source, groups: applyDeals([...live, ...catalogue], opts), attempts };
-  }
-
-  const providers: { source: MenuSource; enabled: boolean; why: string; run: () => Promise<RawRestaurant[]> }[] = [
-    {
-      source: "uber_eats_official_mcp",
-      enabled: Boolean(creds.uberEatsMcpToken),
-      why: "No UBER_EATS_MCP_ACCESS_TOKEN (Uber OAuth, scope eats.3p.mcp)",
-      run: () => searchOfficialMcp(intent, address, creds),
-    },
-    {
-      source: "apify_uber_eats",
-      enabled: Boolean(creds.apifyToken),
-      why: "No APIFY_API_TOKEN",
-      run: () => searchApify(intent, address, creds),
-    },
-  ];
-
-  for (const p of providers) {
-    if (!p.enabled) {
-      attempts.push({ provider: p.source, status: "skipped", detail: p.why });
-      continue;
-    }
-    const t0 = Date.now();
-    try {
-      const raw = await p.run();
-      const latencyMs = Date.now() - t0;
-      if (raw.length === 0) {
-        attempts.push({ provider: p.source, status: "failed", detail: "Returned no restaurants with menu items", latencyMs });
-        continue;
-      }
-      const groups = raw.map((r) => groupFromRaw(r, intent, p.source)).sort((a, b) => b.rankScore - a.rankScore);
-      attempts.push({ provider: p.source, status: "used", detail: `${raw.length} restaurants`, latencyMs, restaurants: raw.length });
-      return { source: p.source, groups: applyDeals(groups, opts), attempts };
-    } catch (error) {
-      attempts.push({ provider: p.source, status: "failed", detail: error instanceof Error ? error.message : String(error), latencyMs: Date.now() - t0 });
-    }
   }
 
   const groups = searchCatalogue(intent).sort((a, b) => b.rankScore - a.rankScore);

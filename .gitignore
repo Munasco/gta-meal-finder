@@ -50,3 +50,6 @@ yarn-error.log*
 # Vercel
 /.vercel/
 .vercel
+
+# Parked code kept locally for later (Apify / official Uber MCP providers)
+/later/
