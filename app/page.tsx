@@ -22,10 +22,13 @@ import { cn } from "@/lib/utils";
 
 type View = "find" | "lenses" | "developer";
 
+/** Developer tools (API page, Connections dialog) are hidden for now; flip to true to bring them back. */
+const SHOW_DEVELOPER = false;
+
 const NAV: { id: View; icon: string; label: string }[] = [
   { id: "find", icon: "lucide:search", label: "Find" },
   { id: "lenses", icon: "lucide:heart-pulse", label: "Lenses" },
-  { id: "developer", icon: "lucide:code", label: "API" },
+  ...(SHOW_DEVELOPER ? [{ id: "developer" as View, icon: "lucide:code", label: "API" }] : []),
 ];
 
 const STORAGE_KEY = "gta-meal-finder:v4";
@@ -201,6 +204,7 @@ export default function MealFinderPage() {
             </button>
           ))}
         </nav>
+        {SHOW_DEVELOPER && (
         <div className="mt-auto">
           <button
             type="button"
@@ -212,6 +216,7 @@ export default function MealFinderPage() {
             <span className={cn("ml-auto size-2 rounded-full", liveConfigured ? "bg-brand" : "bg-muted-foreground/40")} />
           </button>
         </div>
+        )}
       </aside>
 
       {/* Mobile top bar */}
@@ -221,9 +226,11 @@ export default function MealFinderPage() {
             <Icon icon={n.icon} />
           </Button>
         ))}
-        <Button variant="ghost" size="icon-sm" className="ml-auto" onClick={() => setSettingsOpen(true)} aria-label="Connections">
-          <Icon icon="lucide:plug" />
-        </Button>
+        {SHOW_DEVELOPER && (
+          <Button variant="ghost" size="icon-sm" className="ml-auto" onClick={() => setSettingsOpen(true)} aria-label="Connections">
+            <Icon icon="lucide:plug" />
+          </Button>
+        )}
       </div>
 
       <main className="min-w-0 flex-1 px-4 pt-16 pb-24 md:px-8 md:pt-14">
@@ -253,7 +260,7 @@ export default function MealFinderPage() {
                 googleMapsKey={status?.googleMapsKey ?? null}
               />
 
-              {!liveConfigured && (
+              {SHOW_DEVELOPER && !liveConfigured && (
                 <button
                   type="button"
                   onClick={() => setSettingsOpen(true)}
