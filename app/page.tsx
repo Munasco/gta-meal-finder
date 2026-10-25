@@ -8,7 +8,7 @@ import { IntentStrip } from "@/components/meal/intent-strip";
 import { OptionSheet } from "@/components/meal/option-sheet";
 import { RestaurantCard } from "@/components/meal/restaurant-card";
 import { DishList } from "@/components/meal/dish-list";
-import { SettingsDialog, fetchCaptured, type CapturedSummary, type ProviderStatus } from "@/components/meal/settings-dialog";
+import { SettingsDialog, type ProviderStatus } from "@/components/meal/settings-dialog";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -103,26 +103,6 @@ export default function MealFinderPage() {
   const [resultsView, setResultsView] = useState<"restaurants" | "dishes">("restaurants");
   const [sortBy, setSortBy] = useState<SortKey>("match");
   const [status, setStatus] = useState<ProviderStatus | null>(null);
-  const [captured, setCaptured] = useState<CapturedSummary | null>(null);
-
-  useEffect(() => {
-    let cancelled = false;
-    fetchCaptured().then((c) => { if (!cancelled) setCaptured(c); });
-    return () => { cancelled = true; };
-  }, []);
-
-  // Menus captured from the user's own browser only change while the local helper is in play, never in snapshot mode.
-  const snapshotMode = Boolean(status?.snapshot);
-  useEffect(() => {
-    if (snapshotMode) return;
-    let cancelled = false;
-    const refresh = () => fetchCaptured().then((c) => { if (!cancelled) setCaptured(c); });
-    window.addEventListener("focus", refresh);
-    return () => {
-      cancelled = true;
-      window.removeEventListener("focus", refresh);
-    };
-  }, [snapshotMode]);
 
   useEffect(() => {
     let cancelled = false;
@@ -185,7 +165,7 @@ export default function MealFinderPage() {
 
   const sortedGroups = useMemo(() => (result ? sortGroups(result.search.groups, sortBy) : []), [result, sortBy]);
 
-  const liveConfigured = Boolean(status?.browserBridge?.running || (status?.snapshot?.restaurants ?? 0) > 0 || (captured?.items ?? 0) > 0);
+  const liveConfigured = (status?.snapshot?.restaurants ?? 0) > 0;
 
   return (
     <TooltipProvider delayDuration={200}>
@@ -270,18 +250,6 @@ export default function MealFinderPage() {
                 googleMapsKey={status?.googleMapsKey ?? null}
               />
 
-              {SHOW_DEVELOPER && !liveConfigured && (
-                <button
-                  type="button"
-                  onClick={() => setSettingsOpen(true)}
-                  className="flex w-full items-center gap-2 rounded-xl border border-dashed px-3 py-2 text-left text-xs text-muted-foreground hover:bg-accent"
-                >
-                  <Icon icon="lucide:radio" className="size-3.5" />
-                  Capture restaurants near you from Uber Eats
-                  <Icon icon="lucide:chevron-right" className="ml-auto size-3.5" />
-                </button>
-              )}
-
               {error && (
                 <div role="alert" className="flex items-center gap-2 rounded-xl border border-destructive/30 bg-destructive/5 px-3 py-2 text-sm text-destructive">
                   <Icon icon="lucide:circle-alert" />
@@ -365,8 +333,6 @@ export default function MealFinderPage() {
         open={settingsOpen}
         onOpenChange={setSettingsOpen}
         status={status}
-        captured={captured}
-        onCapturedChange={setCaptured}
       />
     </div>
     </TooltipProvider>
@@ -461,14 +427,9 @@ function DeveloperView() {
         <CodeBlock code={`claude mcp add gta-meals --transport http ${origin}/api/mcp`} />
       </section>
       <section className="space-y-2">
-        <h2 className="flex items-center gap-2 text-sm font-medium"><Icon icon="simple-icons:ubereats" />Live Uber Eats helper</h2>
-        <CodeBlock code={`bun run bridge   # opens Chrome, searches Uber Eats at your location, reads each store's menu`} />
-      </section>
-      <section className="space-y-2">
         <h2 className="flex items-center gap-2 text-sm font-medium"><Icon icon="lucide:key-round" />Server env</h2>
         <CodeBlock
           code={`AZURE_DECISION_KEY=…        # request understanding + nutrition estimates
-DATASET_LOCAL=1             # snapshot mode: search the crawl dataset (npm run data:pull)
 GOOGLE_MAPS_API_KEY=…       # optional map picker; OpenStreetMap otherwise`}
         />
       </section>

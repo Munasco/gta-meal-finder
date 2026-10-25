@@ -13,12 +13,9 @@ next-env.d.ts
 .dev.vars*
 *.pem
 
-# Crawl dataset: hosted on Vercel Blob, pulled by `npm run data:pull` (see data/manifest.json)
+# Dataset: hosted on Vercel Blob, pulled by `npm run data:pull` (see data/manifest.json)
 /data/ubereats-gta.json
 /data/health-estimates.json
-
-# Local Chrome profile used by bridge/server.ts
-/.bridge-profile/
 
 # Vercel
 .vercel

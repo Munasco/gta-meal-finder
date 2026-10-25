@@ -1,7 +1,6 @@
 /**
- * Snapshot mode (Vercel or any Node host): the crawl dataset and estimates ship with the build and are
- * searched in-process. Enabled with DATASET_LOCAL=1; `npm run data:pull` fetches the files from Blob.
- * Leave it unset to search Uber Eats live through the local Chrome helper (bun run bridge).
+ * The dataset and estimates ship with the build and are searched in-process.
+ * `npm run data:pull` fetches the files (it runs before `next build`).
  */
 import { indexDataset, mergeEstimates, searchDataset, type DatasetQuery, type DsRestaurant } from "./dataset-search";
 
@@ -12,10 +11,6 @@ interface Loaded {
 
 /** One load per process; a failed load is retried on the next call. */
 let loading: Promise<Loaded> | null = null;
-
-export function localDatasetEnabled(): boolean {
-  return process.env.DATASET_LOCAL === "1";
-}
 
 async function read(): Promise<Loaded> {
   const fs = await import("node:fs/promises");
@@ -48,7 +43,7 @@ function load(): Promise<Loaded> {
 
 /** Start reading the snapshot now so it overlaps with intent analysis instead of following it. */
 export function warmLocalDataset(): void {
-  if (localDatasetEnabled()) void load().catch(() => null);
+  void load().catch(() => null);
 }
 
 export async function searchLocalDataset(q: DatasetQuery): Promise<DsRestaurant[]> {

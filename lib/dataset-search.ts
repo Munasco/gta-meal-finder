@@ -1,6 +1,6 @@
 /**
- * Search over the crawl dataset (restaurants with menus, promos, geo, health estimates).
- * Pure functions, shared by the local helper (bridge/server.ts) and the Vercel build, which bundles the
+ * Search over the dataset (restaurants with menus, promos, geo, health estimates).
+ * Pure functions used by the app build, which bundles the
  * dataset files and searches them in-process.
  */
 export interface DsItem {

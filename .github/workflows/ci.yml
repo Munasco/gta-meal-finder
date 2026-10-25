@@ -21,5 +21,3 @@ jobs:
       - run: npm test
       - name: Build (pulls the dataset from Vercel Blob)
         run: npm run build
-        env:
-          DATASET_LOCAL: "1"

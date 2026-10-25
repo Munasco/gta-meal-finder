@@ -1,7 +1,6 @@
 node_modules
 .next
 out
-.bridge-profile
 tsconfig.tsbuildinfo
 *.log
 .env*

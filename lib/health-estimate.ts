@@ -337,7 +337,7 @@ export async function estimateItemHealth(
   return est;
 }
 
-/** Lenient validation for estimates coming back from the dataset file or /api/ingest. */
+/** Lenient validation for estimates coming back from the dataset file. */
 export function readEstimate(v: unknown): ItemHealthEstimate | null {
   if (!v || typeof v !== "object") return null;
   const o = v as Record<string, unknown>;

@@ -1,0 +1,48 @@
+name: Issue Labels
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/ISSUE_TEMPLATE/**
+      - .github/workflows/issue-labels.yml
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  sync:
+    name: Sync managed labels
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const managed = [
+              { name: "bug", color: "d73a4a", description: "Something is broken or behaving incorrectly." },
+              { name: "data", color: "0e8a16", description: "Wrong score, nutrition estimate, restaurant or menu data." },
+              { name: "enhancement", color: "a2eeef", description: "Requested improvement or new capability." },
+              { name: "accepted", color: "4f801a", description: "Direction and scope approved; a PR is welcome." },
+              { name: "needs-triage", color: "fbca04", description: "Needs maintainer review and initial categorisation." },
+              { name: "needs more info", color: "671411", description: "Could not reproduce or assess yet; closes after 7 days without a reply." },
+              { name: "WIP", color: "FEF2C0", description: "Work in progress. Not ready for review or merge." },
+              { name: "size:XS", color: "0e8a16", description: "0-9 changed lines (lockfiles, vendored UI and data excluded)." },
+              { name: "size:S", color: "5ebd3e", description: "10-29 changed lines." },
+              { name: "size:M", color: "fbca04", description: "30-99 changed lines." },
+              { name: "size:L", color: "fe7d37", description: "100-499 changed lines." },
+              { name: "size:XL", color: "d93f0b", description: "500-999 changed lines." },
+              { name: "size:XXL", color: "b60205", description: "1,000+ changed lines." },
+            ];
+            const { owner, repo } = context.repo;
+            for (const label of managed) {
+              try {
+                const { data: existing } = await github.rest.issues.getLabel({ owner, repo, name: label.name });
+                if (existing.color !== label.color || (existing.description ?? "") !== label.description) {
+                  await github.rest.issues.updateLabel({ owner, repo, name: label.name, color: label.color, description: label.description });
+                }
+              } catch (error) {
+                if (error.status !== 404) throw error;
+                await github.rest.issues.createLabel({ owner, repo, ...label });
+              }
+            }

@@ -1,5 +1,5 @@
 {
-  "note": "The crawl dataset is too large for git. These files live in a public Vercel Blob store under content-addressed paths; `npm run data:pull` downloads and verifies them, `npm run data:push` uploads a re-crawl and rewrites this file. Point DATASET_BASE_URL (or baseUrl here) at your own store to fork the data.",
+  "note": "The dataset is too large for git. These files live in a public Vercel Blob store under content-addressed paths; `npm run data:pull` downloads and verifies them before the build.",
   "baseUrl": "https://qr1nifgptifxenva.public.blob.vercel-storage.com",
   "updatedAt": "2026-10-25T17:40:00.000Z",
   "files": [
@@ -8,14 +8,14 @@
       "path": "datasets/f0c59764186a/ubereats-gta.json",
       "sha256": "f0c59764186a8d23c2d5e57686188ac7c724794bb757a3aa14ac2fc1172b3ed1",
       "bytes": 25911691,
-      "about": "549 Uber Eats restaurants across the GTA with menus, prices, promos and coordinates (bridge/crawl.ts)"
+      "about": "549 Uber Eats restaurants across the GTA with menus, prices, promos and coordinates"
     },
     {
       "name": "health-estimates.json",
       "path": "datasets/debaa71255d9/health-estimates.json",
       "sha256": "debaa71255d9f4cad37be3fd47d3399bf886d74dfa11c7d09280d356db2e87b2",
       "bytes": 17701111,
-      "about": "Decision-1 + USDA nutrition estimates keyed by restaurant|item (bridge/enrich.ts)"
+      "about": "Decision-1 + USDA nutrition estimates keyed by restaurant|item (scripts/enrich.ts)"
     }
   ]
 }

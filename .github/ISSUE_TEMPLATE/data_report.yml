@@ -1,0 +1,50 @@
+name: Data report
+description: A wrong score, implausible nutrition estimate, missing restaurant or broken menu.
+title: "[Data]: "
+labels:
+  - data
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Nutrition numbers are estimates from menu text and reference foods, so some are off. Tell us which one and why it looks wrong.
+
+  - type: input
+    id: restaurant
+    attributes:
+      label: Restaurant and location
+      placeholder: Chipotle, 100 City Centre Dr, Mississauga
+    validations:
+      required: true
+
+  - type: input
+    id: item
+    attributes:
+      label: Menu item
+      placeholder: Salad
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+      description: Quote the numbers or labels shown and what you expected. Link the source if you have one (brand nutrition page, package label).
+      placeholder: Shows 9,147 mg sodium for a plain salad; Chipotle's own page lists about 300 mg.
+    validations:
+      required: true
+
+  - type: input
+    id: query
+    attributes:
+      label: Request that surfaced it
+      placeholder: healthiest chipotle
+
+  - type: upload
+    id: attachments
+    attributes:
+      label: Screenshot
+    validations:
+      required: false
+      accept: ".png,.jpg,.jpeg,.gif,.webp"

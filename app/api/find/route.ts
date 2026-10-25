@@ -1,9 +1,8 @@
 import { NextResponse } from "next/server";
 import { analyzeIntent, decisionConfigFromEnv, type MealIntent } from "@/lib/intent";
-import { setLocationParam } from "@/lib/ingest-store";
 import type { BiomarkerLensId } from "@/lib/models";
-import { credentialsFromEnv, encodeUberLocation, searchMenus, type MenuSearchResult } from "@/lib/uber-eats";
-import { localDatasetEnabled, localDatasetStats, warmLocalDataset } from "@/lib/dataset-local";
+import { searchMenus, type MenuSearchResult } from "@/lib/uber-eats";
+import { localDatasetStats, warmLocalDataset } from "@/lib/dataset-local";
 
 export interface FindRequest {
   query: string;
@@ -32,27 +31,12 @@ export interface FindResponse {
 
 const DEFAULT_ADDRESS = "200 Bay St, Toronto, ON M5J 2J2";
 
-async function bridgeHealth(url?: string): Promise<{ running: boolean; browser?: boolean; busy?: boolean; lastError?: string | null; dataset?: { restaurants: number; items: number; withHealth: number } | null }> {
-  if (!url) return { running: false };
-  try {
-    const r = await fetch(`${url}/health`, { signal: AbortSignal.timeout(1000) });
-    if (!r.ok) return { running: false };
-    const j = (await r.json()) as { browser?: boolean; busy?: boolean; lastError?: string | null };
-    const stats = await fetch(`${url}/dataset/stats`, { signal: AbortSignal.timeout(5000) }).then((x) => (x.ok ? x.json() : null)).catch(() => null);
-    return { running: true, browser: j.browser, busy: j.busy, lastError: j.lastError, dataset: stats as { restaurants: number; items: number; withHealth: number } | null };
-  } catch {
-    return { running: false };
-  }
-}
-
 export async function GET() {
-  const env = credentialsFromEnv();
   const decision = decisionConfigFromEnv();
   return NextResponse.json({
     providers: {
       microsoftDecision1: Boolean(decision.apiKey),
-      snapshot: localDatasetEnabled() ? await localDatasetStats().catch(() => null) : null,
-      browserBridge: localDatasetEnabled() ? { running: false } : await bridgeHealth(env.bridgeUrl),
+      snapshot: await localDatasetStats().catch(() => null),
       /** Browser-restricted Google Maps key; null falls back to OpenStreetMap. */
       googleMapsKey: process.env.GOOGLE_MAPS_API_KEY || null,
     },
@@ -71,10 +55,8 @@ export async function POST(req: Request) {
 
   const loc = body.location && Number.isFinite(body.location.lat) && Number.isFinite(body.location.lng) ? body.location : null;
   const address = loc?.address?.trim() || body.address?.trim() || DEFAULT_ADDRESS;
-  if (loc) setLocationParam(encodeUberLocation({ address, lat: loc.lat, lng: loc.lng }));
 
   const decision = decisionConfigFromEnv();
-  const creds = credentialsFromEnv();
 
   // Read the snapshot while Decision-1 thinks, so a cold start pays for one of them, not both.
   warmLocalDataset();
@@ -85,7 +67,7 @@ export async function POST(req: Request) {
   }
   if (typeof body.maxCalories === "number" && body.maxCalories > 0) intent.maxCalories = body.maxCalories;
   const rangeKm = typeof body.rangeKm === "number" && body.rangeKm > 0 ? body.rangeKm : undefined;
-  const search = await searchMenus(intent, address, creds, {
+  const search = await searchMenus(intent, address, {
     dealsOnly: Boolean(body.dealsOnly),
     origin: loc ? { lat: loc.lat, lng: loc.lng } : undefined,
     rangeKm,

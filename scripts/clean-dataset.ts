@@ -1,8 +1,8 @@
 /**
- * Drop non-restaurant stores (grocery, convenience, pharmacy, retail) and junk rows from the crawl dataset
- * and their estimates. Run after a crawl finishes (never while one is writing the file).
+ * Drop non-restaurant stores (grocery, convenience, pharmacy, retail) and junk rows from the dataset
+ * and their estimates.
  *
- *   bun run bridge/clean-dataset.ts [--file data/ubereats-gta.json] [--dry]
+ *   bun run scripts/clean-dataset.ts [--file data/ubereats-gta.json] [--dry]
  */
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";

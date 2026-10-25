@@ -1,21 +1,16 @@
 #!/usr/bin/env node
 /**
- * Pull or push the crawl dataset.
+ * Pull the dataset.
  *
  * The two large JSON files (data/ubereats-gta.json, data/health-estimates.json) are not committed.
  * They live in a public Vercel Blob store under content-addressed paths, and data/manifest.json
  * records the URL base, path and sha256 of each file.
  *
  *   node scripts/dataset.mjs pull [--force]   download missing files and verify checksums (runs before `next build`)
- *   node scripts/dataset.mjs push             upload changed files to your Blob store and rewrite the manifest
- *
- * Env: DATASET_BASE_URL overrides the manifest's baseUrl for pull.
- *      BLOB_READ_WRITE_TOKEN is required for push (`vercel blob create-store <name> --access public`, then `vercel env pull`).
  */
-import { spawnSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { existsSync } from "node:fs";
-import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -40,7 +35,7 @@ async function readManifest() {
 
 async function pull() {
   const manifest = await readManifest();
-  const base = (process.env.DATASET_BASE_URL ?? manifest.baseUrl).replace(/\/$/, "");
+  const base = manifest.baseUrl.replace(/\/$/, "");
   await mkdir(DATA, { recursive: true });
   for (const file of manifest.files) {
     const dest = path.join(DATA, file.name);
@@ -51,7 +46,7 @@ async function pull() {
         continue;
       }
       if (!force) {
-        log(`${file.name} differs from the manifest; keeping your local copy (use --force to replace it, or data:push to publish it)`);
+        log(`${file.name} differs from the manifest; keeping your local copy (use --force to replace it)`);
         continue;
       }
     }
@@ -67,53 +62,5 @@ async function pull() {
   }
 }
 
-async function push() {
-  const manifest = await readManifest();
-  const token = process.env.BLOB_READ_WRITE_TOKEN;
-  if (!token) {
-    fail(
-      "BLOB_READ_WRITE_TOKEN is not set. Create a public store with `vercel blob create-store <name> --access public --yes`, then `vercel env pull` and re-run with `node --env-file=.env.local scripts/dataset.mjs push`."
-    );
-  }
-  // The Vercel CLI refuses a read-write token when OIDC variables are also present.
-  const env = { ...process.env, BLOB_READ_WRITE_TOKEN: token };
-  delete env.VERCEL_OIDC_TOKEN;
-  delete env.BLOB_STORE_ID;
-
-  let changed = false;
-  for (const file of manifest.files) {
-    const src = path.join(DATA, file.name);
-    if (!existsSync(src)) fail(`${path.relative(ROOT, src)} is missing`);
-    const buf = await readFile(src);
-    const hash = sha256(buf);
-    if (hash === file.sha256) {
-      log(`${file.name} unchanged`);
-      continue;
-    }
-    const pathname = `datasets/${hash.slice(0, 12)}/${file.name}`;
-    log(`uploading ${file.name} (${mb(buf.length)}) to ${pathname}`);
-    const result = spawnSync(
-      "vercel",
-      ["blob", "put", src, "--access", "public", "--pathname", pathname, "--content-type", "application/json", "--non-interactive"],
-      { env, encoding: "utf8", stdio: ["ignore", "pipe", "inherit"] }
-    );
-    if (result.status !== 0) fail(`upload of ${file.name} failed`);
-    const url = result.stdout.match(/https:\/\/\S+/)?.[0];
-    if (!url || !url.endsWith(pathname)) fail(`could not read the blob URL from the Vercel CLI output:\n${result.stdout}`);
-    manifest.baseUrl = url.slice(0, url.length - pathname.length - 1);
-    file.path = pathname;
-    file.sha256 = hash;
-    file.bytes = (await stat(src)).size;
-    changed = true;
-    log(`uploaded ${url}`);
-  }
-  if (changed) {
-    manifest.updatedAt = new Date().toISOString();
-    await writeFile(MANIFEST, `${JSON.stringify(manifest, null, 2)}\n`);
-    log("manifest updated; commit data/manifest.json");
-  }
-}
-
 if (command === "pull") await pull();
-else if (command === "push") await push();
-else fail("usage: node scripts/dataset.mjs <pull [--force] | push>");
+else fail("usage: node scripts/dataset.mjs pull [--force]");

@@ -1,15 +1,14 @@
 import { GTA_DISH_CATALOGUE } from "./gta-catalogue";
-import { ingestedLocationParam, listIngested } from "./ingest-store";
 import { ALLERGEN_KEYWORDS, type MealIntent, type TasteProfile } from "./intent";
 import type { BidirectionalAdjustment, BiomarkerLensId, EvaluatedDish, GtaDish, ScoreComponent } from "./models";
 import { compositionFromComponents, compositionFromDish, computeIndices, type DishIndices } from "./indices";
 import { evaluateDish } from "./scoring-engine";
 import { COMPONENT_LABEL, readEstimate, toSyntheticDish, type ItemHealthEstimate } from "./health-estimate";
-import { localDatasetEnabled, searchLocalDataset } from "./dataset-local";
+import { searchLocalDataset } from "./dataset-local";
 
 /* ---------------------------------- types --------------------------------- */
 
-export type MenuSource = "browser_bridge" | "browser_import" | "catalogue";
+export type MenuSource = "dataset" | "catalogue";
 
 export interface MenuOption {
   id: string;
@@ -145,11 +144,6 @@ export interface RestaurantGroup {
   rankScore: number;
 }
 
-export interface ProviderCredentials {
-  /** Local helper (bun run bridge) that drives a real Chrome window. */
-  bridgeUrl?: string;
-}
-
 export interface ProviderAttempt {
   provider: MenuSource;
   status: "used" | "skipped" | "failed";
@@ -186,12 +180,6 @@ interface RawRestaurant {
 }
 
 /* ------------------------------- utilities -------------------------------- */
-
-export function credentialsFromEnv(): ProviderCredentials {
-  // Snapshot mode (Vercel) has no local Chrome helper to call; an explicit BRIDGE_URL still wins.
-  const bridgeUrl = process.env.BRIDGE_URL ?? (localDatasetEnabled() ? undefined : "http://127.0.0.1:5174");
-  return { bridgeUrl: bridgeUrl?.replace(/\/$/, "") };
-}
 
 export function parsePrice(value: unknown): number | null {
   if (typeof value === "number" && Number.isFinite(value)) return value > 500 ? value / 100 : value;
@@ -243,22 +231,15 @@ function slug(s: string): string {
   return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
 
-/** Uber's `pl` query param: base64 of the URL-encoded location JSON. Coordinates alone are enough. */
-export function encodeUberLocation(loc: { address: string; lat: number; lng: number }): string {
-  return btoa(encodeURIComponent(JSON.stringify({ address: loc.address, latitude: loc.lat, longitude: loc.lng })));
-}
-
 export function uberEatsSearchUrl(term: string): string {
-  const pl = ingestedLocationParam();
-  const q = encodeURIComponent(pl ? term : `${term} Toronto`);
-  return `https://www.ubereats.com/ca/search?q=${q}${pl ? `&pl=${encodeURIComponent(pl)}` : ""}`;
+  return `https://www.ubereats.com/ca/search?q=${encodeURIComponent(`${term} Toronto`)}`;
 }
 
 export function doorDashSearchUrl(term: string): string {
   return `https://www.doordash.com/search/store/${encodeURIComponent(`${term} Toronto`)}/`;
 }
 
-/** Walk any scraper / MCP payload and pull out restaurants with menu items. */
+/** Walk any provider / MCP payload and pull out restaurants with menu items. */
 export function normalizeRestaurants(payload: unknown): RawRestaurant[] {
   const out: RawRestaurant[] = [];
   const seen = new Set<string>();
@@ -796,29 +777,13 @@ function datasetTerms(intent: MealIntent): string[] {
   return [...new Set(terms)].slice(0, 12);
 }
 
-/** The crawl dataset lives in the Bun helper locally (too big for the worker) or ships with the build (DATASET_LOCAL=1). */
-async function datasetMatches(bridgeUrl: string | undefined, intent: MealIntent, opts: SearchOptions): Promise<RawRestaurant[]> {
-  if (localDatasetEnabled()) {
-    try {
-      const rs = await searchLocalDataset({ terms: datasetTerms(intent), hint: intent.restaurantHint, origin: opts.origin, rangeKm: opts.rangeKm, limit: 30, itemsPerRestaurant: 60 });
-      return normalizeRestaurants(rs);
-    } catch (e) {
-      console.warn("[dataset] local snapshot unavailable:", e instanceof Error ? e.message : e);
-      return [];
-    }
-  }
-  if (!bridgeUrl) return [];
+/** The dataset ships with the build and is searched in-process. */
+async function datasetMatches(intent: MealIntent, opts: SearchOptions): Promise<RawRestaurant[]> {
   try {
-    const r = await fetch(`${bridgeUrl}/dataset/search`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ terms: datasetTerms(intent), hint: intent.restaurantHint, origin: opts.origin, rangeKm: opts.rangeKm, limit: 30, itemsPerRestaurant: 60 }),
-      signal: AbortSignal.timeout(8000),
-    });
-    if (!r.ok) return [];
-    const data = (await r.json()) as { restaurants?: unknown };
-    return normalizeRestaurants(data.restaurants);
-  } catch {
+    const rs = await searchLocalDataset({ terms: datasetTerms(intent), hint: intent.restaurantHint, origin: opts.origin, rangeKm: opts.rangeKm, limit: 30, itemsPerRestaurant: 60 });
+    return normalizeRestaurants(rs);
+  } catch (e) {
+    console.warn("[dataset] local snapshot unavailable:", e instanceof Error ? e.message : e);
     return [];
   }
 }
@@ -877,12 +842,7 @@ function applyDeals(groups: RestaurantGroup[], opts: SearchOptions): RestaurantG
   return out.filter(hasDeal).map((g) => ({ ...g, options: g.options.some((o) => o.promo) ? [...g.options].sort((a, b) => Number(Boolean(b.promo)) - Number(Boolean(a.promo))) : g.options }));
 }
 
-export async function searchMenus(
-  intent: MealIntent,
-  address: string,
-  creds: ProviderCredentials = credentialsFromEnv(),
-  opts: SearchOptions = {}
-): Promise<MenuSearchResult> {
+export async function searchMenus(intent: MealIntent, address: string, opts: SearchOptions = {}): Promise<MenuSearchResult> {
   const attempts: ProviderAttempt[] = [];
   const live: RestaurantGroup[] = [];
   const seenRestaurant = new Set<string>();
@@ -895,65 +855,11 @@ export async function searchMenus(
     }
   };
 
-  // Matching restaurants from the crawl dataset (served by the helper) plus anything captured in this session.
-  const fromDataset = await datasetMatches(creds.bridgeUrl, intent, opts);
-  const capturedNow = listIngested().filter((r) => r.items.length > 0);
-  const knownNames = [...fromDataset.map((r) => r.name), ...capturedNow.map((r) => r.restaurant)];
-  const hintSlug = intent.restaurantHint ? slug(intent.restaurantHint).split("-")[0] : null;
-  const hintCaptured = hintSlug ? knownNames.some((n) => slug(n).includes(hintSlug)) : true;
-  const needLive = knownNames.length < 5 || !hintCaptured;
-
-  // 0. Local helper driving a real Chrome window (bun run bridge): fresh Uber Eats search at the user's location.
-  if (creds.bridgeUrl && !needLive) {
-    attempts.push({ provider: "browser_bridge", status: "skipped", detail: `Answered from ${knownNames.length} captured menus${hintSlug ? ` (incl. ${intent.restaurantHint})` : ""}` });
-  } else if (creds.bridgeUrl) {
-    const t0 = Date.now();
-    try {
-      const health = await fetch(`${creds.bridgeUrl}/health`, { signal: AbortSignal.timeout(1500) });
-      if (!health.ok) throw new Error(`health HTTP ${health.status}`);
-      const query = `${intent.searchTerm}${intent.protein !== "any" && !intent.restaurantHint ? ` ${intent.protein}` : ""}`.trim();
-      const res = await fetch(`${creds.bridgeUrl}/search`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query, pl: ingestedLocationParam(), address, maxStores: 4, prefer: intent.restaurantHint }),
-        signal: AbortSignal.timeout(150_000),
-      });
-      const data = (await res.json()) as { restaurants?: unknown; error?: string };
-      if (!res.ok) throw new Error(data.error ?? `HTTP ${res.status}`);
-      const raw = normalizeRestaurants(data.restaurants);
-      if (raw.length === 0) {
-        attempts.push({ provider: "browser_bridge", status: "failed", detail: "Uber Eats returned no menus for this search", latencyMs: Date.now() - t0 });
-      } else {
-        pushGroups(raw, "browser_bridge");
-        attempts.push({ provider: "browser_bridge", status: "used", detail: `${raw.length} restaurants from Uber Eats`, latencyMs: Date.now() - t0, restaurants: raw.length });
-      }
-    } catch (error) {
-      const msg = error instanceof Error ? error.message : String(error);
-      const offline = /ECONNREFUSED|fetch failed|timeout|aborted|Network/i.test(msg) && Date.now() - t0 < 3000;
-      attempts.push({ provider: "browser_bridge", status: offline ? "skipped" : "failed", detail: offline ? "Helper not running (bun run bridge)" : msg, latencyMs: Date.now() - t0 });
-    }
-  }
-
-  // 1. Crawl dataset matches, then menus captured earlier in this session (bookmarklet / helper runs).
+  // 1. Dataset matches.
+  const fromDataset = await datasetMatches(intent, opts);
   if (fromDataset.length > 0) {
-    const before = live.length;
-    pushGroups(fromDataset, "browser_import");
-    attempts.push({ provider: "browser_import", status: "used", detail: `${live.length - before} restaurants from the crawl dataset`, restaurants: live.length - before });
-  }
-  const captured = listIngested().filter((r) => r.items.length > 0);
-  if (captured.length > 0) {
-    const raw: RawRestaurant[] = captured.map((r) => ({
-      name: r.restaurant,
-      url: r.storeUrl,
-      rating: r.rating,
-      etaText: null,
-      promos: r.promos,
-      geo: r.geo,
-      items: r.items.map((i) => ({ ...i })),
-    }));
-    const before = live.length;
-    pushGroups(raw, "browser_import");
-    attempts.push({ provider: "browser_import", status: "used", detail: `${live.length - before} restaurants captured from your browser`, restaurants: live.length - before });
+    pushGroups(fromDataset, "dataset");
+    attempts.push({ provider: "dataset", status: "used", detail: `${live.length} restaurants from the dataset`, restaurants: live.length });
   }
 
   if (live.length > 0) {

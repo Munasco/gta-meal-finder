@@ -17,11 +17,8 @@
     "check": "npm run lint && npm run typecheck && npm test",
     "icons": "node scripts/bundle-icons.mjs",
     "data:pull": "node scripts/dataset.mjs pull",
-    "data:push": "node --env-file=.env.local scripts/dataset.mjs push",
-    "bridge": "bun run bridge/server.ts",
-    "crawl": "OBU_SESSION=meal-finder-crawl bun run bridge/crawl.ts",
-    "clean": "bun run bridge/clean-dataset.ts",
-    "enrich": "bun run bridge/enrich.ts"
+    "clean": "bun run scripts/clean-dataset.ts",
+    "enrich": "bun run scripts/enrich.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

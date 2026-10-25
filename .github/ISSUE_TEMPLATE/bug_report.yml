@@ -1,0 +1,114 @@
+name: Bug report
+description: Report broken behaviour, regressions, crashes or reliability issues.
+title: "[Bug]: "
+labels:
+  - bug
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for broken behaviour. For a wrong score, missing restaurant or bad menu data, use **Data report** instead.
+        Feature requests belong in [Discussions](https://github.com/Munasco/gta-meal-finder/discussions/categories/ideas).
+        Search existing issues first and keep the report to one problem.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and did not find a duplicate.
+          required: true
+        - label: I included enough detail to reproduce or investigate the problem.
+          required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Search and ranking
+        - Scoring, lenses or indices (health score, Nutri-Score, AHEI, Health Canada)
+        - Request understanding (lens, diet, budget, portions)
+        - UI
+        - MCP server or API
+        - Dataset or nutrition estimates
+        - Build, CI or deploy
+        - Docs
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the exact request you typed and the address or settings in use.
+      placeholder: |
+        1. Open https://eat-healthier.vercel.app
+        2. Type "healthiest chipotle under $20"
+        3. Open the first result
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - Blocks use completely
+        - Major degradation or frequent failure
+        - Minor bug or occasional failure
+        - Cosmetic issue
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Production URL, commit SHA or branch, if known.
+      placeholder: main @ abc1234
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, browser, Node or Bun version; whether the intent model keys were configured.
+      placeholder: macOS 26, Safari 26, Node 24, keyword fallback
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or stack traces
+      description: Paste only the relevant output. Redact keys.
+      render: shell
+
+  - type: upload
+    id: attachments
+    attributes:
+      label: Screenshots or recordings
+      description: Redact anything private before uploading.
+    validations:
+      required: false
+      accept: ".png,.jpg,.jpeg,.gif,.webp,.mp4,.mov,.webm,.log,.txt,.json,.zip"
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Workaround
+      description: If you found one, include it.

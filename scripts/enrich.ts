@@ -1,11 +1,10 @@
 /**
- * Add a Decision-1 health estimate to every item in the crawl dataset.
+ * Add a Decision-1 health estimate to every item in the dataset.
  *
  *   bun run enrich [--file data/ubereats-gta.json] [--concurrency 4] [--limit 50] [--only "Nando"]
  *
  * Estimates are stored in a separate file (data/health-estimates.json, keyed by restaurant + item)
- * so the crawl can keep rewriting the dataset in parallel. Resumable: existing keys are skipped.
- * Enriched restaurants are re-posted to the app's /api/ingest as they complete.
+ * so the dataset file is never rewritten. Resumable: existing keys are skipped.
  */
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
@@ -27,7 +26,6 @@ const ONLY = args.get("only")?.toLowerCase() ?? null;
 const REDO_MATCH = args.get("redo-match") ? new RegExp(args.get("redo-match")!, "i") : null;
 /** Re-estimate sides / drinks / desserts / extras whose estimate exceeds this many kcal. */
 const REDO_SMALL_KCAL = args.get("redo-small-kcal") ? Number(args.get("redo-small-kcal")) : null;
-const APP = (process.env.APP_URL ?? "http://127.0.0.1:5173").replace(/\/$/, "");
 
 async function loadEnv() {
   // bun loads .env automatically; .dev.vars holds the same keys for the worker. Read it as a fallback.
@@ -109,11 +107,6 @@ for (const r of todo) {
   await writeFile(HEALTH_FILE, JSON.stringify(estimates));
   const rate = done / Math.max(1, (Date.now() - t0) / 1000);
   console.log(`[enrich] ${r.restaurant}: ${r.items.filter((i) => i.health).length}/${r.items.length} · total ${done} done, ${failed} failed, ${rate.toFixed(1)}/s`);
-  try {
-    await fetch(`${APP}/api/ingest`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ source: "enrich", restaurants: [r] }) });
-  } catch {
-    /* app not running */
-  }
 }
 
 const withHealth = ds.restaurants.reduce((n, r) => n + r.items.filter((i) => i.health).length, 0);

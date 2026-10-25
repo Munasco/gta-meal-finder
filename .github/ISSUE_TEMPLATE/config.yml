@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Feature request
+    url: https://github.com/Munasco/gta-meal-finder/discussions/categories/ideas
+    about: Suggest an improvement or new capability in Discussions.
+  - name: Question
+    url: https://github.com/Munasco/gta-meal-finder/discussions/categories/q-a
+    about: Ask how something works or how to run it.
