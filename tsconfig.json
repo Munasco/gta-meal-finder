@@ -50,6 +50,7 @@
     ".sites-runtime",
     "outputs",
     "work",
-    "bridge"
+    "bridge",
+    "launch-video"
   ]
 }
