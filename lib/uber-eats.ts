@@ -1,7 +1,7 @@
 import { GTA_DISH_CATALOGUE } from "./gta-catalogue";
 import { localDatasetEnabled, searchLocalDataset } from "./dataset-local";
 import { ingestedLocationParam, listIngested } from "./ingest-store";
-import type { MealIntent } from "./intent";
+import { ALLERGEN_KEYWORDS, type MealIntent, type TasteProfile } from "./intent";
 import type { BiomarkerLensId, EvaluatedDish } from "./models";
 import { evaluateDish } from "./scoring-engine";
 import { COMPONENT_LABEL, readEstimate, toSyntheticDish, type ItemHealthEstimate } from "./health-estimate";
@@ -101,6 +101,8 @@ export interface RestaurantGroup {
   geo: { lat: number; lng: number } | null;
   /** Straight-line distance from the delivery point, when the store's coordinates are known. */
   distanceKm: number | null;
+  /** Other locations of the same brand that were collapsed into this card. */
+  otherLocations: { restaurant: string; distanceKm: number | null; storeUrl: string | null }[];
   options: MenuOption[];
   combo: ComboPlan;
   rankScore: number;
@@ -374,6 +376,65 @@ function stripOptions(description: string): string {
   return description.replace(/\b(add|add-on|choice of|your choice of|choose|option(?:al|s)?|upgrade|sub(?:stitute)?|swap|or|with your)\b[^.,;]*/gi, " ");
 }
 
+const TASTE_WORDS: Record<TasteProfile, RegExp> = {
+  warm_savory_grain_bowl: /\b(bowl|grain|quinoa|brown rice|lentil|farro|barley)\b/i,
+  spicy_asian_lemongrass_satay: /\b(thai|lemongrass|satay|ginger|basil|wok|curry|pad|vietnamese|pho|korean|kimchi|szechuan|sichuan|teriyaki|ramen)\b/i,
+  smoky_mexican_chipotle_lime: /\b(mexican|burrito|taco|chipotle|salsa|black beans?|lime|cilantro|fajita|quesadilla)\b/i,
+  mediterranean_herb_olive_lemon: /\b(mediterranean|greek|shawarma|peri|portuguese|lemon|olive|hummus|falafel|kebab|kabab|souvlaki|pita|tzatziki|tahini)\b/i,
+  crisp_superfood_greens_salad: /\b(salad|greens|kale|spinach|arugula|slaw)\b/i,
+  high_protein_grilled_plate: /\b(grilled|plate|platter|steak|salmon|breast|protein|rotisserie|charcoal|tandoori)\b/i,
+};
+
+const SPICY = /\b(spicy|hot|peri|chili|chilli|jalape[nñ]o|sriracha|szechuan|sichuan|vindaloo|habanero|cajun|buffalo|nashville)\b/i;
+const MEAT = /\b(chicken|beef|pork|lamb|bacon|ham|turkey|steak|sausage|pepperoni|salami|prosciutto|brisket|veal|duck|goat|mutton|wings?|burger|meatball|kebab|kabab|shawarma|gyro|jerk)\b/i;
+const FISH = /\b(fish|salmon|tuna|shrimp|prawns?|crab|lobster|seafood|cod|tilapia|calamari|squid|octopus|anchov|sardine|scallop|clam|mussel|oyster|poke|sashimi|nigiri)\b/i;
+const DAIRY = /\b(cheese|cheesy|cream|creamy|yogurt|yoghurt|butter|milk|paneer|halloumi|alfredo|mozzarella|cheddar|feta|parmesan|ricotta|ghee|mayo|ranch|caesar)\b/i;
+const GLUTEN = /\b(bread|bun|wrap|pita|naan|roti|pasta|noodles?|ramen|udon|pizza|battered|breaded|crispy|tempura|dumplings?|gyoza|sandwich|sub|bagel|croissant|toast|tortilla|burrito|flour|couscous|barley|soy sauce|panko|katsu)\b/i;
+const HIGH_CARB = /\b(rice|bread|bun|wrap|pita|naan|roti|pasta|noodles?|pizza|fries|potato|sugar|dessert|cake|cookie|pancake|waffle|bagel|sandwich|burrito|tortilla)\b/i;
+const GF_NOTE = /gluten[- ]?free|\bgf\b|celiac/i;
+const VEGAN_NOTE = /\bvegan|plant[- ]based\b/i;
+const DF_NOTE = /dairy[- ]?free|\bvegan\b/i;
+
+/** A hard dietary rule the item breaks, or null. Decision-1's read of the protein wins where available. */
+function dietViolation(intent: MealIntent, name: string, description: string, est: ItemHealthEstimate | null): string | null {
+  const hay = `${name} ${description}`;
+  const protein = est?.mainProtein ?? null;
+  const hasMeat = protein ? ["chicken", "beef_lamb", "pork"].includes(protein) : MEAT.test(name) || MEAT.test(stripOptions(description));
+  const hasFish = protein ? protein === "fish_seafood" : FISH.test(name) || FISH.test(stripOptions(description));
+  switch (intent.diet) {
+    case "vegetarian":
+      return hasMeat || hasFish ? "Not vegetarian" : null;
+    case "vegan":
+      if (VEGAN_NOTE.test(hay)) return null;
+      return hasMeat || hasFish || (protein ? protein === "egg_dairy" : DAIRY.test(hay) || /\begg/i.test(hay)) ? "Not vegan" : null;
+    case "pescatarian":
+      return hasMeat ? "Not pescatarian" : null;
+    case "gluten_free":
+      if (GF_NOTE.test(hay)) return null;
+      return GLUTEN.test(hay) || est?.method === "fried_battered" ? "Likely contains gluten" : null;
+    case "dairy_free":
+      if (DF_NOTE.test(hay)) return null;
+      return DAIRY.test(hay) ? "Likely contains dairy" : null;
+    case "keto_low_carb":
+      if (est?.nutrients && est.nutrients.carbsG > 45) return `~${Math.round(est.nutrients.carbsG)} g carbs`;
+      return !est?.nutrients && HIGH_CARB.test(name) ? "High-carb" : null;
+    default:
+      return null;
+  }
+}
+
+/** Allergen the user excluded that this item mentions, or null. */
+function allergenHit(intent: MealIntent, name: string, description: string): string | null {
+  const hay = `${name} ${description}`.toLowerCase();
+  for (const tag of intent.detectedAllergens) {
+    if (tag === "gluten" && GF_NOTE.test(hay)) continue;
+    if (tag === "dairy" && DF_NOTE.test(hay)) continue;
+    const words = tag === "gluten" ? [...ALLERGEN_KEYWORDS.gluten, "bread", "pasta", "noodle", "wrap", "pita", "naan", "pizza", "breaded", "battered"] : ALLERGEN_KEYWORDS[tag];
+    if (words.some((w) => new RegExp(`\\b${w}`, "i").test(hay))) return `Contains ${tag.replace("_", " ")}`;
+  }
+  return null;
+}
+
 function kindOf(name: string, description: string, price: number | null): MenuOption["kind"] {
   const hay = `${name} ${description}`;
   if (NAME_ONLY_NEGATIVE.some(([re]) => re.test(name))) return "extra";
@@ -386,11 +447,12 @@ function kindOf(name: string, description: string, price: number | null): MenuOp
 export function scoreOption(
   input: { name: string; description: string; priceCad: number | null; health?: ItemHealthEstimate | null; calories?: number | null },
   intent: MealIntent
-): Pick<MenuOption, "healthScore" | "fitScore" | "portionScore" | "kind" | "reasons" | "cautions" | "promo" | "calories" | "caloriesEstimated" | "health"> {
+): Pick<MenuOption, "healthScore" | "fitScore" | "portionScore" | "kind" | "reasons" | "cautions" | "promo" | "calories" | "caloriesEstimated" | "health"> & { blocked: string | null } {
   const hay = `${input.name} ${input.description}`;
   const reasons: string[] = [];
   const cautions: string[] = [];
   const est = input.health ?? null;
+  const blocked = dietViolation(intent, input.name, input.description, est) ?? allergenHit(intent, input.name, input.description);
   let health = 55;
 
   for (const [re, pts, why] of POSITIVE) if (re.test(hay)) { health += pts; reasons.push(why); }
@@ -419,7 +481,19 @@ export function scoreOption(
     if (hasProtein) { fit += 25; reasons.unshift(`Has ${intent.protein}`); }
     else if (kind === "main") { fit -= 25; cautions.push(`No ${intent.protein}`); }
   }
-  fit += (portion - 50) * intent.wantsLargePortions * 0.5;
+  // Portion: when calories are known, judge fullness by energy instead of words.
+  const kcal = input.calories ?? est?.caloriesEst ?? null;
+  if (kcal !== null && kind !== "extra") {
+    const [lo, hi] = intent.wantsLargePortions > 0.6 ? [650, 1000] : [400, 750];
+    portion = kcal < lo ? Math.max(10, 50 - (lo - kcal) / 6) : kcal > hi ? Math.max(30, 70 - (kcal - hi) / 10) : 70 + Math.min(30, (kcal - lo) / ((hi - lo) / 30));
+  }
+  fit += (portion - 50) * (intent.wantsLargePortions > 0.6 ? 0.5 : 0.2);
+  // Taste, cuisine and spice from the request.
+  if (intent.tasteConfidence >= 0.5 && TASTE_WORDS[intent.tasteProfile].test(hay)) { fit += 8; reasons.push("Matches your taste"); }
+  if (intent.cuisineHint && new RegExp(intent.cuisineHint.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&"), "i").test(hay)) fit += 6;
+  if (intent.wantsSpicy >= 0.6 && SPICY.test(hay)) { fit += 6; reasons.push("Spicy"); }
+  else if (intent.wantsSpicy <= 0.25 && SPICY.test(input.name)) fit -= 6;
+  if (intent.protein !== "any" && est?.proteinBand === "over_30g") fit += 5;
   for (const ex of intent.detectedIngredientExclusions) {
     if (ex && hay.toLowerCase().includes(ex)) { fit -= 40; cautions.push(`Contains ${ex}`); }
   }
@@ -460,6 +534,7 @@ export function scoreOption(
     calories,
     caloriesEstimated: !input.calories && Boolean(est),
     health: est ? { ...est, components: est.components.map((c) => ({ ...c, label: COMPONENT_LABEL.get(c.id) ?? c.id })) } : null,
+    blocked,
   };
 }
 
@@ -522,8 +597,9 @@ export function buildCombo(options: MenuOption[], intent: MealIntent, deals: Dea
 
 function groupFromRaw(raw: RawRestaurant, intent: MealIntent, source: MenuSource): RestaurantGroup {
   const unique = raw.items.filter((it, i, arr) => arr.findIndex((o) => o.name.toLowerCase() === it.name.toLowerCase() && o.price === it.price) === i);
-  const options: MenuOption[] = unique.map((it, i) => {
-    const scored = scoreOption({ name: it.name, description: it.description, priceCad: it.price, health: it.health, calories: it.calories }, intent);
+  const options: MenuOption[] = unique.flatMap((it, i) => {
+    const { blocked, ...scored } = scoreOption({ name: it.name, description: it.description, priceCad: it.price, health: it.health, calories: it.calories }, intent);
+    if (blocked) return [];
     const id = `${slug(raw.name)}-${slug(it.name)}-${i}`;
     // Estimated nutrition goes through the same engine and biomarker lens as the verified catalogue.
     const evaluated = it.health?.nutrients
@@ -539,7 +615,7 @@ function groupFromRaw(raw: RawRestaurant, intent: MealIntent, source: MenuSource
       scored.reasons = [...new Set([...evaluated.takeMoreOfHits.slice(0, 2).map((h) => h.nutrientOrFood), ...scored.reasons])].slice(0, 3);
       scored.cautions = [...new Set([...evaluated.takeLessOfChecks.filter((c) => c.status === "caution").slice(0, 2).map((c) => c.nutrientOrFood), ...scored.cautions])].slice(0, 3);
     }
-    return {
+    return [{
       evaluated,
       id,
       name: it.name,
@@ -551,7 +627,7 @@ function groupFromRaw(raw: RawRestaurant, intent: MealIntent, source: MenuSource
       url: it.url ?? raw.url ?? uberEatsSearchUrl(`${raw.name} ${it.name}`),
       source,
       ...scored,
-    };
+    }];
   });
   const capped = intent.maxCalories !== null ? options.filter((o) => o.calories === null || o.calories <= intent.maxCalories!) : options;
   return { ...finalizeGroup(raw.name, raw.url, raw.rating, raw.etaText, source, capped, intent, raw.promos ?? []), geo: raw.geo ?? null };
@@ -576,6 +652,10 @@ function finalizeGroup(
   const bestHealth = top[0]?.healthScore ?? 0;
   const unhealthyPenalty = bestHealth < 45 ? 40 : bestHealth < 55 ? 15 : 0;
   const nameHit = intent.restaurantHint && slug(restaurant).includes(slug(intent.restaurantHint).split("-")[0]) ? 25 : 0;
+  const restaurantText = `${restaurant} ${options.slice(0, 20).map((o) => `${o.name} ${o.description}`).join(" ")}`;
+  const cuisineHit = intent.cuisineHint && new RegExp(intent.cuisineHint.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&"), "i").test(restaurantText) ? 10 : 0;
+  const tasteHit = intent.tasteConfidence >= 0.5 && TASTE_WORDS[intent.tasteProfile].test(restaurant) ? 6 : 0;
+  const halalMiss = intent.diet === "halal" && !/\bhalal\b/i.test(restaurantText) ? 60 : 0;
   return {
     restaurant,
     storeUrl: storeUrl ?? uberEatsSearchUrl(restaurant),
@@ -586,9 +666,10 @@ function finalizeGroup(
     promos,
     geo: null,
     distanceKm: null,
+    otherLocations: [],
     options: sorted.slice(0, 5),
     combo,
-    rankScore: Math.round(base + nameHit - unhealthyPenalty + (combo.fitsBudget ? 10 : -20) + (promos.length || sorted.some((o) => o.promo) ? 5 : 0)),
+    rankScore: Math.round(base + nameHit + cuisineHit + tasteHit - unhealthyPenalty - halalMiss + (combo.fitsBudget ? 10 : -20) + (promos.length || sorted.some((o) => o.promo) ? 5 : 0) - (top.length === 0 ? 50 : 0)),
   };
 }
 
@@ -602,7 +683,8 @@ function searchCatalogue(intent: MealIntent): RestaurantGroup[] {
       decisionWeights: intent.noulWeights,
     });
     if (evaluated.matchState.type === "excluded_allergen") continue;
-    const scored = scoreOption({ name: dish.name, description: dish.description, priceCad: dish.priceCad }, intent);
+    const { blocked, ...scored } = scoreOption({ name: dish.name, description: dish.description, priceCad: dish.priceCad }, intent);
+    if (blocked) continue;
     const option: MenuOption = {
       id: dish.id,
       name: dish.name,
@@ -644,6 +726,7 @@ function datasetTerms(intent: MealIntent): string[] {
     ...intent.searchTerm.split(/\s+/),
     intent.protein !== "any" ? (intent.protein === "plant" ? "tofu" : intent.protein) : "",
     intent.cuisineHint ?? "",
+    intent.diet === "halal" ? "halal" : intent.diet === "vegan" ? "vegan" : intent.diet === "vegetarian" ? "vegetarian" : intent.diet === "gluten_free" ? "gluten" : "",
     ...intent.queryText.toLowerCase().replace(/[^a-z\s]/g, " ").split(/\s+/).filter((w) => w.length > 4 && !/healthy|enough|portions|something|please|around|under|budget|dollars|would|about|really|people/.test(w)),
   ].filter(Boolean);
   return [...new Set(terms)].slice(0, 12);
@@ -679,6 +762,32 @@ async function datasetMatches(bridgeUrl: string | undefined, intent: MealIntent,
 /** "BOGO only" means a real buy-one-get-one (or 2-for-1) at the store or on an item. */
 const hasDeal = (g: RestaurantGroup) => parseDeals(g.promos).some((d) => d.kind === "bogo") || g.options.some((o) => o.promo && /bogo|buy \d+,? get \d+|2 for 1|two for one/i.test(o.promo));
 
+/** "Monkey Poke Rosedale (Unit 1 …)" and "Monkey Poke Queen West" are one brand; keep one card per brand. */
+function brandKey(name: string): string {
+  const words = name.split("(")[0].toLowerCase().replace(/[^a-z0-9'\s]/g, " ").trim().split(/\s+/).filter(Boolean);
+  return (words.length >= 2 ? words.slice(0, 2) : words).join(" ");
+}
+
+function collapseBrands(groups: RestaurantGroup[]): RestaurantGroup[] {
+  const byBrand = new Map<string, RestaurantGroup>();
+  for (const g of groups) {
+    const key = brandKey(g.restaurant);
+    const kept = byBrand.get(key);
+    if (!kept) {
+      byBrand.set(key, { ...g, otherLocations: [] });
+      continue;
+    }
+    // Prefer a clearly nearer location when it scores about as well.
+    const nearer = g.distanceKm !== null && (kept.distanceKm === null || g.distanceKm < kept.distanceKm - 2) && g.rankScore >= kept.rankScore - 8;
+    if (nearer) {
+      byBrand.set(key, { ...g, otherLocations: [...kept.otherLocations, { restaurant: kept.restaurant, distanceKm: kept.distanceKm, storeUrl: kept.storeUrl }] });
+    } else {
+      kept.otherLocations.push({ restaurant: g.restaurant, distanceKm: g.distanceKm, storeUrl: g.storeUrl });
+    }
+  }
+  return [...byBrand.values()].sort((a, b) => b.rankScore - a.rankScore);
+}
+
 const closeness = (score: number, target: number, sigma = 12) => Math.exp(-((score - target) ** 2) / (2 * sigma * sigma));
 
 function applyDeals(groups: RestaurantGroup[], opts: SearchOptions): RestaurantGroup[] {
@@ -699,6 +808,7 @@ function applyDeals(groups: RestaurantGroup[], opts: SearchOptions): RestaurantG
       .map((g) => ({ ...g, distanceKm: g.geo ? Number(distanceKm(origin, g.geo).toFixed(1)) : null }))
       .filter((g) => opts.rangeKm === undefined || g.distanceKm === null || g.distanceKm <= opts.rangeKm);
   }
+  out = collapseBrands(out);
   if (!opts.dealsOnly) return out;
   return out.filter(hasDeal).map((g) => ({ ...g, options: g.options.some((o) => o.promo) ? [...g.options].sort((a, b) => Number(Boolean(b.promo)) - Number(Boolean(a.promo))) : g.options }));
 }

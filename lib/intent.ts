@@ -1,6 +1,7 @@
 import type { AllergenTag, BiomarkerLensId, DecisionApiNoulWeights } from "./models";
 
 export type ProteinPreference = "chicken" | "fish" | "plant" | "beef" | "any";
+export type DietConstraint = "none" | "vegetarian" | "vegan" | "pescatarian" | "gluten_free" | "dairy_free" | "halal" | "keto_low_carb";
 
 export type TasteProfile =
   | "warm_savory_grain_bowl"
@@ -27,6 +28,10 @@ export interface MealIntent {
   wantsLargePortions: number;
   /** 0-1: avoid fried / battered items. */
   limitFried: number;
+  /** Hard dietary rule the results must respect. */
+  diet: DietConstraint;
+  /** 0-1: wants spicy food. */
+  wantsSpicy: number;
   noulWeights: DecisionApiNoulWeights;
   budgetCad: number | null;
   /** Optional per-item calorie cap (applies where calories are known or estimated). */
@@ -40,7 +45,7 @@ export interface MealIntent {
   searchTerm: string;
 }
 
-const ALLERGEN_KEYWORDS: Record<AllergenTag, string[]> = {
+export const ALLERGEN_KEYWORDS: Record<AllergenTag, string[]> = {
   peanuts: ["peanut", "peanuts", "groundnut"],
   tree_nuts: ["tree nut", "tree nuts", "almond", "almonds", "walnut", "cashew", "pecan", "pistachio", "hazelnut"],
   sesame: ["sesame", "tahini"],
@@ -303,6 +308,24 @@ const DECISION_QUESTIONS = {
     type: "noul",
     instructions: "Does the user want large, filling, or generous portions (e.g. 'enough portions', 'filling', 'big', 'for sharing')?",
   },
+  diet_constraint: {
+    type: "choice",
+    instructions: "Does the user state a hard dietary rule the food must follow? Only pick one if it is explicit.",
+    criteria: {
+      none: "No dietary rule stated",
+      vegetarian: "Vegetarian (no meat or fish; eggs and dairy fine)",
+      vegan: "Vegan or plant-based only (no meat, fish, eggs, dairy, honey)",
+      pescatarian: "Pescatarian (fish and seafood fine, no other meat)",
+      gluten_free: "Gluten-free or celiac",
+      dairy_free: "Dairy-free or lactose intolerant",
+      halal: "Halal only",
+      keto_low_carb: "Keto or low-carb",
+    },
+  },
+  wants_spicy: {
+    type: "noul",
+    instructions: "Does the user want spicy or hot food? (0 if they want mild or do not mention it)",
+  },
   limit_fried: {
     type: "noul",
     instructions: "Should deep-fried, battered, or crispy-fried items be avoided for this user (healthy request or liver / lipid / weight concerns)?",
@@ -404,6 +427,17 @@ export async function analyzeIntent(
   for (const [k, v] of Object.entries(a.primary_lens?.probabilities ?? {})) lensProbabilities[k] = round(v);
 
   const portionWords = /\b(enough|filling|big|large|generous|hearty|share|sharing|family|feast|hungry|portions?)\b/.test(lower);
+  const heuristicDiet = (): DietConstraint =>
+    /\bvegan|plant[- ]based\b/.test(lower) ? "vegan"
+    : /\bvegetarian|veggie only|no meat\b/.test(lower) ? "vegetarian"
+    : /\bpescatarian\b/.test(lower) ? "pescatarian"
+    : /gluten[- ]?free|celiac|coeliac/.test(lower) ? "gluten_free"
+    : /dairy[- ]?free|lactose/.test(lower) ? "dairy_free"
+    : /\bhalal\b/.test(lower) ? "halal"
+    : /\bketo|low[- ]carb\b/.test(lower) ? "keto_low_carb"
+    : "none";
+  const dietFromModel = a.diet_constraint?.choice as DietConstraint | undefined;
+  const diet: DietConstraint = dietFromModel && dietFromModel !== "none" && (a.diet_constraint?.confidence ?? 0) >= 0.6 ? dietFromModel : heuristicDiet();
 
   return {
     queryText,
@@ -419,6 +453,8 @@ export async function analyzeIntent(
     ironDirection,
     wantsLargePortions: round(a.wants_large_portions?.noul ?? (portionWords ? 0.8 : 0.3)),
     limitFried: round(a.limit_fried?.noul ?? (/healthy|light|lean|liver|fat/.test(lower) ? 0.85 : 0.4)),
+    diet,
+    wantsSpicy: round(a.wants_spicy?.noul ?? (/\bspicy|hot\b|peri|chili/.test(lower) ? 0.8 : 0.2)),
     noulWeights,
     budgetCad,
     maxCalories: null,
