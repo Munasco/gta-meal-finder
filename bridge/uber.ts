@@ -11,7 +11,7 @@ export const OBU_REGISTRY = "/tmp/open-browser-use/active.json";
 const CACHE_MS = 10 * 60 * 1000;
 
 export interface Item { name: string; description: string; price: number | null; section: string | null; imageUrl: string | null; url?: string | null; calories?: number | null; likedPct?: number | null }
-export interface Restaurant { restaurant: string; storeUrl: string | null; rating: number | null; address: string | null; items: Item[]; promos?: string[]; geo?: { lat: number; lng: number } | null }
+export interface Restaurant { restaurant: string; storeUrl: string | null; rating: number | null; address: string | null; items: Item[]; promos?: string[]; geo?: { lat: number; lng: number } | null; schemaType?: string | null }
 export interface StoreLink { name: string; url: string; promos: string[] }
 
 export const cache = new Map<string, { at: number; restaurants: Restaurant[] }>();
@@ -54,6 +54,7 @@ function extractMenu(): Restaurant[] {
         const addr = node.address as Record<string, unknown> | undefined;
         const geo = node.geo as Record<string, unknown> | undefined;
         out.push({
+          schemaType: typeof node["@type"] === "string" ? (node["@type"] as string) : null,
           geo: geo && Number.isFinite(Number(geo.latitude)) ? { lat: Number(geo.latitude), lng: Number(geo.longitude) } : null,
           restaurant: String(node.name ?? text(document.querySelector("h1")) ?? "Restaurant").trim(),
           storeUrl: location.href.split("?")[0],
@@ -307,7 +308,10 @@ export async function search(query: string, pl: string | null, maxStores: number
         await settle(h, (s) => s.ld > 0, 20_000);
         await scrollThrough(h);
         const found = await h.evaluate<Restaurant[]>(EXPR_EXTRACT);
-        for (const r of found) restaurants.push({ ...r, storeUrl: store.url, restaurant: r.restaurant || store.name, promos: store.promos });
+        for (const r of found) {
+          if (r.schemaType && !/Restaurant|FoodEstablishment|Cafe|Bar/i.test(r.schemaType)) continue;
+          restaurants.push({ ...r, storeUrl: store.url, restaurant: r.restaurant || store.name, promos: store.promos });
+        }
         console.log(`[bridge] ${store.name}: ${found.reduce((n, r) => n + r.items.length, 0)} items`);
       } catch (e) {
         console.warn(`[bridge] ${store.name}: ${e instanceof Error ? e.message : e}`);

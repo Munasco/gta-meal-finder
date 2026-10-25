@@ -9,6 +9,7 @@
  */
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { isNonRestaurantName, isNonRestaurantType } from "../lib/store-filter";
 import { EXPR_EXTRACT, EXPR_STORES, getDriver, scrollThrough, settle, sleep, type Restaurant, type StoreLink } from "./uber";
 
 const args = new Map<string, string>();
@@ -113,7 +114,7 @@ try {
       await h.goto(url);
       await settle(h, (s) => s.stores >= 3, 45_000);
       await sleep(1200);
-      const stores = (await h.evaluate<StoreLink[]>(EXPR_STORES)).slice(0, MAX_STORES);
+      const stores = (await h.evaluate<StoreLink[]>(EXPR_STORES)).filter((s) => !isNonRestaurantName(s.name)).slice(0, MAX_STORES);
       for (const store of stores) {
         const existing = known.get(store.url);
         const stale = existing && REVISIT && (!existing.items.some((i) => i.url) || !existing.geo || !existing.address);
@@ -132,6 +133,10 @@ try {
           const r = found[0];
           if (!r || r.items.length === 0) {
             console.log(`[crawl]   ${store.name}: no menu`);
+            continue;
+          }
+          if (isNonRestaurantType(r.schemaType) || isNonRestaurantName(r.restaurant)) {
+            console.log(`[crawl]   ${store.name}: skipped (${r.schemaType ?? "not a restaurant"})`);
             continue;
           }
           const entry: DatasetRestaurant = {
