@@ -182,7 +182,7 @@ export function GoogleLocationMap({
         </div>
         {error && (
           <div className="absolute inset-0 flex items-center justify-center bg-muted/80 px-3 text-center text-xs text-muted-foreground">
-            <Icon icon="lucide:map-off" className="mr-1.5 size-3.5" />
+            <Icon icon="lucide:map-pin-off" className="mr-1.5 size-3.5" />
             {error}
           </div>
         )}

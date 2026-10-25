@@ -3,16 +3,21 @@
  * searched in-process. Enabled with DATASET_LOCAL=1. Never used on the Cloudflare dev runtime, which
  * has no filesystem and asks the local helper instead.
  */
-import { mergeEstimates, searchDataset, type DatasetQuery, type DsRestaurant } from "./dataset-search";
+import { indexDataset, mergeEstimates, searchDataset, type DatasetQuery, type DsRestaurant } from "./dataset-search";
 
-let cache: { restaurants: DsRestaurant[]; loadedAt: number } | null = null;
+interface Loaded {
+  restaurants: DsRestaurant[];
+  stats: { restaurants: number; items: number; withHealth: number };
+}
+
+/** One load per process; a failed load is retried on the next call. */
+let loading: Promise<Loaded> | null = null;
 
 export function localDatasetEnabled(): boolean {
   return process.env.DATASET_LOCAL === "1";
 }
 
-async function load(): Promise<DsRestaurant[]> {
-  if (cache) return cache.restaurants;
+async function read(): Promise<Loaded> {
   const fs = await import("node:fs/promises");
   const path = await import("node:path");
   const root = process.env.DATASET_DIR ?? path.join(process.cwd(), "data");
@@ -24,15 +29,32 @@ async function load(): Promise<DsRestaurant[]> {
   } catch {
     /* no estimates shipped */
   }
-  cache = { restaurants, loadedAt: Date.now() };
-  return restaurants;
+  indexDataset(restaurants);
+  let items = 0;
+  let withHealth = 0;
+  for (const r of restaurants) for (const i of r.items) { items += 1; if (i.health) withHealth += 1; }
+  return { restaurants, stats: { restaurants: restaurants.length, items, withHealth } };
+}
+
+function load(): Promise<Loaded> {
+  if (!loading) {
+    loading = read().catch((e) => {
+      loading = null;
+      throw e;
+    });
+  }
+  return loading;
+}
+
+/** Start reading the snapshot now so it overlaps with intent analysis instead of following it. */
+export function warmLocalDataset(): void {
+  if (localDatasetEnabled()) void load().catch(() => null);
 }
 
 export async function searchLocalDataset(q: DatasetQuery): Promise<DsRestaurant[]> {
-  return searchDataset(await load(), q);
+  return searchDataset((await load()).restaurants, q);
 }
 
 export async function localDatasetStats() {
-  const rs = await load();
-  return { restaurants: rs.length, items: rs.reduce((n, r) => n + r.items.length, 0), withHealth: rs.reduce((n, r) => n + r.items.filter((i) => i.health).length, 0) };
+  return (await load()).stats;
 }

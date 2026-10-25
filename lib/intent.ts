@@ -422,11 +422,31 @@ export function decisionConfigFromEnv(): DecisionConfig {
   };
 }
 
-async function callDecisionOne(queryText: string, config: DecisionConfig) {
+type DecisionResponse = { model: string; answers: Record<string, DecisionAnswer> };
+
+/** Same request text, same answers: skip the round trip while the function instance is warm. */
+const DECISION_CACHE = new Map<string, { at: number; value: DecisionResponse }>();
+const DECISION_CACHE_TTL_MS = 15 * 60_000;
+const DECISION_CACHE_MAX = 300;
+const DECISION_TIMEOUT_MS = 6000;
+
+async function callDecisionOne(queryText: string, config: DecisionConfig): Promise<DecisionResponse | null> {
   if (!config.apiKey || !config.endpoint) return null;
-  const res = await fetch(config.endpoint, {
+  const key = `${config.deployment ?? "decision-1"}|${queryText.trim().toLowerCase().replace(/\s+/g, " ")}`;
+  const hit = DECISION_CACHE.get(key);
+  if (hit && Date.now() - hit.at < DECISION_CACHE_TTL_MS) return hit.value;
+  const value = await requestDecisionOne(queryText, config);
+  if (DECISION_CACHE.size >= DECISION_CACHE_MAX) DECISION_CACHE.delete(DECISION_CACHE.keys().next().value as string);
+  DECISION_CACHE.set(key, { at: Date.now(), value });
+  return value;
+}
+
+async function requestDecisionOne(queryText: string, config: DecisionConfig): Promise<DecisionResponse> {
+  const res = await fetch(config.endpoint!, {
     method: "POST",
-    headers: { "Content-Type": "application/json", "api-key": config.apiKey },
+    headers: { "Content-Type": "application/json", "api-key": config.apiKey! },
+    // Heuristics take over if the model is slow; the user never waits on a hung upstream.
+    signal: AbortSignal.timeout(DECISION_TIMEOUT_MS),
     body: JSON.stringify({
       model: config.deployment ?? "decision-1",
       state: JSON.stringify({
@@ -440,7 +460,7 @@ async function callDecisionOne(queryText: string, config: DecisionConfig) {
   if (!res.ok) {
     throw new Error(`Microsoft Decision-1 HTTP ${res.status}: ${(await res.text()).slice(0, 300)}`);
   }
-  return (await res.json()) as { model: string; answers: Record<string, DecisionAnswer> };
+  return (await res.json()) as DecisionResponse;
 }
 
 const round = (n: number) => Number(n.toFixed(4));

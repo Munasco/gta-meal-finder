@@ -10,17 +10,19 @@
     "dev": "node scripts/run-framework.mjs dev",
     "build": "node scripts/run-framework.mjs build",
     "start": "node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js dev --config dist/server/wrangler.json --local --persist-to .wrangler/state --ip 127.0.0.1 --inspector-port 0",
-    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "lint": "node scripts/bundle-icons.mjs --check && eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
     "bridge": "bun run bridge/server.ts",
     "crawl": "OBU_SESSION=meal-finder-crawl bun run bridge/crawl.ts",
     "enrich": "bun run bridge/enrich.ts",
-    "build:vercel": "next build",
+    "build:vercel": "node scripts/bundle-icons.mjs && next build",
     "start:vercel": "next start",
-    "clean": "bun run bridge/clean-dataset.ts"
+    "clean": "bun run bridge/clean-dataset.ts",
+    "icons": "node scripts/bundle-icons.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
+    "@fontsource-variable/inter": "^5.3.0",
     "@hookform/resolvers": "^5.7.1",
     "@iconify/react": "^6.0.3",
     "@shadcn/react": "^0.3.0",
@@ -52,6 +54,9 @@
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.37.1",
     "@cloudflare/workers-types": "4.20260515.1",
+    "@iconify-json/lucide": "^1.2.147",
+    "@iconify-json/simple-icons": "^1.2.100",
+    "@iconify/utils": "^3.1.7",
     "@tailwindcss/postcss": "4.2.1",
     "@types/bun": "^1.4.4",
     "@types/google.maps": "^3.66.7",

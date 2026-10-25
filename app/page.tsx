@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Icon } from "@/components/icon";
 import { Composer } from "@/components/meal/composer";
 import type { GeoLocation } from "@/components/meal/location-map";
@@ -107,14 +107,22 @@ export default function MealFinderPage() {
 
   useEffect(() => {
     let cancelled = false;
+    fetchCaptured().then((c) => { if (!cancelled) setCaptured(c); });
+    return () => { cancelled = true; };
+  }, []);
+
+  // Menus captured from the user's own browser only change while the local helper is in play, never in snapshot mode.
+  const snapshotMode = Boolean(status?.snapshot);
+  useEffect(() => {
+    if (snapshotMode) return;
+    let cancelled = false;
     const refresh = () => fetchCaptured().then((c) => { if (!cancelled) setCaptured(c); });
-    refresh();
     window.addEventListener("focus", refresh);
     return () => {
       cancelled = true;
       window.removeEventListener("focus", refresh);
     };
-  }, []);
+  }, [snapshotMode]);
 
   useEffect(() => {
     let cancelled = false;
@@ -174,6 +182,8 @@ export default function MealFinderPage() {
       setLoading(false);
     }
   }, [state]);
+
+  const sortedGroups = useMemo(() => (result ? sortGroups(result.search.groups, sortBy) : []), [result, sortBy]);
 
   const liveConfigured = Boolean(status?.browserBridge?.running || (status?.snapshot?.restaurants ?? 0) > 0 || (captured?.items ?? 0) > 0);
 
@@ -334,9 +344,9 @@ export default function MealFinderPage() {
                       {state.bogo ? "No deals nearby for this. Turn off BOGO to see everything." : "Nothing matched."}
                     </div>
                   ) : resultsView === "dishes" ? (
-                    <DishList groups={sortGroups(result.search.groups, sortBy)} sortBy={sortBy} targetScore={state.targetScore ? Number(state.targetScore) : null} onSelect={setSelected} />
+                    <DishList groups={sortedGroups} sortBy={sortBy} targetScore={state.targetScore ? Number(state.targetScore) : null} onSelect={setSelected} />
                   ) : (
-                    sortGroups(result.search.groups, sortBy).slice(0, 8).map((g) => (
+                    sortedGroups.slice(0, 8).map((g) => (
                       <RestaurantCard key={g.restaurant} group={g} onSelect={setSelected} />
                     ))
                   )}

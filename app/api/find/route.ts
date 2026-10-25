@@ -3,7 +3,7 @@ import { analyzeIntent, decisionConfigFromEnv, type MealIntent } from "@/lib/int
 import { setLocationParam } from "@/lib/ingest-store";
 import type { BiomarkerLensId } from "@/lib/models";
 import { credentialsFromEnv, encodeUberLocation, searchMenus, type MenuSearchResult } from "@/lib/uber-eats";
-import { localDatasetEnabled, localDatasetStats } from "@/lib/dataset-local";
+import { localDatasetEnabled, localDatasetStats, warmLocalDataset } from "@/lib/dataset-local";
 
 export interface FindRequest {
   query: string;
@@ -76,6 +76,8 @@ export async function POST(req: Request) {
   const decision = decisionConfigFromEnv();
   const creds = credentialsFromEnv();
 
+  // Read the snapshot while Decision-1 thinks, so a cold start pays for one of them, not both.
+  warmLocalDataset();
   const intent = await analyzeIntent(query, decision);
   if (body.lens) intent.primaryLens = body.lens;
   if (typeof body.budgetCad === "number" && Number.isFinite(body.budgetCad) && body.budgetCad > 0) {

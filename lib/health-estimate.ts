@@ -238,7 +238,7 @@ export function toSyntheticDish(
     nutrients,
     bioactives: est.bioactives,
     locations: [],
-    nutritionSourceTitle: `Estimate · USDA FoodData Central (SR Legacy) + Microsoft Decision-1 · ${components.join(", ") || "no components"}`,
+    nutritionSourceTitle: "Estimate · USDA FoodData Central + Decision-1",
     nutritionSourceUrl: "https://fdc.nal.usda.gov/",
     nutritionVerifiedDate: est.estimatedAt.slice(0, 10),
   };

@@ -28,13 +28,16 @@ export const SOURCE_META: Record<MenuSource, { label: string; icon: string; live
 
 export const cad = (n: number | null | undefined) => (n === null || n === undefined ? "—" : `$${n.toFixed(2)}`);
 
-/** Short names for the scoring engine's component labels. */
-export function shortDriver(label: string): string {
-  if (/protein/i.test(label)) return "Protein";
-  if (/fibre|fiber/i.test(label)) return "Fibre";
-  if (/bioactive|whole/i.test(label)) return "Whole foods";
-  if (/sodium/i.test(label)) return "Sodium";
-  if (/saturated|trans/i.test(label)) return "Sat fat";
-  if (/sugar|glycemic/i.test(label)) return "Sugar";
-  return label;
+/** Short names for the scoring engine's components (`ScoreComponent.id`). */
+const DRIVER_LABEL: Record<string, string> = {
+  protein_density: "Protein",
+  dietary_fibre: "Fibre",
+  whole_food_bioactives: "Whole foods",
+  sodium_load: "Sodium",
+  saturated_fat: "Sat fat",
+  sugar_caloric: "Sugar",
+};
+
+export function driverLabel(id: string): string {
+  return DRIVER_LABEL[id] ?? id.replace(/_/g, " ");
 }

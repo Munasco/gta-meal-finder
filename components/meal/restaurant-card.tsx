@@ -2,9 +2,10 @@
 
 import { Icon } from "@/components/icon";
 import { Button } from "@/components/ui/button";
+import { NutriChip } from "@/components/meal/indices";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import type { MenuOption, RestaurantGroup } from "@/lib/uber-eats";
-import { cad, shortDriver } from "@/lib/ui-meta";
+import { cad, driverLabel } from "@/lib/ui-meta";
 import { cn } from "@/lib/utils";
 
 function ScoreRing({ value, label }: { value: number; label: string }) {
@@ -79,7 +80,7 @@ export function OptionRow({ option, inCombo, onSelect, showRestaurant = false }:
                 return (
                   <span key={c.id} className={cn("inline-flex items-center gap-0.5", neg ? "text-warning" : "text-brand")}>
                     <Icon icon={neg ? "lucide:arrow-down" : "lucide:arrow-up"} className="size-3" />
-                    {shortDriver(c.label)} {c.metricDisplay.split(" · ")[0].replace(/ \(.*\)$/, "")}
+                    {driverLabel(c.id)} {c.metricDisplay.split(" · ")[0].replace(/ \(.*\)$/, "")}
                   </span>
                 );
               })}
@@ -88,6 +89,7 @@ export function OptionRow({ option, inCombo, onSelect, showRestaurant = false }:
         <span className="mt-1 flex items-center gap-2.5">
           <ScoreRing value={option.healthScore} label="Health score" />
           <ScoreRing value={option.fitScore} label="Fit to your request" />
+          <NutriChip indices={option.indices} />
           {!option.evaluated && option.calories !== null && (
             <Tooltip>
               <TooltipTrigger asChild>

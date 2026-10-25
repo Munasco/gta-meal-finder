@@ -2,7 +2,7 @@ import { AbsoluteFill, Sequence, useCurrentFrame } from "remotion";
 import { easeIn, rise } from "../anim";
 import { Device } from "../components/Device";
 import { Chip, Headline, Kicker } from "../components/Type";
-import { COLORS } from "../config";
+import { COLORS, FPS, type Clip } from "../config";
 import { s } from "../timeline";
 
 export interface Callout {
@@ -23,7 +23,7 @@ export const Chapter: React.FC<{
   title: string;
   accent?: string;
   kicker: string;
-  clip: string;
+  clip: Clip;
   clipStart?: number;
   length: number; // chapter length in seconds
   titleFor?: number;
@@ -35,6 +35,11 @@ export const Chapter: React.FC<{
   const f = useCurrentFrame();
   const titleEnd = s(titleFor);
   const end = s(length);
+  // The capture must cover the chapter from the moment the device appears; otherwise it freezes on its last frame.
+  const played = length - titleFor + 4 / FPS;
+  const maxStart = clip.seconds - played - 2 / FPS;
+  if (clipStart > maxStart) throw new Error(`${clip.src}: clipStart ${clipStart}s overruns the ${clip.seconds}s clip (max ${maxStart.toFixed(2)}s)`);
+  const start = Math.max(0, clipStart);
   const fadeOut = rise(f, end - 8, end, easeIn);
   return (
     <AbsoluteFill style={{ background: COLORS.bg, opacity: 1 - fadeOut }}>
@@ -42,7 +47,7 @@ export const Chapter: React.FC<{
       {f >= titleEnd - 4 && (
         <AbsoluteFill style={{ transform: `translateY(0px)` }}>
           <div style={{ position: "absolute", inset: 0 }}>
-            <DeviceAt start={titleEnd - 4} clip={clip} clipStart={clipStart} zoom={zoom} origin={origin} />
+            <DeviceAt start={titleEnd - 4} clip={clip.src} clipStart={start} zoom={zoom} origin={origin} />
           </div>
           {callouts.map((c, i) => (
             <Chip key={i} text={c.text} x={c.x} y={c.y} from={s(c.at)} to={s(c.until)} icon={c.icon} tone={c.tone} />

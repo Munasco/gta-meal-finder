@@ -49,36 +49,71 @@ export function mergeEstimates(restaurants: DsRestaurant[], estimates: Record<st
   return restaurants;
 }
 
-/** Rank dataset restaurants for a request; the app scores only what comes back. */
-export function searchDataset(restaurants: DsRestaurant[], q: DatasetQuery): DsRestaurant[] {
-  const norm = (v: string) => v.toLowerCase();
-  const terms = q.terms.map(norm).filter((t) => t.length > 2);
-  const hint = q.hint ? norm(q.hint).replace(/[^a-z0-9]/g, "") : null;
-  const scored: { r: DsRestaurant; score: number; km: number | null }[] = [];
+interface IndexedItem {
+  item: DsItem;
+  name: string;
+  desc: string;
+  priced: boolean;
+}
+
+interface IndexedRestaurant {
+  r: DsRestaurant;
+  name: string;
+  /** Letters and digits only, for restaurant-hint matching ("nandos" ~ "Nando's"). */
+  key: string;
+  items: IndexedItem[];
+}
+
+const INDEX = new WeakMap<DsRestaurant[], IndexedRestaurant[]>();
+
+/**
+ * Lower-cased search text per restaurant and item, built once per dataset array instead of on every
+ * request (55k items × every term). Non-restaurant stores are dropped here; unpriced items still count
+ * toward a restaurant's match but are never returned.
+ */
+export function indexDataset(restaurants: DsRestaurant[]): IndexedRestaurant[] {
+  let idx = INDEX.get(restaurants);
+  if (idx) return idx;
+  idx = [];
   for (const r of restaurants) {
     if (!r.items.length || isNonRestaurantName(r.restaurant)) continue;
+    const name = r.restaurant.toLowerCase();
+    const items = r.items.map((item) => ({ item, name: item.name.toLowerCase(), desc: item.description.toLowerCase(), priced: item.price !== null }));
+    idx.push({ r, name, key: name.replace(/[^a-z0-9]/g, ""), items });
+  }
+  INDEX.set(restaurants, idx);
+  return idx;
+}
+
+/** Rank dataset restaurants for a request; the app scores only what comes back. */
+export function searchDataset(restaurants: DsRestaurant[], q: DatasetQuery): DsRestaurant[] {
+  const terms = q.terms.map((t) => t.toLowerCase()).filter((t) => t.length > 2);
+  const hint = q.hint ? q.hint.toLowerCase().replace(/[^a-z0-9]/g, "") : null;
+  const scored: { ix: IndexedRestaurant; score: number }[] = [];
+  for (const ix of indexDataset(restaurants)) {
+    const { r } = ix;
     const km = q.origin && r.geo ? haversineKm(q.origin, r.geo) : null;
     if (q.rangeKm !== undefined && km !== null && km > q.rangeKm) continue;
-    const name = norm(r.restaurant);
     let score = 0;
-    if (hint && name.replace(/[^a-z0-9]/g, "").includes(hint)) score += 50;
+    if (hint && ix.key.includes(hint)) score += 50;
     for (const t of terms) {
-      if (name.includes(t)) score += 6;
+      if (ix.name.includes(t)) score += 6;
       let hits = 0;
-      for (const i of r.items) {
-        if (norm(i.name).includes(t)) hits += 1;
-        else if (norm(i.description).includes(t)) hits += 0.3;
+      for (const i of ix.items) {
+        if (i.name.includes(t)) hits += 1;
+        else if (i.desc.includes(t)) hits += 0.3;
         if (hits >= 12) break;
       }
       score += Math.min(hits, 12);
     }
     if (km !== null) score += Math.max(0, 4 - km) * 0.5;
-    if (score > 0 || terms.length === 0) scored.push({ r, score, km });
+    if (score > 0 || terms.length === 0) scored.push({ ix, score });
   }
   scored.sort((a, b) => b.score - a.score);
-  return scored.slice(0, q.limit).map(({ r }) => {
-    const matches = (i: DsItem) => terms.reduce((n, t) => n + (norm(i.name).includes(t) ? 2 : norm(i.description).includes(t) ? 1 : 0), 0);
-    const items = [...r.items].filter((i) => i.price !== null).sort((a, b) => matches(b) - matches(a)).slice(0, q.itemsPerRestaurant);
+  return scored.slice(0, q.limit).map(({ ix }) => {
+    const { r } = ix;
+    const matches = (i: IndexedItem) => terms.reduce((n, t) => n + (i.name.includes(t) ? 2 : i.desc.includes(t) ? 1 : 0), 0);
+    const items = ix.items.filter((i) => i.priced).sort((a, b) => matches(b) - matches(a)).slice(0, q.itemsPerRestaurant).map((i) => i.item);
     return { restaurant: r.restaurant, storeUrl: r.storeUrl, rating: r.rating, address: r.address, promos: r.promos ?? [], geo: r.geo ?? null, items };
   });
 }
