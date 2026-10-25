@@ -39,7 +39,7 @@ async function loadPoints(): Promise<{ name: string; pl: string | null }[]> {
   }
   return [{ name: ADDRESS ?? "default", pl: PL_SINGLE }];
 }
-/** Revisit stores captured before item links / calories were collected. */
+/** Revisit stores captured before item links, calories, address or coordinates were collected. */
 const REVISIT = args.has("revisit");
 
 const DEFAULT_QUERIES = [
@@ -116,7 +116,7 @@ try {
       const stores = (await h.evaluate<StoreLink[]>(EXPR_STORES)).slice(0, MAX_STORES);
       for (const store of stores) {
         const existing = known.get(store.url);
-        const stale = existing && REVISIT && !existing.items.some((i) => i.url);
+        const stale = existing && REVISIT && (!existing.items.some((i) => i.url) || !existing.geo || !existing.address);
         if (existing && !stale) {
           if (!existing.foundVia.includes(q)) existing.foundVia.push(q);
           if (points.length > 1 && !existing.foundVia.includes(`@${point.name}`)) existing.foundVia.push(`@${point.name}`);

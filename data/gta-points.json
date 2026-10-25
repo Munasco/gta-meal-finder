@@ -1,35 +1,235 @@
 {
   "note": "Crawl anchor points across the Greater Toronto Area, ~6 km apart. Uber Eats search is location-based, so each point surfaces the restaurants that deliver there.",
   "points": [
-    { "name": "Downtown Toronto (Bay & Queen)", "lat": 43.6525, "lng": -79.3830 },
-    { "name": "King West / Liberty Village", "lat": 43.6390, "lng": -79.4200 },
-    { "name": "Yorkville / Midtown", "lat": 43.6710, "lng": -79.3900 },
-    { "name": "Danforth / Greektown", "lat": 43.6770, "lng": -79.3500 },
-    { "name": "Leslieville / The Beaches", "lat": 43.6670, "lng": -79.3150 },
-    { "name": "High Park / Bloor West Village", "lat": 43.6510, "lng": -79.4650 },
-    { "name": "Eglinton West / York", "lat": 43.6900, "lng": -79.4500 },
-    { "name": "Etobicoke Centre (Islington)", "lat": 43.6450, "lng": -79.5250 },
-    { "name": "South Etobicoke (Long Branch)", "lat": 43.5950, "lng": -79.5250 },
-    { "name": "Downsview / Jane & Finch", "lat": 43.7600, "lng": -79.5100 },
-    { "name": "North York Centre (Yonge & Sheppard)", "lat": 43.7610, "lng": -79.4110 },
-    { "name": "Don Mills / Fairview", "lat": 43.7770, "lng": -79.3450 },
-    { "name": "Scarborough Town Centre", "lat": 43.7760, "lng": -79.2580 },
-    { "name": "Scarborough East (Morningside)", "lat": 43.7850, "lng": -79.1900 },
-    { "name": "Scarborough South (Kingston Rd)", "lat": 43.7100, "lng": -79.2500 },
-    { "name": "Milliken / Markham South", "lat": 43.8250, "lng": -79.3000 },
-    { "name": "Markham Unionville", "lat": 43.8620, "lng": -79.3060 },
-    { "name": "Richmond Hill", "lat": 43.8710, "lng": -79.4370 },
-    { "name": "Thornhill", "lat": 43.8150, "lng": -79.4240 },
-    { "name": "Vaughan Metropolitan Centre", "lat": 43.7940, "lng": -79.5270 },
-    { "name": "Woodbridge", "lat": 43.7820, "lng": -79.6000 },
-    { "name": "Mississauga Square One", "lat": 43.5930, "lng": -79.6420 },
-    { "name": "Port Credit", "lat": 43.5560, "lng": -79.5860 },
-    { "name": "Streetsville / Meadowvale", "lat": 43.5940, "lng": -79.7300 },
-    { "name": "Brampton Downtown", "lat": 43.6850, "lng": -79.7600 },
-    { "name": "Bramalea", "lat": 43.7170, "lng": -79.7090 },
-    { "name": "Oakville", "lat": 43.4480, "lng": -79.6670 },
-    { "name": "Pickering", "lat": 43.8360, "lng": -79.0870 },
-    { "name": "Ajax", "lat": 43.8500, "lng": -79.0200 },
-    { "name": "Oshawa / Whitby", "lat": 43.8970, "lng": -78.8650 }
+    {
+      "name": "Downtown Toronto (Bay & Queen)",
+      "lat": 43.6525,
+      "lng": -79.383
+    },
+    {
+      "name": "King West / Liberty Village",
+      "lat": 43.639,
+      "lng": -79.42
+    },
+    {
+      "name": "Yorkville / Midtown",
+      "lat": 43.671,
+      "lng": -79.39
+    },
+    {
+      "name": "Danforth / Greektown",
+      "lat": 43.677,
+      "lng": -79.35
+    },
+    {
+      "name": "Leslieville / The Beaches",
+      "lat": 43.667,
+      "lng": -79.315
+    },
+    {
+      "name": "High Park / Bloor West Village",
+      "lat": 43.651,
+      "lng": -79.465
+    },
+    {
+      "name": "Eglinton West / York",
+      "lat": 43.69,
+      "lng": -79.45
+    },
+    {
+      "name": "Etobicoke Centre (Islington)",
+      "lat": 43.645,
+      "lng": -79.525
+    },
+    {
+      "name": "South Etobicoke (Long Branch)",
+      "lat": 43.595,
+      "lng": -79.525
+    },
+    {
+      "name": "Downsview / Jane & Finch",
+      "lat": 43.76,
+      "lng": -79.51
+    },
+    {
+      "name": "North York Centre (Yonge & Sheppard)",
+      "lat": 43.761,
+      "lng": -79.411
+    },
+    {
+      "name": "Don Mills / Fairview",
+      "lat": 43.777,
+      "lng": -79.345
+    },
+    {
+      "name": "Scarborough Town Centre",
+      "lat": 43.776,
+      "lng": -79.258
+    },
+    {
+      "name": "Scarborough East (Morningside)",
+      "lat": 43.785,
+      "lng": -79.19
+    },
+    {
+      "name": "Scarborough South (Kingston Rd)",
+      "lat": 43.71,
+      "lng": -79.25
+    },
+    {
+      "name": "Milliken / Markham South",
+      "lat": 43.825,
+      "lng": -79.3
+    },
+    {
+      "name": "Markham Unionville",
+      "lat": 43.862,
+      "lng": -79.306
+    },
+    {
+      "name": "Richmond Hill",
+      "lat": 43.871,
+      "lng": -79.437
+    },
+    {
+      "name": "Thornhill",
+      "lat": 43.815,
+      "lng": -79.424
+    },
+    {
+      "name": "Vaughan Metropolitan Centre",
+      "lat": 43.794,
+      "lng": -79.527
+    },
+    {
+      "name": "Woodbridge",
+      "lat": 43.782,
+      "lng": -79.6
+    },
+    {
+      "name": "Mississauga Square One",
+      "lat": 43.593,
+      "lng": -79.642
+    },
+    {
+      "name": "Port Credit",
+      "lat": 43.556,
+      "lng": -79.586
+    },
+    {
+      "name": "Streetsville / Meadowvale",
+      "lat": 43.594,
+      "lng": -79.73
+    },
+    {
+      "name": "Brampton Downtown",
+      "lat": 43.685,
+      "lng": -79.76
+    },
+    {
+      "name": "Bramalea",
+      "lat": 43.717,
+      "lng": -79.709
+    },
+    {
+      "name": "Oakville",
+      "lat": 43.448,
+      "lng": -79.667
+    },
+    {
+      "name": "Pickering",
+      "lat": 43.836,
+      "lng": -79.087
+    },
+    {
+      "name": "Ajax",
+      "lat": 43.85,
+      "lng": -79.02
+    },
+    {
+      "name": "Oshawa / Whitby",
+      "lat": 43.897,
+      "lng": -78.865
+    },
+    {
+      "name": "Malvern / Scarborough North",
+      "lat": 43.805,
+      "lng": -79.225
+    },
+    {
+      "name": "Rexdale / North Etobicoke",
+      "lat": 43.72,
+      "lng": -79.57
+    },
+    {
+      "name": "Clarkson / Lorne Park",
+      "lat": 43.52,
+      "lng": -79.63
+    },
+    {
+      "name": "Mississauga East (Dixie)",
+      "lat": 43.625,
+      "lng": -79.58
+    },
+    {
+      "name": "Brampton West (Mount Pleasant)",
+      "lat": 43.67,
+      "lng": -79.82
+    },
+    {
+      "name": "Maple / Vaughan North",
+      "lat": 43.86,
+      "lng": -79.51
+    },
+    {
+      "name": "Markham North (Major Mackenzie)",
+      "lat": 43.9,
+      "lng": -79.26
+    },
+    {
+      "name": "Aurora",
+      "lat": 44.0,
+      "lng": -79.466
+    },
+    {
+      "name": "Newmarket",
+      "lat": 44.055,
+      "lng": -79.46
+    },
+    {
+      "name": "Whitby",
+      "lat": 43.88,
+      "lng": -78.94
+    },
+    {
+      "name": "Milton",
+      "lat": 43.518,
+      "lng": -79.877
+    },
+    {
+      "name": "Burlington",
+      "lat": 43.325,
+      "lng": -79.799
+    },
+    {
+      "name": "Bolton / Caledon",
+      "lat": 43.875,
+      "lng": -79.735
+    },
+    {
+      "name": "Stouffville",
+      "lat": 43.97,
+      "lng": -79.245
+    },
+    {
+      "name": "Leaside / Thorncliffe",
+      "lat": 43.705,
+      "lng": -79.36
+    },
+    {
+      "name": "Weston / Mount Dennis",
+      "lat": 43.7,
+      "lng": -79.51
+    }
   ]
 }
