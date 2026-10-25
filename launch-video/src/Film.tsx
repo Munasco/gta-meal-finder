@@ -41,7 +41,7 @@ export const Film: React.FC = () => {
           title="Just say it."
           kicker="Describe the meal. Budget included. Shame optional."
           clip={CLIPS.prompt}
-          clipStart={3.6}
+          clipStart={2.8}
           length={T.prompt.to - T.prompt.from}
           titleFor={1.8}
           zoom={[s(6.5), s(10.5), 1, 1.12]}
@@ -60,14 +60,14 @@ export const Film: React.FC = () => {
           accent="the math."
           kicker="Net cost before tax and fees. Tip your driver."
           clip={CLIPS.combo}
-          clipStart={4.5}
+          clipStart={3.6}
           length={T.combo.to - T.combo.from}
           titleFor={1.9}
           zoom={[s(4), s(9), 1, 1.16]}
           origin={[0.82, 0.3]}
           callouts={[
             { text: "Big back? We got you", x: 1430, y: 260, at: 3.4, until: 6.4, icon: "🍽️", tone: "warn" },
-            { text: "BOGO: second main free. Cardio not included.", x: 1430, y: 350, at: 5.2, until: 8.4, icon: "🏷️", tone: "brand" },
+            { text: "BOGO: 2nd main free. Cardio extra.", x: 1380, y: 350, at: 5.2, until: 8.4, icon: "🏷️", tone: "brand" },
             { text: "Math done. Wallet alive.", x: 1430, y: 440, at: 7.0, until: 10.0, icon: "💸" },
           ]}
         />
@@ -79,7 +79,7 @@ export const Film: React.FC = () => {
           accent="reads the menu."
           kicker="USDA components + Decision-1. Scored like the lab, not the vibes."
           clip={CLIPS.sheet}
-          clipStart={5.6}
+          clipStart={4.7}
           length={T.menu.to - T.menu.from}
           titleFor={1.8}
           zoom={[s(3), s(8), 1, 1.18]}

@@ -1,10 +1,11 @@
 import { GTA_DISH_CATALOGUE } from "./gta-catalogue";
-import { localDatasetEnabled, searchLocalDataset } from "./dataset-local";
 import { ingestedLocationParam, listIngested } from "./ingest-store";
 import { ALLERGEN_KEYWORDS, type MealIntent, type TasteProfile } from "./intent";
-import type { BiomarkerLensId, EvaluatedDish } from "./models";
+import type { BidirectionalAdjustment, BiomarkerLensId, EvaluatedDish, GtaDish, ScoreComponent } from "./models";
+import { compositionFromComponents, compositionFromDish, computeIndices, type DishIndices } from "./indices";
 import { evaluateDish } from "./scoring-engine";
 import { COMPONENT_LABEL, readEstimate, toSyntheticDish, type ItemHealthEstimate } from "./health-estimate";
+import { localDatasetEnabled, searchLocalDataset } from "./dataset-local";
 
 /* ---------------------------------- types --------------------------------- */
 
@@ -33,13 +34,49 @@ export interface MenuOption {
   /** Verified (catalogue) or Decision-1 estimated calories. */
   calories: number | null;
   caloriesEstimated: boolean;
-  health: ItemHealthEstimate | null;
-  /** Present only for catalogue items with verified nutrition. */
-  evaluated?: EvaluatedDish;
+  health: OptionHealth | null;
+  /** Scoring-engine drivers and nutrients, trimmed to what the UI shows; present when nutrition is known or estimated. */
+  evaluated?: OptionEvaluation;
+  /** Nutri-Score, meal-adapted AHEI and Health Canada "high in" flags; null without nutrition. */
+  indices: DishIndices | null;
 }
 
+/** What the UI shows of an estimate (nutrients travel in `evaluated.dish`); the wire format for `MenuOption.health`. */
+export type OptionHealth = Pick<ItemHealthEstimate, "caloriesBand" | "caloriesEst" | "mainProtein" | "kind" | "components">;
+
+/** The parts of `EvaluatedDish` the cards and sheet render. The full object stays on the server. */
+export interface OptionEvaluation {
+  /** Drivers worth at least a point; labels come from `driverLabel(id)` on the client. */
+  baselineComponents: Pick<ScoreComponent, "id" | "direction" | "points" | "metricDisplay">[];
+  takeMoreOfHits: Pick<BidirectionalAdjustment, "nutrientOrFood" | "dishValueDisplay">[];
+  takeLessOfChecks: Pick<BidirectionalAdjustment, "nutrientOrFood" | "dishValueDisplay" | "status">[];
+  dish: Pick<GtaDish, "servingSize" | "nutrients" | "nutritionSourceTitle" | "nutritionSourceUrl">;
+}
+
+export function slimEvaluation(ev: EvaluatedDish): OptionEvaluation {
+  return {
+    baselineComponents: ev.baselineComponents.filter((c) => Math.abs(c.points) >= 1).map(({ id, direction, points, metricDisplay }) => ({ id, direction, points, metricDisplay })),
+    takeMoreOfHits: ev.takeMoreOfHits.slice(0, 3).map(({ nutrientOrFood, dishValueDisplay }) => ({ nutrientOrFood, dishValueDisplay })),
+    takeLessOfChecks: ev.takeLessOfChecks.filter((c) => c.status === "caution").slice(0, 3).map(({ nutrientOrFood, dishValueDisplay, status }) => ({ nutrientOrFood, dishValueDisplay, status })),
+    dish: { servingSize: ev.dish.servingSize, nutrients: ev.dish.nutrients, nutritionSourceTitle: ev.dish.nutritionSourceTitle, nutritionSourceUrl: ev.dish.nutritionSourceUrl },
+  };
+}
+
+function slimHealth(est: ItemHealthEstimate): OptionHealth {
+  return {
+    caloriesBand: est.caloriesBand,
+    caloriesEst: est.caloriesEst,
+    mainProtein: est.mainProtein,
+    kind: est.kind,
+    components: est.components.map((c) => ({ ...c, label: COMPONENT_LABEL.get(c.id) ?? c.id })),
+  };
+}
+
+/** A combo lists its items by reference; the full option is in `RestaurantGroup.options`. */
+export type ComboItem = Pick<MenuOption, "id" | "name" | "priceCad" | "kind">;
+
 export interface ComboPlan {
-  items: MenuOption[];
+  items: ComboItem[];
   /** Menu prices added up. */
   subtotalCad: number;
   /** Money the deal takes off (BOGO: the cheaper main is free). */
@@ -151,9 +188,9 @@ interface RawRestaurant {
 /* ------------------------------- utilities -------------------------------- */
 
 export function credentialsFromEnv(): ProviderCredentials {
-  return {
-    bridgeUrl: (process.env.BRIDGE_URL ?? "http://127.0.0.1:5174").replace(/\/$/, ""),
-  };
+  // Snapshot mode (Vercel) has no local Chrome helper to call; an explicit BRIDGE_URL still wins.
+  const bridgeUrl = process.env.BRIDGE_URL ?? (localDatasetEnabled() ? undefined : "http://127.0.0.1:5174");
+  return { bridgeUrl: bridgeUrl?.replace(/\/$/, "") };
 }
 
 export function parsePrice(value: unknown): number | null {
@@ -543,7 +580,7 @@ export function scoreOption(
     promo: promoMatch ? promoMatch[0] : null,
     calories,
     caloriesEstimated: !input.calories && Boolean(est),
-    health: est ? { ...est, components: est.components.map((c) => ({ ...c, label: COMPONENT_LABEL.get(c.id) ?? c.id })) } : null,
+    health: est ? slimHealth(est) : null,
     blocked,
   };
 }
@@ -595,7 +632,7 @@ export function buildCombo(options: MenuOption[], intent: MealIntent, deals: Dea
   const fees = items.length ? net * FEE_RATE + SERVICE_FEE : 0;
   const total = net + fees;
   return {
-    items,
+    items: items.map(({ id, name, priceCad, kind }) => ({ id, name, priceCad, kind })),
     subtotalCad: Number(subtotal.toFixed(2)),
     discountCad: Number(discount.toFixed(2)),
     dealLabel: discount > 0 ? label : null,
@@ -614,21 +651,28 @@ function groupFromRaw(raw: RawRestaurant, intent: MealIntent, source: MenuSource
     if (blocked) return [];
     const id = `${slug(raw.name)}-${slug(it.name)}-${i}`;
     // Estimated nutrition goes through the same engine and biomarker lens as the verified catalogue.
-    const evaluated = it.health?.nutrients
-      ? evaluateDish(toSyntheticDish(it.health, { id, name: it.name, restaurant: raw.name, description: it.description, priceCad: it.price, publishedCalories: it.calories }), {
+    const synthetic = it.health?.nutrients ? toSyntheticDish(it.health, { id, name: it.name, restaurant: raw.name, description: it.description, priceCad: it.price, publishedCalories: it.calories }) : null;
+    const evaluated = synthetic
+      ? evaluateDish(synthetic, {
           activeLens: intent.primaryLens,
           excludedAllergens: intent.detectedAllergens,
           excludedIngredients: intent.detectedIngredientExclusions,
           decisionWeights: intent.noulWeights,
         })
       : undefined;
+    // When the estimate is anchored to published calories the nutrients are rescaled; the component masses must follow.
+    const scale = it.health && synthetic && it.health.nutrients.calories > 0 ? synthetic.nutrients.calories / it.health.nutrients.calories : 1;
+    const indices = it.health && synthetic
+      ? computeIndices(compositionFromComponents(it.health.components.map((c) => ({ ...c, grams: c.grams * scale })), synthetic.nutrients, it.health.kind))
+      : null;
     if (evaluated) {
       scored.healthScore = Math.round(evaluated.combinedRankScore * 0.8 + scored.healthScore * 0.2);
       scored.reasons = [...new Set([...evaluated.takeMoreOfHits.slice(0, 2).map((h) => h.nutrientOrFood), ...scored.reasons])].slice(0, 3);
       scored.cautions = [...new Set([...evaluated.takeLessOfChecks.filter((c) => c.status === "caution").slice(0, 2).map((c) => c.nutrientOrFood), ...scored.cautions])].slice(0, 3);
     }
     return [{
-      evaluated,
+      evaluated: evaluated ? slimEvaluation(evaluated) : undefined,
+      indices,
       id,
       name: it.name,
       description: it.description,
@@ -724,7 +768,8 @@ function searchCatalogue(intent: MealIntent): RestaurantGroup[] {
       calories: dish.nutrients.calories,
       caloriesEstimated: false,
       health: null,
-      evaluated,
+      evaluated: slimEvaluation(evaluated),
+      indices: computeIndices(compositionFromDish(dish)),
     };
     if (intent.maxCalories !== null && dish.nutrients.calories > intent.maxCalories) continue;
     byRestaurant.set(dish.restaurant, [...(byRestaurant.get(dish.restaurant) ?? []), option]);

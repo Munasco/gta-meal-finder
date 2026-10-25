@@ -1,4 +1,4 @@
-import { FPS } from "./config";
+import { FPS, measured, type MediaFile } from "./config";
 
 /** Seconds → frames. */
 export const s = (sec: number) => Math.round(sec * FPS);
@@ -17,13 +17,27 @@ export const T = {
   outro: { from: 56.0, to: END },      // dishes, claim, big backs, end card (final section)
 } as const;
 
-/** Voice lines (public/audio/vo-N.wav). Scene beats sit around their real lengths. */
+/** A voice line placed `offset` seconds into its chapter; it must end before the chapter does. */
+const vo = (file: MediaFile, chapter: { from: number; to: number }, offset: number) => {
+  const dur = measured(file);
+  const at = chapter.from + offset;
+  if (at + dur > chapter.to - 0.3) throw new Error(`${file} (${dur}s) runs past its chapter (ends ${(at + dur).toFixed(2)}s, chapter ends ${chapter.to}s)`);
+  return { file, at, dur };
+};
+
+/** Voice lines (public/audio/vo-N.wav); lengths come from the files, so a re-recorded line re-times itself. */
 export const VO = [
-  { file: "audio/vo-1.wav", at: T.prompt.from + 2.0, dur: 7.32 },
-  { file: "audio/vo-2.wav", at: T.combo.from + 2.3, dur: 5.96 },
-  { file: "audio/vo-3.wav", at: T.menu.from + 1.2, dur: 7.08 },
-  { file: "audio/vo-4.wav", at: T.gta.from + 1.8, dur: 5.28 },
-  { file: "audio/vo-5.wav", at: T.outro.from + 5.2, dur: 4.4 },
-] as const;
+  vo("audio/vo-1.wav", T.prompt, 2.0),
+  vo("audio/vo-2.wav", T.combo, 2.3),
+  vo("audio/vo-3.wav", T.menu, 1.2),
+  vo("audio/vo-4.wav", T.gta, 1.8),
+  vo("audio/vo-5.wav", T.outro, 5.2),
+];
+
+/** Outro beats (seconds into the outro) follow voice line 5: card out, grid reprise, end card. */
+export const BIG_BACKS_OUT = VO[4].at - T.outro.from + VO[4].dur + 0.2;
+export const GRID_OUT = BIG_BACKS_OUT + 4.8;
+export const END_CARD = GRID_OUT + 0.4;
+if (END_CARD + 6 > END - T.outro.from) throw new Error(`Outro beats run past the film: end card at ${END_CARD.toFixed(1)}s of ${(END - T.outro.from).toFixed(1)}s`);
 
 export const DURATION = s(END);

@@ -1,11 +1,12 @@
 "use client";
 
 import { Icon } from "@/components/icon";
+import { IndicesPanel } from "@/components/meal/indices";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import type { MenuOption } from "@/lib/uber-eats";
-import { SOURCE_META, cad, shortDriver } from "@/lib/ui-meta";
+import { SOURCE_META, cad, driverLabel } from "@/lib/ui-meta";
 import { officialNutritionLink } from "@/lib/nutrition-links";
 
 function Driver({ label, metric, points }: { label: string; metric: string; points: number }) {
@@ -84,7 +85,7 @@ export function OptionSheet({ option, onClose }: { option: MenuOption | null; on
                     .sort((a, b) => Math.abs(b.points) - Math.abs(a.points))
                     .slice(0, 6)
                     .map((c) => (
-                      <Driver key={c.id} label={shortDriver(c.label)} metric={c.metricDisplay} points={c.direction === "negative" ? -Math.abs(c.points) : c.points} />
+                      <Driver key={c.id} label={driverLabel(c.id)} metric={c.metricDisplay} points={c.direction === "negative" ? -Math.abs(c.points) : c.points} />
                     ))}
                   {option.cautions.filter((c) => /No |over your limit|Fried/.test(c)).map((c) => <Line key={c} icon="lucide:triangle-alert" text={c} tone="warn" />)}
                 </ul>
@@ -95,6 +96,13 @@ export function OptionSheet({ option, onClose }: { option: MenuOption | null; on
                     {option.cautions.map((c) => <Line key={c} icon="lucide:triangle-alert" text={c} tone="warn" />)}
                   </ul>
                 )
+              )}
+
+              {option.indices && (
+                <>
+                  <Separator />
+                  <IndicesPanel indices={option.indices} basis={option.health ? "estimate" : "catalogue"} />
+                </>
               )}
 
               {option.health && option.health.components.length > 0 && (

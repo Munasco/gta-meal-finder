@@ -4,7 +4,7 @@
     "pl": "JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjIwMCUyMEJheSUyMFN0JTJDJTIwVG9yb250byUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNjQ3NyUyQyUyMmxvbmdpdHVkZSUyMiUzQS03OS4zNzk3JTdE"
   },
   "startedAt": "2026-10-25T03:43:28.876Z",
-  "updatedAt": "2026-10-25T06:29:41.157Z",
+  "updatedAt": "2026-10-25T06:35:17.413Z",
   "queriesDone": [
     "healthy",
     "salad",
@@ -181,7 +181,11 @@
     "Port Credit|thai",
     "Port Credit|vietnamese",
     "Port Credit|mexican",
-    "Port Credit|vegan"
+    "Port Credit|vegan",
+    "Port Credit|caribbean",
+    "Port Credit|halal",
+    "Streetsville / Meadowvale|healthy",
+    "Streetsville / Meadowvale|salad"
   ],
   "restaurants": [
     {
@@ -117426,7 +117430,8 @@
         "@King West / Liberty Village",
         "@Yorkville / Midtown",
         "@Vaughan Metropolitan Centre",
-        "@Mississauga Square One"
+        "@Mississauga Square One",
+        "@Port Credit"
       ],
       "itemCount": 130,
       "capturedAt": "2026-10-25T04:01:18.067Z"
@@ -205431,7 +205436,8 @@
         "@Thornhill",
         "@Vaughan Metropolitan Centre",
         "@Woodbridge",
-        "@Mississauga Square One"
+        "@Mississauga Square One",
+        "@Port Credit"
       ],
       "itemCount": 66,
       "capturedAt": "2026-10-25T05:04:04.226Z"
@@ -209887,7 +209893,8 @@
       "foundVia": [
         "halal",
         "@Downtown Toronto (Bay & Queen)",
-        "@Mississauga Square One"
+        "@Mississauga Square One",
+        "@Port Credit"
       ],
       "itemCount": 41,
       "capturedAt": "2026-10-25T05:05:16.498Z"
@@ -347427,7 +347434,8 @@
         "halal",
         "@Vaughan Metropolitan Centre",
         "@Woodbridge",
-        "@Mississauga Square One"
+        "@Mississauga Square One",
+        "@Port Credit"
       ],
       "itemCount": 57,
       "capturedAt": "2026-10-25T06:12:06.813Z"
@@ -369924,7 +369932,8 @@
       "bogo": false,
       "foundVia": [
         "healthy",
-        "@Mississauga Square One"
+        "@Mississauga Square One",
+        "@Streetsville / Meadowvale"
       ],
       "itemCount": 25,
       "capturedAt": "2026-10-25T06:15:59.019Z"
@@ -375013,7 +375022,8 @@
       "bogo": false,
       "foundVia": [
         "salad",
-        "@Mississauga Square One"
+        "@Mississauga Square One",
+        "@Streetsville / Meadowvale"
       ],
       "itemCount": 26,
       "capturedAt": "2026-10-25T06:16:41.070Z"
@@ -430832,6 +430842,1612 @@
       ],
       "itemCount": 39,
       "capturedAt": "2026-10-25T06:29:19.312Z"
+    },
+    {
+      "address": "2501 Hyde Park Gate, Oakville",
+      "geo": {
+        "lat": 43.5149816,
+        "lng": -79.6876969
+      },
+      "items": [
+        {
+          "calories": null,
+          "description": "ALLERGENS:  Dairy, Gluten\nThis thick &amp; hearty Chili variation is loaded with flavour, a touch of heat and some smokey tones. Made with organic and halal white meat turkey for a great source of lean protein.  Duo of pinto and black beans, fire roasted tomatoes and a beautiful blend of spices, cilantro.  \n\nToppers (served on the side): sour cream and shredded cheddar cheese, sourdough bread \n\n*Organic Ingredients",
+          "imageUrl": null,
+          "likedPct": 96,
+          "name": "Over the Top Healthy Turkey Chili 16oz",
+          "price": 15.99,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522ad4f4ec5-aa91-4be6-a46e-3ad52dfdc9af%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Big Bowl of Healing Chicken Miso Broth, pulled chicken, rice noodles, bok choy, shiitake mushrooms, julienned carrots, jalapeño, mint, cilantro, basil, green onions. Chili sauce on the side (made in house). *halal hormone free chicken \n*organic ingredients\nALLERGENS: Soy, Sesame\nGluten Friendly",
+          "imageUrl": null,
+          "likedPct": 81,
+          "name": "Healing Chicken Noodle Bowl",
+          "price": 17.99,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25224d4e6f5d-a0a6-5c79-b659-e098310abbd3%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "description": "Almond milk, almond butter, banana, brazil nuts, cacao powder, cinnamon, dates, vanilla, raspberry chia sauce (made in-house). *organic ingredients \nALLERGENS:  Tree Nuts",
+          "imageUrl": null,
+          "name": "Chocolate &amp; Raspberry Shake 16oz",
+          "price": 12.99,
+          "section": "Featured items"
+        },
+        {
+          "calories": null,
+          "description": "Deluxe Tuna Sandwich using Wild Skip jack Tuna, Chosen Mayo, loaded with veggies (green onions, celery, red pepper, snap peas, cucumber, mixed greens, sprouts). Topped with a lovely lemon Tahini! Served on a toasted Focaccia Bun. *organic ingredients\nALLERGENS: Dairy (eggs), Fish, Gluten, Sesame, Mustard",
+          "imageUrl": null,
+          "likedPct": 87,
+          "name": "Deluxe Tuna Crunch Sandwich",
+          "price": 14.99,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522e04260b1-788b-557c-bfe9-662bc9ca9d1b%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Juicy halal and hormone free chicken breast, kale, red peppers, tomato, crispy tempeh bits, slathered in a classic caesar dressing (made in-house).\nALLERGENS:  Dairy, Eggs, Fish, Gluten, Soy, Mustard",
+          "imageUrl": null,
+          "likedPct": 86,
+          "name": "Chicken Caesar Wrap",
+          "price": 13.99,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25220038ea95-0d51-5ed9-91bc-3e6d592766bf%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Gluten Friendly. Contains nuts. Roasted Halal Hormone Free Chicken Breast tossed in a flavourful Adobe sauce (made in-house), romaine lettuce, black bean salad, pico de Gallo, cabbage, corn, crispy tortilla sticks, pucker-me up vinaigrette and chipotle sour cream.  \n*organic produce\nALLERGENS:  Tree Nuts",
+          "imageUrl": null,
+          "likedPct": 83,
+          "name": "Mexican Power Bowl Chicken",
+          "price": 16.99,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25223a8c2e90-2c25-5870-b3d8-fe097c163d6f%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Smoky pulled chicken, vibrant beans &amp; Mexican green rice, and a creamy chipotle finish — all wrapped in gluten-free goodness\n\nOur signature burrito features slow-simmered pulled chicken breast infused with smoky chipotle chilies, sun-dried tomatoes, and warm spices. Wrapped in a soft gluten-free tortilla, it’s layered with vibrant green rice, hearty adobo black beans, crisp red cabbage, and freshly made pico de gallo. Finished with a silky CASHEW-chipotle “sour cream,” this burrito is crafted for a perfect balance of comfort and authenticity.  \n\nALLERGENS: Contains soy (tamari), tree nuts (cashews). Gluten-free.\n\nNote: You have the option to select regular sour cream (instead of our cashew based chipotle sour cream).",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Adobo Pulled Chicken Burrito",
+          "price": 15.99,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%252288cd25cb-9da1-4b35-9b33-2cffa0e2e18b%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Carrot, grapefruit, orange, lemon, lime, ginger, turmeric, BEE POLLEN\n*organic ingredients",
+          "imageUrl": null,
+          "likedPct": 87,
+          "name": "F L U Fighter Smoothie 16oz",
+          "price": 10.99,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25224e351b92-9390-545b-b19b-223d7d0e629a%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Organic lentils are slow cooked in coconut milk &amp; our nutritious vegetable stock along with a medley of wonderful warming spices (cumin, curry, turmeric, ginger, cinnamon &amp; aniseed). Served over organic Basmati Rice. Topped with a soft boiled egg, chili &amp; lime. Rich in minerals, protein &amp; fiber.  Perfect for a cold Day! \norganic ingredients. \nGluten Friendly\nALLERGEN: Eggs, Sesame",
+          "imageUrl": null,
+          "likedPct": 66,
+          "name": "Red Split Lentil Dahl Bowl",
+          "price": 12.99,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522d9149251-7de2-44ea-a85c-6e1a45e62f59%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Almond butter, tahini, almond milk, avocado, cacao powder, dates, cold brew coffee, vanilla. *organic ingredients \nALLERGENS:  Tree Nuts, Sesame",
+          "imageUrl": null,
+          "likedPct": 88,
+          "name": "Protein Punch Cacao Smoothie 16oz",
+          "price": 12.99,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522e87fe255-5dbc-5b53-a46e-ff6791681e4f%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Top selling hard to believe these are healthy, hearty and guilty free.  Customer Favourite! \nVegan. Gluten Friendly\nALLERGENS:  Tree Nuts. \nOrganic ingredients",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "Cookies Spiced Carrot Cake 84g",
+          "price": 4.49,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522efbf3509-26b5-5ed1-9e77-b4792d565c23%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Vegan. Gluten Friendly\nALLERGENS:  Tree Nuts. \nCustomer Favourite, guilt free, moist and satisfying made with premium ingredients! Gluten Free Flour, bananas, walnuts, rice milk, coconut oil, coconut sugar, cinnamon, ginger, nutmeg, cardamon, vanilla \n*organic ingredients",
+          "imageUrl": null,
+          "likedPct": 95,
+          "name": "Banana Walnut Loaf 132g",
+          "price": 4.99,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522e2dcc5c0-6a82-52e3-8a87-0ed97cfd069d%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "description": "Your choice of milk &amp; Superfine ground turmeric, cinnamon, and ginger make this a perfect caffeine - free latte blend.",
+          "imageUrl": null,
+          "name": "Latte Turmeric &amp; Ginger",
+          "price": 4.29,
+          "section": "Featured items"
+        },
+        {
+          "description": "Vegan. Gluten Friendly. \n\nPear, gluten free oats, rice milk, raisins, mix of 5 super seeds, cacao powder, cinnamon, ginger, maple syrup. (Topper: coconut flakes, figs, lemon zest). *organic ingredients\n\nNOTE: Our retail items may expire within 1 to 3 days",
+          "imageUrl": null,
+          "name": "Pear &amp; Super Seedy Overnight Oats",
+          "price": 7.99,
+          "section": "Featured items"
+        },
+        {
+          "calories": null,
+          "description": "Prepare with your choice of milk &amp; Premium Ceremonial Matcha, this exceptional drink features deep umami flavor, light grassy notes, and a brilliant green color.",
+          "imageUrl": null,
+          "likedPct": 93,
+          "name": "Latte Matcha",
+          "price": 4.79,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522b10150fe-1b12-5117-abb9-48cf37f03802%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Baby spinach leaves, mint, celery, green apple, cucumber, date, coconut water *organic ingredients",
+          "imageUrl": null,
+          "likedPct": 96,
+          "name": "Alkalizing Refresher Smoothie 16oz",
+          "price": 10.99,
+          "section": "Smoothies",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%2522b16a7cb7-1398-52b2-af0e-acc8ed222e95%2522%252C%2522itemUuid%2522%253A%252248323e30-15a0-547d-bb84-9f4c64164e03%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Mango, Banana, Pineapple, Hemp Hearts, Mulberries, Blue Spirulina, Coconut Water. *organic ingredients",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "Blue Dream Smoothie 16oz",
+          "price": 14.99,
+          "section": "Smoothies",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%2522b16a7cb7-1398-52b2-af0e-acc8ed222e95%2522%252C%2522itemUuid%2522%253A%2522d7f20172-edb7-5a83-a8aa-3ee027dc665c%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Blueberries, banana, cashews, coconut flakes, mulberries, almond butter, blueberry powder, BEE POLLEN *organic ingredients \nALLERGENS: Tree Nuts",
+          "imageUrl": null,
+          "likedPct": 88,
+          "name": "Blueberry Blast Smoothie 16oz",
+          "price": 12.99,
+          "section": "Smoothies",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%2522b16a7cb7-1398-52b2-af0e-acc8ed222e95%2522%252C%2522itemUuid%2522%253A%2522265aa756-213f-5005-99fc-a2fea2d53ad2%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Carrot, grapefruit, orange, lemon, lime, ginger, turmeric, BEE POLLEN\n*organic ingredients",
+          "imageUrl": null,
+          "likedPct": 87,
+          "name": "F L U Fighter Smoothie 16oz",
+          "price": 10.99,
+          "section": "Smoothies",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25224e351b92-9390-545b-b19b-223d7d0e629a%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Mango, pineapple, banana, spinach, hemp hearts, dates, ginger, coconut water *organic ingredients",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "Hide My Greens Smoothie 16oz",
+          "price": 13.99,
+          "section": "Smoothies",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%2522b16a7cb7-1398-52b2-af0e-acc8ed222e95%2522%252C%2522itemUuid%2522%253A%25226cee35be-bbd0-54cb-ba8c-896c0cae654a%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Almond butter, tahini, almond milk, avocado, cacao powder, dates, cold brew coffee, vanilla. *organic ingredients \nALLERGENS:  Tree Nuts, Sesame",
+          "imageUrl": null,
+          "likedPct": 88,
+          "name": "Protein Punch Cacao Smoothie 16oz",
+          "price": 12.99,
+          "section": "Smoothies",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522e87fe255-5dbc-5b53-a46e-ff6791681e4f%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "description": "Almond milk, almond butter, banana, brazil nuts, cacao powder, cinnamon, dates, vanilla, raspberry chia sauce (made in-house). *organic ingredients \nALLERGENS:  Tree Nuts",
+          "imageUrl": null,
+          "name": "Chocolate &amp; Raspberry Shake 16oz",
+          "price": 12.99,
+          "section": "Smoothies"
+        },
+        {
+          "description": "Organic Strawberries, Organic Banana, Organic Freshly Squeezed Orange Juice.",
+          "imageUrl": null,
+          "name": "Strawberry Banana Smoothie 16oz",
+          "price": 10.99,
+          "section": "Smoothies"
+        },
+        {
+          "description": "Choice of milk (regular, almond milk, oat milk, coconut milk), choice of protein powder (New Zealand Whey Isolate OR Garden Of Life Raw Organic unsweetened), Spinach, Greek yoghurt (dairy), Avocado, Date, Cinnamon.\nALLERGENS:  Dairy",
+          "imageUrl": null,
+          "name": "Green &amp; Protein Smoothie 16oz",
+          "price": 15.99,
+          "section": "Smoothies"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Vegan Protein 1 Scoop",
+          "price": 3.49,
+          "section": "Smoothies"
+        },
+        {
+          "description": "ALLERGEN:  Dairy",
+          "imageUrl": null,
+          "name": "Whey Isolate Protein 1 Scoop",
+          "price": 3.49,
+          "section": "Smoothies"
+        },
+        {
+          "description": "Like your favourite yogurt breakfast bowl blended into a smoothie. Made with Greek yogurt, banana, milk or your choice of milk alternative, protein powder (whey or vegan), HPK granola (almond butter, tahini), dates, fig, and cinnamon. Creamy, filling, and protein-packed.\n*Organic Ingredients\nALLERGENS:  Tree Nuts (Almonds), Dairy, Sesame",
+          "imageUrl": null,
+          "name": "Breakfast Power Smoothie  16oz",
+          "price": 15.99,
+          "section": "Smoothies"
+        },
+        {
+          "description": "A smooth, creamy blend of mixed berries, banana, coconut milk, Greek yogurt, orange juice, honey, and vanilla for a refreshing smoothie with creamsicle vibes.\nAllergens: Dairy (Greek yogurt)",
+          "imageUrl": null,
+          "name": "Mixed Berry Creamsicle Smoothie 16oz",
+          "price": 12.99,
+          "section": "Smoothies"
+        },
+        {
+          "description": "Vegan. Contains Nuts \nDark Rye slathered with a super creamy cashew and tahini hummus (grain free). Layers of lettuce, tomato, cucumber, avocado, sprouts, green onion, dehydrated crispy sesame tahini onions.\nALLERGENS:  Tree Nuts, Gluten, Sesame",
+          "imageUrl": null,
+          "name": "Creamy Cashew Hummus Stacked Veggie Sandwich",
+          "price": 12.99,
+          "section": "Sandwiches &amp; Wraps"
+        },
+        {
+          "calories": null,
+          "description": "Deluxe Tuna Sandwich using Wild Skip jack Tuna, Chosen Mayo, loaded with veggies (green onions, celery, red pepper, snap peas, cucumber, mixed greens, sprouts). Topped with a lovely lemon Tahini! Served on a toasted Focaccia Bun. *organic ingredients\nALLERGENS: Dairy (eggs), Fish, Gluten, Sesame, Mustard",
+          "imageUrl": null,
+          "likedPct": 87,
+          "name": "Deluxe Tuna Crunch Sandwich",
+          "price": 14.99,
+          "section": "Sandwiches &amp; Wraps",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522e04260b1-788b-557c-bfe9-662bc9ca9d1b%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Juicy halal and hormone free chicken breast, kale, red peppers, tomato, crispy tempeh bits, slathered in a classic caesar dressing (made in-house).\nALLERGENS:  Dairy, Eggs, Fish, Gluten, Soy, Mustard",
+          "imageUrl": null,
+          "likedPct": 86,
+          "name": "Chicken Caesar Wrap",
+          "price": 13.99,
+          "section": "Sandwiches &amp; Wraps",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25220038ea95-0d51-5ed9-91bc-3e6d592766bf%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "description": "Gluten Free Wrap:  Juicy halal and hormone free chicken breast, kale, red peppers, tomato, crispy tempeh bits, slathered in a classic caesar dressing (made in-house).\nALLERGENS:  Dairy, Eggs, Fish, Soy, Mustard",
+          "imageUrl": null,
+          "name": "Chicken Caesar Wrap Gluten Free",
+          "price": 14.99,
+          "section": "Sandwiches &amp; Wraps"
+        },
+        {
+          "description": "Vegan. Chickpea Salad filling of smashed chickpeas, peppers, green onions, olives, tahini and a mix of herbs and spices. *organic ingredients\nALLERGENS:  Gluten, Sesame, Mustard",
+          "imageUrl": null,
+          "name": "Smashed Chickpea Salad Wrap",
+          "price": 9.99,
+          "section": "Sandwiches &amp; Wraps"
+        },
+        {
+          "description": "Vegan. Gluten Free. Chickpea Salad filling of smashed chickpeas, peppers, green onions, olives, tahini and a mix of herbs and spices. *organic ingredients\nALLERGENS: Sesame, Mustard",
+          "imageUrl": null,
+          "name": "Smashed Chickpea Salad Wrap Gluten Free",
+          "price": 10.99,
+          "section": "Sandwiches &amp; Wraps"
+        },
+        {
+          "calories": null,
+          "description": "Smoky pulled chicken, vibrant beans &amp; Mexican green rice, and a creamy chipotle finish — all wrapped in gluten-free goodness\n\nOur signature burrito features slow-simmered pulled chicken breast infused with smoky chipotle chilies, sun-dried tomatoes, and warm spices. Wrapped in a soft gluten-free tortilla, it’s layered with vibrant green rice, hearty adobo black beans, crisp red cabbage, and freshly made pico de gallo. Finished with a silky CASHEW-chipotle “sour cream,” this burrito is crafted for a perfect balance of comfort and authenticity.  \n\nALLERGENS: Contains soy (tamari), tree nuts (cashews). Gluten-free.\n\nNote: You have the option to select regular sour cream (instead of our cashew based chipotle sour cream).",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Adobo Pulled Chicken Burrito",
+          "price": 15.99,
+          "section": "Sandwiches &amp; Wraps",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%252288cd25cb-9da1-4b35-9b33-2cffa0e2e18b%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Organic lentils are slow cooked in coconut milk &amp; our nutritious vegetable stock along with a medley of wonderful warming spices (cumin, curry, turmeric, ginger, cinnamon &amp; aniseed). Served over organic Basmati Rice. Topped with a soft boiled egg, chili &amp; lime. Rich in minerals, protein &amp; fiber.  Perfect for a cold Day! \norganic ingredients. \nGluten Friendly\nALLERGEN: Eggs, Sesame",
+          "imageUrl": null,
+          "likedPct": 66,
+          "name": "Red Split Lentil Dahl Bowl",
+          "price": 12.99,
+          "section": "Warm Bowls",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522d9149251-7de2-44ea-a85c-6e1a45e62f59%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Gluten Friendly. Contains nuts. Roasted Halal Hormone Free Chicken Breast tossed in a flavourful Adobe sauce (made in-house), romaine lettuce, black bean salad, pico de Gallo, cabbage, corn, crispy tortilla sticks, pucker-me up vinaigrette and chipotle sour cream.  \n*organic produce\nALLERGENS:  Tree Nuts",
+          "imageUrl": null,
+          "likedPct": 83,
+          "name": "Mexican Power Bowl Chicken",
+          "price": 16.99,
+          "section": "Bowls",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25223a8c2e90-2c25-5870-b3d8-fe097c163d6f%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "description": "Vegan. Gluten Free. Contains nuts. Sautéed scramble of smashed chickpeas and organic tofu, quinoa, arugula, sprouts, microgreens, cherry tomatoes, avocado. Mixed seed topper. Combo dressings: Chermoula (Moroccan pesto), Roasted garlic aioli.  \n*organic ingredients\nALLERGENS:  Tree Nuts, Soy, Sesame",
+          "imageUrl": null,
+          "name": "Turmeric Scramble Power Bowl",
+          "price": 16.99,
+          "section": "Bowls"
+        },
+        {
+          "description": "Vegan, Gluten Free. Contains nuts. Walnut Mushroom Medley Chili in a flavourful Adobe sauce (made in-house), mix of romaine and iceberg lettuce, blackbean salad, pico de Gallo, cabbage, corn, crispy tortilla sticks topper, pucker-me up vinaigrette and chipotle sour cream.\n *organic ingredients\nALLERGENS:  Contains Nuts",
+          "imageUrl": null,
+          "name": "Mexican Power Bowl Vegan",
+          "price": 16.99,
+          "section": "Bowls"
+        },
+        {
+          "description": "Super crunchy and loaded with flavour. Romaine lettuce, Roasted Chicken Breast wedges (halal hormone free), Parmesan slivers, Sourdough croutons made in-house, Radish slivers, Smoky sunflower seed topper. Classic Caesar salad dressing made in-house.  \n\norganic produce\nALLERGENS:  Dairy, Eggs, Fish, Gluten, Soy, Mustard",
+          "imageUrl": null,
+          "name": "Chicken Caesar Salad",
+          "price": 15.99,
+          "section": "Salads"
+        },
+        {
+          "calories": null,
+          "description": "Big Bowl of Healing Chicken Miso Broth, pulled chicken, rice noodles, bok choy, shiitake mushrooms, julienned carrots, jalapeño, mint, cilantro, basil, green onions. Chili sauce on the side (made in house). *halal hormone free chicken \n*organic ingredients\nALLERGENS: Soy, Sesame\nGluten Friendly",
+          "imageUrl": null,
+          "likedPct": 81,
+          "name": "Healing Chicken Noodle Bowl",
+          "price": 17.99,
+          "section": "Soups",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25224d4e6f5d-a0a6-5c79-b659-e098310abbd3%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "ALLERGENS:  Dairy, Gluten\nThis thick &amp; hearty Chili variation is loaded with flavour, a touch of heat and some smokey tones. Made with organic and halal white meat turkey for a great source of lean protein.  Duo of pinto and black beans, fire roasted tomatoes and a beautiful blend of spices, cilantro.  \n\nToppers (served on the side): sour cream and shredded cheddar cheese, sourdough bread \n\n*Organic Ingredients",
+          "imageUrl": null,
+          "likedPct": 96,
+          "name": "Over the Top Healthy Turkey Chili 16oz",
+          "price": 15.99,
+          "section": "Soups",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522ad4f4ec5-aa91-4be6-a46e-3ad52dfdc9af%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "description": "Hearty &amp; Satisfying with this classic favourite.  Halal hormone free roasted chicken, cheddar cheese, red onions, BBQ Sauce (unrefined, with cane sugar), fresh green onions.  *organic ingredients\nALLERGENS:  Dairy, Gluten",
+          "imageUrl": null,
+          "name": "BBQ Chicken Pizza",
+          "price": 17.99,
+          "section": "Pizzas"
+        },
+        {
+          "description": "Gluten Free. Individual Sized Fermented 9” crust. Hearty &amp; Satisfying with this classic favourite. Halal hormone free roasted chicken, cheddar cheese, red onions, BBQ Sauce (unrefined, with cane sugar), fresh green onions. \n*organic ingredients\nALLERGENS: Dairy",
+          "imageUrl": null,
+          "name": "BBQ Chicken Pizza, Gluten Friendly",
+          "price": 18.99,
+          "section": "Pizzas"
+        },
+        {
+          "description": "Individual Sized Fermented 8x8” crust. In-house pizza sauce, organic mozzarella, basil, evoo. \n*organic ingredients\nALLERGENS:  Dairy, Gluten",
+          "imageUrl": null,
+          "name": "Classic Cheese Pizza",
+          "price": 13.99,
+          "section": "Pizzas"
+        },
+        {
+          "description": "Gluten Free. Individual Sized Fermented 9” crust. In-house pizza sauce, organic mozzarella, oregano, fresh basil, EVOO.  *organic ingredients\nALLERGENS:  Dairy",
+          "imageUrl": null,
+          "name": "Classic Cheese Pizza, Gluten Friendly",
+          "price": 14.99,
+          "section": "Pizzas"
+        },
+        {
+          "description": "Contains Nuts. This super Seedy, packed with protein In-House Granola has a ginger zing to it and is a perfect start to your mornings. Pumpkin seeds, chia seeds, gluten free oats, millet, almond butter(tree nut) , tahini (sesame), coconut flakes, maple syrup, lemon zest, fresh ginger, Maca Root Powder, Pure Vanilla Extract, Pluck Tea Harvest Gold Powder. *organic ingredients\n\nALLERGENS:  Tree Nuts, Sesame",
+          "imageUrl": null,
+          "name": "In-House Granola Gluten Friendly",
+          "price": 7.99,
+          "section": "Breakfast"
+        },
+        {
+          "calories": null,
+          "description": "Vegan. Gluten Friendly\nALLERGENS:  Tree Nuts. \nCustomer Favourite, guilt free, moist and satisfying made with premium ingredients! Gluten Free Flour, bananas, walnuts, rice milk, coconut oil, coconut sugar, cinnamon, ginger, nutmeg, cardamon, vanilla \n*organic ingredients",
+          "imageUrl": null,
+          "likedPct": 95,
+          "name": "Banana Walnut Loaf 132g",
+          "price": 4.99,
+          "section": "Loaf, Cookies &amp; Pastries",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522e2dcc5c0-6a82-52e3-8a87-0ed97cfd069d%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "description": "Buy 2 and Save\nVegan. Gluten Friendly\nALLERGENS:  Tree Nuts. \nCustomer Favourite, guilt free, moist and satisfying made with premium ingredients! Gluten Free Flour, bananas, walnuts, rice milk, coconut oil, coconut sugar, cinnamon, ginger, nutmeg, cardamon, vanilla *organic ingredients",
+          "imageUrl": null,
+          "name": "2 Banana Walnut Loaves 132g",
+          "price": 9,
+          "section": "Loaf, Cookies &amp; Pastries"
+        },
+        {
+          "calories": null,
+          "description": "Top selling hard to believe these are healthy, hearty and guilty free.  Customer Favourite! \nVegan. Gluten Friendly\nALLERGENS:  Tree Nuts. \nOrganic ingredients",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "Cookies Spiced Carrot Cake 84g",
+          "price": 4.49,
+          "section": "Loaf, Cookies &amp; Pastries",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522efbf3509-26b5-5ed1-9e77-b4792d565c23%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "description": "Now here's a decadent TREAT that's soft and chewy, loaded with a duo of semi sweet &amp; dark chocolate chips, guilt free.  \nThis makes a great snack as it's flourless yet satiating as the base of this cookie is almond meal.  Lovely enjoyed with a cup of one of our pluck teas. \n\nVegan. Gluten Friendly\nALLERGENS:  Tree Nuts. \nOrganic ingredients",
+          "imageUrl": null,
+          "name": "Double Chocolate Chip Cookie Flourless 88g",
+          "price": 5.99,
+          "section": "Loaf, Cookies &amp; Pastries"
+        },
+        {
+          "description": "Our Blueberry Lemon Muffins are baked fresh with fresh blueberries and a vibrant touch of lemon for a bright, balanced flavour. Soft and golden with a tender crumb, they make an easy grab-and-go breakfast or snack any time of day.\nALLERGENS: Dairy, Eggs, Gluten (Wheat)",
+          "imageUrl": null,
+          "name": "Blueberry Lemon Muffin",
+          "price": 4.99,
+          "section": "Loaf, Cookies &amp; Pastries"
+        },
+        {
+          "description": "Goodness in every bite. These are made in-house using quality Halal hormone free ground beef, tomatoes, potatoes, onions, garlic, green olives, eggs, olive oil, and a medley of herbs and spices.  Crispy simple 4 ingredient crust.\nALLERGENS:  Eggs, Gluten",
+          "imageUrl": null,
+          "name": "Beef Empanada",
+          "price": 5.99,
+          "section": "Savoury Pastries &amp; Snacks"
+        },
+        {
+          "description": "Buy two and save\nGoodness in every bite. These are made in-house using quality Halal hormone free ground beef, tomatoes, potatoes, onions, garlic, green olives, eggs, olive oil, and a medley of herbs and spices.  Crispy simple 4 ingredient crust.\nALLERGENS:  Eggs, Gluten",
+          "imageUrl": null,
+          "name": "2 Beef Empanadas",
+          "price": 11,
+          "section": "Savoury Pastries &amp; Snacks"
+        },
+        {
+          "description": "Tender beef and carrot filling in a flaky pastry crust.\nALLERGENS:  Dairy, Eggs",
+          "imageUrl": null,
+          "name": "Beef &amp; Carrot Pie 5\"",
+          "price": 8.99,
+          "section": "Savoury Pastries &amp; Snacks"
+        },
+        {
+          "description": "Tender chicken and vegetables in a flaky pastry crust.\nALLERGENS:  Dairy, Eggs",
+          "imageUrl": null,
+          "name": "Chicken &amp; Vegetable Pie 5\"",
+          "price": 8.99,
+          "section": "Savoury Pastries &amp; Snacks"
+        },
+        {
+          "description": "Spicy beef filling in a crispy pastry, gluten-free.\nALLERGENS:  Dairy, Eggs",
+          "imageUrl": null,
+          "name": "Jamaican Beef Patties Gluten Free",
+          "price": 3.99,
+          "section": "Savoury Pastries &amp; Snacks"
+        },
+        {
+          "description": "Individual hand-pie, stuffed with the famous sweet and savory mix of chicken, dates, olives, capers, and a hint of wine vinegar.\nALLERGENS:  Gluten, Eggs",
+          "imageUrl": null,
+          "name": "Chicken Marbella Empanada",
+          "price": 5.99,
+          "section": "Savoury Pastries &amp; Snacks"
+        },
+        {
+          "description": "All Natural &amp; Plant based Made with organic flour. Served with chutney.\nAllergens:  Gluten",
+          "imageUrl": null,
+          "name": "Mix Veg Pakoras 4PK",
+          "price": 6.49,
+          "section": "Savoury Pastries &amp; Snacks"
+        },
+        {
+          "description": "All Natural &amp; Plant based Made with organic flour. Served with chutney.\nAllergens:  Gluten",
+          "imageUrl": null,
+          "name": "Mix Veg Pakoras 8PK",
+          "price": 10.99,
+          "section": "Savoury Pastries &amp; Snacks"
+        },
+        {
+          "description": "All Natural &amp; Plant based Made with organic flour.\nAllergens:  Gluten",
+          "imageUrl": null,
+          "name": "Samosa",
+          "price": 4.99,
+          "section": "Savoury Pastries &amp; Snacks"
+        },
+        {
+          "description": "Buy two and save\nAll Natural &amp; Plant based Made with organic flour.\nAllergens:  Gluten",
+          "imageUrl": null,
+          "name": "2 Samosa's",
+          "price": 9,
+          "section": "Savoury Pastries &amp; Snacks"
+        },
+        {
+          "description": "Flaky, golden pastry layered around a rich feta cheese filling and baked until perfectly crisp. Savoury, buttery, and satisfying, this Mediterranean classic is perfect any time of day.\nALLERGENS: Dairy, Gluten (Wheat), Eggs, Sesame",
+          "imageUrl": null,
+          "name": "Feta Cheese Boureka",
+          "price": 5.99,
+          "section": "Savoury Pastries &amp; Snacks"
+        },
+        {
+          "description": "A warm, savoury pocket filled with a comforting blend of chickpeas, potato, sweet potato, kale, and green peas simmered with coconut milk, garlic, lemon, and aromatic curry spices. Wrapped in a flaky pastry crust for a rich, flavourful bite with a gentle kick of spice.\nAllergens: Gluten (Wheat), Eggs",
+          "imageUrl": null,
+          "name": "Veggie Pockets",
+          "price": 5.49,
+          "section": "Savoury Pastries &amp; Snacks"
+        },
+        {
+          "description": "A Fresh Twist on Tuna.\nMade with premium Safe Catch wild tuna and our signature organic corn salsa prepared in-house, this sandwich blends cool, creamy textures with bursts of sweet corn and crisp veggies. Bright, clean, and satisfying.\n\n*Safe Catch Wild Tuna, Mayonnaise, *Celery, *Green onion, *Salt &amp; pepper &amp; *Corn salsa (made in-house), *Multigrain Bread\n\nNOTE: Our retail items may expire within 1 to 3 days",
+          "imageUrl": null,
+          "name": "Tuna Sandwich",
+          "price": 10.99,
+          "section": "Grab &amp;  GO Sandwiches"
+        },
+        {
+          "description": "Classic Comfort, Elevated.\nWe take egg salad to the next level with perfectly creamy hard-boiled eggs and a hint of hot sauce for subtle heat. Rich, satisfying, and made with clean, organic ingredients for a feel-good bite anytime.\n\n*Hard Boiled Eggs, Mayonnaise, *Green Onion, *Hot Sauce, *Salt &amp; pepper\n\n*Organic Ingredients\n\nNOTE: Our retail items may expire within 1 to 3 days",
+          "imageUrl": null,
+          "name": "Creamy Egg Sandwich",
+          "price": 10.99,
+          "section": "Grab &amp;  GO Sandwiches"
+        },
+        {
+          "description": "Bold. Authentic. Made From Scratch. Crafted with our house-made Adobo sauce using real chipotle chilies imported from Mexico, this sandwich packs deep, smoky flavour with tender chicken and fresh, organic ingredients. No shortcuts—just full-on flavour.\n\nGrass Fed Hormone Free Halal Chicken, *Celery, Mayonnaise, *Red onion, *Salt &amp; pepper\n(Adobo Sauce: *sun dried tomatoes, tomatoes, chipotle chilies, *garlic,* dates, *tomato, *oregano, *chilli powder, *cumin, *apple cider, *sea salt)\n\n*Organic Ingredients\n\nNOTE: Our retail items may expire within 1 to 3 days",
+          "imageUrl": null,
+          "name": "Adobo Chicken Sandwich",
+          "price": 10.99,
+          "section": "Grab &amp;  GO Sandwiches"
+        },
+        {
+          "description": "Vegan. Gluten Friendly\nALLERGENS:  Tree Nuts, Sesame \nKelp Noodles (neutral tasting low-calorie noodle substitute), cabbage, peppers, carrots, green onions, cilantro, toasted black sesame seeds. Sweet and spicy slivered almond topper. Tangy almond dressing. *organic ingredients\n\nNOTE: Our retail items may expire within 1 to 3 days",
+          "imageUrl": null,
+          "name": "Rainbowl Kelp Noodle Salad",
+          "price": 13.99,
+          "section": "Grab &amp; GO Salads"
+        },
+        {
+          "description": "Vegan. Gluten Free. \nALLERGENS:  Tree Nuts, Sesame\nSpiralled zucchini and cucumber, mixed greens, carrots, peppers, sprouts, cherry tomatoes, Kalamata olives. Mixed seed topper. Combo dressings: Basil spinach pesto and Turmeric Sunshine Vinaigrette. \n*organic ingredients\n\nNOTE: Our retail items may expire within 1 to 3 days",
+          "imageUrl": null,
+          "name": "Spiral Your Heart Out Salad",
+          "price": 14.99,
+          "section": "Grab &amp; GO Salads"
+        },
+        {
+          "description": "ALLERGENS:  Tree Nuts\nDuo of Squash delicately roasted, red quinoa, arugula, pecans, cranberries, red onion, pure pomegranate molasses and a refreshing cashew mint aioli.\n\nNOTE: Our retail items may expire within 1 to 3 days",
+          "imageUrl": null,
+          "name": "Duo Squash &amp; Quinoa Salad",
+          "price": 11.99,
+          "section": "Grab &amp; GO Salads"
+        },
+        {
+          "description": "Our HPK Signature Chopped Chicken Salad brings together Halal hormone-free chicken, crisp romaine lettuce, chickpeas, wild rice, cheddar cheese, red pepper, snap peas, corn, and red onion for a fresh, satisfying bite in every forkful. Finished with our house-made Garden Ranch Dressing made with Greek yogurt, herbs, garlic, lemon, and a touch of honey.\nALLERGENS: Dairy, Egg, Mustard.",
+          "imageUrl": null,
+          "name": "Signature Chopped Chicken Salad",
+          "price": 18.99,
+          "section": "Grab &amp; GO Salads"
+        },
+        {
+          "description": "Big Bowl of Healing Chicken Miso Broth, pulled chicken, rice noodles, bok choy, shiitake mushrooms, julienned carrots, mint, cilantro, basil, green onions. Chili sauce on the side (made in house). *halal hormone free chicken \n*organic ingredients\nALLERGENS: Soy, Sesame\nGluten Friendly",
+          "imageUrl": null,
+          "name": "Soup Healing Chicken Noodle 700mL",
+          "price": 15.99,
+          "section": "Grab &amp; Go Soups"
+        },
+        {
+          "description": "Vegan. Gluten Friendly. Roasted sweet potatoes, butternut squash, garlic and onions pureed with an aromatic vegetable stock. Finished with coconut milk, and a beautifully medley of spices. \n*organic ingredients\nALLERGENS: Gluten, Soy",
+          "imageUrl": null,
+          "name": "Beautifully Spiced Sweet Potato &amp; Butternut Squash Soup 700ml",
+          "price": 12.99,
+          "section": "Grab &amp; Go Soups"
+        },
+        {
+          "description": "Organic lentils are slow cooked in coconut milk &amp; our nutritious vegetable stock along with a medley of wonderful warming spices (cumin, curry, turmeric, ginger, cinnamon &amp; aniseed). Rich in minerals, protein &amp; fiber.  \norganic ingredients. \nGluten Friendly\nALLERGEN: Sesame",
+          "imageUrl": null,
+          "name": "Red Split Lentil Dahl Bowl 700ml",
+          "price": 12.99,
+          "section": "Grab &amp; Go Soups"
+        },
+        {
+          "description": "This thick &amp; hearty Chili variation is loaded with flavour, a touch of heat and some smokey tones. Made with organic and halal white meat turkey for a great source of lean protein.  Duo of pinto and black beans, fire roasted tomatoes and a beautiful blend of spices, cilantro.  \n*Organic Ingredients",
+          "imageUrl": null,
+          "name": "Over the Top Healthy Turkey Chili 700ml",
+          "price": 20.99,
+          "section": "Grab &amp; Go Soups"
+        },
+        {
+          "description": "House-made with locally crafted Blackbird Baking Co. sourdough bread, our croutons are tossed in olive oil with garlic and a savoury blend of herbs, then baked until perfectly crisp and golden.\nALLERGENS: Gluten (Wheat)",
+          "imageUrl": null,
+          "name": "Sourdough Garlic &amp; Herb Croutons 250g",
+          "price": 7.99,
+          "section": "Grab &amp; Go Soups"
+        },
+        {
+          "description": "Gluten Free. \nALLERGENS:  Tree nuts, Dairy\nOrganic yoghurt, in-house granola, strawberries, blueberries, raspberries.  *organic ingredients\nNOTE: Our retail items may expire within 1 to 3 days",
+          "imageUrl": null,
+          "name": "Parfait Rise &amp; Shine Dairy",
+          "price": 7.99,
+          "section": "Grab &amp; GO Snacks"
+        },
+        {
+          "description": "Gluten Free. Vegan. \nALLERGENS:  Tree nuts\nCashew coconut whip cream, in-house granola, strawberries, blueberries, raspberries. *organic ingredients\n\nNOTE: Our retail items may expire within 1 to 3 days",
+          "imageUrl": null,
+          "name": "Parfait Rise &amp; Shine Vegan",
+          "price": 8.99,
+          "section": "Grab &amp; GO Snacks"
+        },
+        {
+          "description": "Vegan. Gluten Friendly. \n\nPear, gluten free oats, rice milk, raisins, mix of 5 super seeds, cacao powder, cinnamon, ginger, maple syrup. (Topper: coconut flakes, figs, lemon zest). *organic ingredients\n\nNOTE: Our retail items may expire within 1 to 3 days",
+          "imageUrl": null,
+          "name": "Pear &amp; Super Seedy Overnight Oats",
+          "price": 7.99,
+          "section": "Grab &amp; GO Snacks"
+        },
+        {
+          "description": "Allergens:  Tree Nuts.\nLight, creamy chia pudding with a hint of lemon, topped with fruity blueberry &amp; apple sauce and shredded coconut.  \nChia is made using Almond Milk.\n\nNOTE: Our retail items may expire within 1 to 3 days",
+          "imageUrl": null,
+          "name": "Chia Pudding with Blueberry Apple Sauce",
+          "price": 6.49,
+          "section": "Grab &amp; GO Snacks"
+        },
+        {
+          "description": "Allergens: Peanuts, Dairy, \n\nFuel your day with our new Peanut Butter Pretzel Protein Bites — the perfect grab-and-go snack! These gluten-free bites are packed with creamy peanut butter, toasted coconut, and crunchy gluten-free pretzels, balanced with a touch of maple syrup and sea salt for the ultimate sweet-salty combo.\n\nMade with Schinoussa unflavoured whey protein powder, they’re a delicious way to stay energized and satisfied.\n\n\n\nIngredients: Gluten Free Rolled Oats, Gluten Free Pretzels, Shredded Coconut, Flax, Peanut Butter, Maple Syrup, Coconut Oil, Whey Protein Powder, Rice Milk, Sea Salt, Chocolate\n\nGluten Friendly",
+          "imageUrl": null,
+          "name": "Peanut Butter Pretzel Protein Bites",
+          "price": 8.49,
+          "section": "Grab &amp; GO Snacks"
+        },
+        {
+          "description": "Enjoy this perfect mix of salty and sweet. rolled into a small bite size treat.  If you love tahini and honey then you want to give this a try.\nALLERGENS: Sesame",
+          "imageUrl": null,
+          "name": "Tahini Quinoa Puff Bites  4PK",
+          "price": 6.99,
+          "section": "Grab &amp; GO Snacks"
+        },
+        {
+          "description": "(6 pack)\nTop selling hard to believe these are healthy, hearty and guilty free.  Customer Favourite! Vegan. Gluten Friendly. \nALLERGENS:  Tree Nuts. \nOrganic ingredients",
+          "imageUrl": null,
+          "name": "Cookies Spiced Carrot Cake 6 Pack",
+          "price": 9.99,
+          "section": "Grab &amp; GO Snacks"
+        },
+        {
+          "description": "Made in house with organic  Valencia oranges.",
+          "imageUrl": null,
+          "name": "Orange Juice Organic 470mL",
+          "price": 7.49,
+          "section": "Grab &amp; GO Fresh Juices"
+        },
+        {
+          "description": "Made in house with organic Valencia oranges.",
+          "imageUrl": null,
+          "name": "Orange Juice Organic 950mL",
+          "price": 12.99,
+          "section": "Grab &amp; GO Fresh Juices"
+        },
+        {
+          "description": "Daily Greens, Naturally Balanced\nAn energizing blend of organic spinach, kale, pineapple, and orange juice to nourish, alkalize, and restore. Rich in vitamins and plant nutrients, this clean, fruit-forward green juice supports vitality.\n\n\nOrange Juice*\nPineapple\nSpinach*\nGreen Kale*\n*organic ingredients",
+          "imageUrl": null,
+          "name": "Green-On 470ml",
+          "price": 13.49,
+          "section": "Grab &amp; GO Fresh Juices"
+        },
+        {
+          "description": "Immune Support with a Kick of Fresh Ginger A bright blend of organic strawberries, ginger, and orange juice designed to energize and uplift. Packed with antioxidants and vitamin C, this refreshing 16oz wellness boost is your daily dose of feel-good!\n\nOrange Juice*\nStrawberries*\nGinger*\n\n*Organic Ingredients",
+          "imageUrl": null,
+          "name": "Strawberry Gingerade 470ml",
+          "price": 13.49,
+          "section": "Grab &amp; GO Fresh Juices"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Sea Moss Gel Mango Lime 16oz",
+          "price": 29.99,
+          "section": "Frozen Sea Moss Gel"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Sea Moss Gel Strawberry Ginger 16oz",
+          "price": 29.99,
+          "section": "Frozen Sea Moss Gel"
+        },
+        {
+          "description": "Fresh avocado serving",
+          "imageUrl": null,
+          "name": "Avocado 2oz",
+          "price": 2.99,
+          "section": "Condiments"
+        },
+        {
+          "description": "Tangy and sweet condiment perfect for adding flavor to your meal.",
+          "imageUrl": null,
+          "name": "BBQ Sauce 1oz",
+          "price": 1.49,
+          "section": "Condiments"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Extra Chicken 2oz",
+          "price": 4.99,
+          "section": "Condiments"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Chili Sauce 1oz",
+          "price": 2.49,
+          "section": "Condiments"
+        },
+        {
+          "description": "ALLERGEN:  Dairy",
+          "imageUrl": null,
+          "name": "Egg Hard Boiled",
+          "price": 2.99,
+          "section": "Condiments"
+        },
+        {
+          "description": "Rich and creamy aioli infused with garlic.\nALLERGEN:  Tree Nuts",
+          "imageUrl": null,
+          "name": "Garlic Aioli 1oz",
+          "price": 1.49,
+          "section": "Condiments"
+        },
+        {
+          "description": "Sweet and tangy mango condiment.",
+          "imageUrl": null,
+          "name": "Mango Chutney 1oz",
+          "price": 1.49,
+          "section": "Condiments"
+        },
+        {
+          "description": "Raspberry (fresh and freeze dried) and chia seeds come together to create a delicious and tangy jam.  Lovely accompaniment to out banana walnut loaf.",
+          "imageUrl": null,
+          "name": "Raspberry Jam 1oz",
+          "price": 1.49,
+          "section": "Condiments"
+        },
+        {
+          "description": "Tangy and sweet condiment made with tamarind.",
+          "imageUrl": null,
+          "name": "Tamarind Chutney 1oz",
+          "price": 1.49,
+          "section": "Condiments"
+        },
+        {
+          "description": "Classic Caesar dressing in a 3oz serving.\nALLERGENS:  Dairy, Fish, Soy, Eggs, Mustard",
+          "imageUrl": null,
+          "name": "Caesar Dressing 3oz",
+          "price": 3.99,
+          "section": "Condiments"
+        },
+        {
+          "description": "Medley of Tuna, green onion, celery, Chosen Mayonnaise, salt &amp; pepper.  2 oz serving\nALLERGENS:  Eggs, Mustard",
+          "imageUrl": null,
+          "name": "Tuna Salad 2oz",
+          "price": 4.49,
+          "section": "Condiments"
+        },
+        {
+          "description": "Raw Irish Sea Moss, Made in House in small batches.  Contains 92 essential minerals.  Great to add the health benefits of Sea Moss to your Smoothies, Coffees and Teas.   Tastes great on it's own, you won't even taste it in your drink!\n\nIngredients: Raw Irish Sea Moss, Cinnamon, Bay Leaf, Star Anise, Coconut Nectar",
+          "imageUrl": null,
+          "name": "Irish Sea Moss Gel",
+          "price": 2.5,
+          "section": "Condiments"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Lion's Mane 1S",
+          "price": 1.49,
+          "section": "Condiments"
+        },
+        {
+          "description": "Allergen:  Sesame",
+          "imageUrl": null,
+          "name": "Lemon Tahini Sauce 3oz",
+          "price": 2.99,
+          "section": "Condiments"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Extra Cheese Mozzarella",
+          "price": 2.49,
+          "section": "Condiments"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Extra Cheese Cheddar",
+          "price": 2.49,
+          "section": "Condiments"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Matcha 1S",
+          "price": 2.5,
+          "section": "Condiments"
+        },
+        {
+          "description": "Traditional spicy chai, made with a special blend of fresh ground spices. Fragrant and flavorful with notes of cardamom, ginger, cinnamon, and nutmeg. Prepare with your choice of  Milk.",
+          "imageUrl": null,
+          "name": "Latte Chai",
+          "price": 4.29,
+          "section": "Specialty Drinks"
+        },
+        {
+          "calories": null,
+          "description": "Prepare with your choice of milk &amp; Premium Ceremonial Matcha, this exceptional drink features deep umami flavor, light grassy notes, and a brilliant green color.",
+          "imageUrl": null,
+          "likedPct": 93,
+          "name": "Latte Matcha",
+          "price": 4.79,
+          "section": "Specialty Drinks",
+          "url": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25226f3aa8d9-0058-5cab-a47e-8e698dfc2c4c%2522%252C%2522sectionUuid%2522%253A%252284d9c3e0-a7aa-58b0-aefc-aac0b671755a%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522b10150fe-1b12-5117-abb9-48cf37f03802%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "description": "Your choice of milk &amp; Superfine ground turmeric, cinnamon, and ginger make this a perfect caffeine - free latte blend.",
+          "imageUrl": null,
+          "name": "Latte Turmeric &amp; Ginger",
+          "price": 4.29,
+          "section": "Specialty Drinks"
+        },
+        {
+          "description": "A cozy twist on matcha — made with our house-made banana bread syrup, crafted from scratch in our kitchen. Smooth, lightly sweet, and perfectly balanced with the warmth of fresh banana bread and the earthy notes of matcha.\n*16OZ \n(Loaf not included)",
+          "imageUrl": null,
+          "name": "Banana Bread Matcha Latte",
+          "price": 5.49,
+          "section": "Specialty Drinks"
+        },
+        {
+          "description": "Fruity and chocolatey, organic and Fairtrade espresso blend featuring the legendary beans of Sidamo, Ethiopia. Prepare with your choice of milk.",
+          "imageUrl": null,
+          "name": "Latte",
+          "price": 4.29,
+          "section": "Specialty Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Latte Pumpkin Spice",
+          "price": 4.79,
+          "section": "Specialty Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Hot Chocolate Lion's Mane",
+          "price": 5.49,
+          "section": "Specialty Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Latte Charcoal",
+          "price": 4.79,
+          "section": "Specialty Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Latte Coconut",
+          "price": 4.79,
+          "section": "Specialty Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Latte Mocha",
+          "price": 4.79,
+          "section": "Specialty Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Latte Salted Caramel",
+          "price": 4.79,
+          "section": "Specialty Drinks"
+        },
+        {
+          "description": "Rich and creamy coffee drink served over ice.",
+          "imageUrl": null,
+          "name": "Iced Latte 16oz",
+          "price": 3.99,
+          "section": "Cold Beverages"
+        },
+        {
+          "description": "A cozy twist on Iced matcha — made with our house-made banana bread syrup, crafted from scratch in our kitchen. Smooth, lightly sweet, and perfectly balanced with the warmth of fresh banana bread and the earthy notes of matcha.\n*16OZ\n(Loaf not included)",
+          "imageUrl": null,
+          "name": "Iced Banana Bread Matcha Latte 16oz",
+          "price": 6.29,
+          "section": "Cold Beverages"
+        },
+        {
+          "description": "Earthy meets fruity in the best way. We whisk our vibrant matcha to perfection and swirl it with our fresh, house-made raspberry sauce for a latte that’s creamy, uplifting, and naturally sweet",
+          "imageUrl": null,
+          "name": "Iced Raspberry Matcha Latte",
+          "price": 5.49,
+          "section": "Cold Beverages"
+        },
+        {
+          "description": "An iced protein drink with deep chocolate flavour and warming spice. Made with premium Chocosol Vanilla Salt 65% chocolate, maple syrup, cinnamon, ginger, nutmeg, and a touch of cayenne for a smooth finish with subtle heat. Customized with your choice of milk or milk alternative and whey or vegan protein.\nALLERGENS: Contains Dairy if made with dairy milk or whey protein.",
+          "imageUrl": null,
+          "name": "Iced Protein Spiced Chocolate 16oz",
+          "price": 8.99,
+          "section": "Cold Beverages"
+        },
+        {
+          "description": "A smooth, energizing protein refresher made with ceremonial grade matcha, creamy tahini, maple syrup, cinnamon, and vanilla for a rich, balanced flavour that’s both earthy and subtly sweet. Customized with your choice of milk or milk alternative and whey or vegan protein.\nALLERGENS: Sesame. Contains Dairy if made with dairy milk or whey protein",
+          "imageUrl": null,
+          "name": "Tahini Matcha Protein chill 16oz",
+          "price": 8.99,
+          "section": "Cold Beverages"
+        },
+        {
+          "description": "Rich and smooth coffee drink made with espresso and cold water.",
+          "imageUrl": null,
+          "name": "Iced Americano 16oz",
+          "price": 3.49,
+          "section": "Cold Beverages"
+        },
+        {
+          "description": "Rich and smooth iced latte infused with charcoal, served over ice in a 16oz cup.",
+          "imageUrl": null,
+          "name": "Iced Latte Charcoal 16oz",
+          "price": 4.99,
+          "section": "Cold Beverages"
+        },
+        {
+          "description": "Rich and creamy latte infused with coconut flavour.",
+          "imageUrl": null,
+          "name": "Iced Latte Coconut 16oz",
+          "price": 4.99,
+          "section": "Cold Beverages"
+        },
+        {
+          "description": "Rich and creamy mocha flavour in a refreshing iced latte.",
+          "imageUrl": null,
+          "name": "Iced Latte Mocha 16oz",
+          "price": 4.99,
+          "section": "Cold Beverages"
+        },
+        {
+          "description": "Rich and creamy latte with a hint of salted caramel.",
+          "imageUrl": null,
+          "name": "Iced Latte Salted Caramel 16oz",
+          "price": 4.99,
+          "section": "Cold Beverages"
+        },
+        {
+          "description": "Refreshing green tea latte made with matcha powder.",
+          "imageUrl": null,
+          "name": "Iced Matcha Latte 16oz",
+          "price": 4.99,
+          "section": "Cold Beverages"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Iced Chocolate Lion's Mane 16oz",
+          "price": 6.29,
+          "section": "Cold Beverages"
+        },
+        {
+          "description": "Fruity and chocolatey, organic and Fairtrade espresso blend featuring the legendary beans of Sidamo, Ethiopia. Prepare with your choice of milk.",
+          "imageUrl": null,
+          "name": "Cappuccino",
+          "price": 4.29,
+          "section": "Cappuccino"
+        },
+        {
+          "description": "Fruity and chocolatey, organic and Fairtrade espresso blend featuring the legendary beans of Sidamo, Ethiopia.",
+          "imageUrl": null,
+          "name": "Americano",
+          "price": 3.39,
+          "section": "Americano"
+        },
+        {
+          "description": "Fruity and chocolatey, organic and Fairtrade espresso blend featuring the legendary beans of Sidamo, Ethiopia.",
+          "imageUrl": null,
+          "name": "Espresso Shot 2oz",
+          "price": 2.49,
+          "section": "Espresso"
+        },
+        {
+          "description": "An elevated, smooth and balanced take on a classic Orange Pekoe. This tea is a premium blend sourced exclusively from Rwanda Mountain Tea farmers.",
+          "imageUrl": null,
+          "name": "Orange Pekoe",
+          "price": 2.69,
+          "section": "Tea"
+        },
+        {
+          "description": "Traditional spicy chai, made with our special blend of fresh ground spices. Fragrant and flavorful with notes of cardamom, ginger, cinnamon, and nutmeg.",
+          "imageUrl": null,
+          "name": "Chai Spice",
+          "price": 2.99,
+          "section": "Tea"
+        },
+        {
+          "description": "(Caffeine-Free) A refreshing blend of lemon, ginger, rosehip and Nova Scotia cranberries.",
+          "imageUrl": null,
+          "name": "CTRL+ALT+DEL",
+          "price": 2.99,
+          "section": "Tea"
+        },
+        {
+          "description": "A mellower version of the traditional Earl Grey, this incredibly popular bergamot infused tea features a delectably soft, creamy finish.",
+          "imageUrl": null,
+          "name": "Earl Grey",
+          "price": 2.99,
+          "section": "Tea"
+        },
+        {
+          "description": "This organic, full leaf, high altitude green tea features full green tea flavor without the bitterness.",
+          "imageUrl": null,
+          "name": "Fields of Green",
+          "price": 2.99,
+          "section": "Tea"
+        },
+        {
+          "description": "This pumpkin spice blend is the perfect steep to cozy up to this season. Full of flavor, this cinnamon-studded tea is delicious with a splash of milk, as a latte, or on its own.",
+          "imageUrl": null,
+          "name": "Pumpkin Spice",
+          "price": 2.99,
+          "section": "Tea"
+        },
+        {
+          "description": "Citrus-infused tea for a soothing drink.",
+          "imageUrl": null,
+          "name": "Tea Citrus Soother 16oz",
+          "price": 4.79,
+          "section": "Tea"
+        }
+      ],
+      "rating": 4.6,
+      "restaurant": "Healthy Planet Kitchen (Oakville)",
+      "storeUrl": "https://www.ubereats.com/ca/store/healthy-planet-kitchen-oakville/bzqo2QBYXKukfo5pjfwsTA",
+      "promos": [],
+      "bogo": false,
+      "foundVia": [
+        "healthy",
+        "@Streetsville / Meadowvale"
+      ],
+      "itemCount": 139,
+      "capturedAt": "2026-10-25T06:32:53.239Z"
+    },
+    {
+      "address": "4180 Confederation Pkwy, Mississauga",
+      "geo": {
+        "lat": 43.5887017,
+        "lng": -79.6500808
+      },
+      "items": [
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": 66,
+          "name": "Craft Yours Large Salad",
+          "price": 21,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25228eae8fcb-5419-54f6-b3b6-d138278fd992%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Romaine, Parmesan Cheese, Grilled Chicken, Croutons, Cherry Tomatoes &amp; Caesar Dressing.",
+          "imageUrl": null,
+          "likedPct": 80,
+          "name": "Regular Caesar Salad",
+          "price": 16,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%252260cac60e-fd1a-51d2-85b9-eeecda7deeed%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Romaine Lettuce, Kalamata Olives, Cucumber, Cherry Tomatoes, Feta Cheese, Red Onion, with Greek Dressing",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "Regular Greek Salad",
+          "price": 16,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522872076ca-ab96-5d4e-bacf-51690445a772%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Craft Yours Regular Salad",
+          "price": 16,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25222e78be1b-f2df-54a8-a1a8-3d50f617de00%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Garlic Bread",
+          "price": 9,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25220d95c311-084a-55b4-944d-11a674275ac4%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Romaine Lettuce, Kalamata Olives, Cucumber, Cherry Tomatoes, Feta Cheese, Red Onion, with Greek Dressing",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Large Greek Salad",
+          "price": 21,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25224648b782-5d35-5e3f-9498-c22568862838%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Romaine, Grilled Chicken, Quinoa, Chickpeas, Spinach, Broccoli, Cherry Tomatoes, Avocado, with Olive Oil &amp; Balsamic Vinaigrette",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Large Superfood Salad",
+          "price": 24,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%252285508a44-e080-5e34-8386-3b5135a0206b%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Romaine, Parmesan Cheese, Grilled Chicken, Croutons, Cherry Tomatoes &amp; Caesar Dressing.",
+          "imageUrl": null,
+          "likedPct": 66,
+          "name": "Large Caesar Salad",
+          "price": 21,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522f3e5b2c8-2622-5114-8bfe-afec43151c9a%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Romaine, Grilled Chicken, Quinoa, Chickpeas, Spinach, Broccoli, Cherry Tomatoes, Avocado, with Olive Oil &amp; Balsamic Vinaigrette",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Regular Superfood Salad",
+          "price": 18,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25227ed2fbc2-3614-5917-8ea4-2e2f6c81d27d%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Spring Mix, Grilled Chicken, Sun-Dried Tomatoes, Roasted Red Peppers, Roasted Garlic, Goat Cheese, Pear with Pesto Dressing.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Large Chicken Pesto Salad",
+          "price": 21,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%252202ddc464-3150-511a-aa3e-224ffdb7f38f%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Spring Mix, Arugula, Walnuts, Goat Cheese, Chicken, Cranberries &amp; Corn. With Hone Lime Poppy Seed Dressing.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Large Spring Salad",
+          "price": 21,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%252248f1e080-abd5-53bf-bac0-fccd04184432%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "San Pellegrino Blood Orange",
+          "price": 4.5,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522a436f33d-e0da-582e-b282-73a5de6cc162%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "San Marzano Sauce, Mozzarella Cheese, Mushrooms, Green Peppers, Roasted Red Peppers &amp; Red Onions.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Veggie Small Bite",
+          "price": 12,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522cd07de9e-ff99-5c61-b66d-a8f4a1d4219d%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Pizza Small Bites",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "SMALL BITES Margherita",
+          "price": 11,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%252291cada31-6b50-5c75-bcc1-db7c41161927%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Pizza Small Bites",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "SMALL BITES Yorkville",
+          "price": 13,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522c6eb5755-0887-54b7-b271-7116b652497c%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Pizza Small Bites",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "SMALL BITES Cheese Pi",
+          "price": 11,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25223c72d343-fdf4-50ce-a1bf-4b569f7f458f%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": 66,
+          "name": "Craft Yours Large Salad",
+          "price": 21,
+          "section": "Large Salads",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25228eae8fcb-5419-54f6-b3b6-d138278fd992%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Romaine, Parmesan Cheese, Grilled Chicken, Croutons, Cherry Tomatoes &amp; Caesar Dressing.",
+          "imageUrl": null,
+          "likedPct": 66,
+          "name": "Large Caesar Salad",
+          "price": 21,
+          "section": "Large Salads",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522f3e5b2c8-2622-5114-8bfe-afec43151c9a%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Spring Mix, Grilled Chicken, Sun-Dried Tomatoes, Roasted Red Peppers, Roasted Garlic, Goat Cheese, Pear with Pesto Dressing.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Large Chicken Pesto Salad",
+          "price": 21,
+          "section": "Large Salads",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%252202ddc464-3150-511a-aa3e-224ffdb7f38f%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Romaine Lettuce, Kalamata Olives, Cucumber, Cherry Tomatoes, Feta Cheese, Red Onion, with Greek Dressing",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Large Greek Salad",
+          "price": 21,
+          "section": "Large Salads",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25224648b782-5d35-5e3f-9498-c22568862838%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Spring Mix, Arugula, Walnuts, Goat Cheese, Chicken, Cranberries &amp; Corn. With Hone Lime Poppy Seed Dressing.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Large Spring Salad",
+          "price": 21,
+          "section": "Large Salads",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%252248f1e080-abd5-53bf-bac0-fccd04184432%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Romaine, Grilled Chicken, Quinoa, Chickpeas, Spinach, Broccoli, Cherry Tomatoes, Avocado, with Olive Oil &amp; Balsamic Vinaigrette",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Large Superfood Salad",
+          "price": 24,
+          "section": "Large Salads",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%252285508a44-e080-5e34-8386-3b5135a0206b%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Craft Yours Regular Salad",
+          "price": 16,
+          "section": "Small Salads",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25222e78be1b-f2df-54a8-a1a8-3d50f617de00%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Romaine, Parmesan Cheese, Grilled Chicken, Croutons, Cherry Tomatoes &amp; Caesar Dressing.",
+          "imageUrl": null,
+          "likedPct": 80,
+          "name": "Regular Caesar Salad",
+          "price": 16,
+          "section": "Small Salads",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%252260cac60e-fd1a-51d2-85b9-eeecda7deeed%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "description": "Spring Mix, Grilled Chicken, Sun-Dried Tomatoes, Roasted Red Peppers, Roasted Garlic, Goat Cheese, Pear with Pesto Dressing.",
+          "imageUrl": null,
+          "name": "Regular Chicken Pesto Salad",
+          "price": 16,
+          "section": "Small Salads"
+        },
+        {
+          "calories": null,
+          "description": "Romaine Lettuce, Kalamata Olives, Cucumber, Cherry Tomatoes, Feta Cheese, Red Onion, with Greek Dressing",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "Regular Greek Salad",
+          "price": 16,
+          "section": "Small Salads",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522872076ca-ab96-5d4e-bacf-51690445a772%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "description": "Spring Mix, Arugula, Walnuts, Goat Cheese, Chicken, Cranberries &amp; Corn. With Honey Lime Poppy Seed Dressing.",
+          "imageUrl": null,
+          "name": "Regular Spring Salad",
+          "price": 16,
+          "section": "Small Salads"
+        },
+        {
+          "calories": null,
+          "description": "Romaine, Grilled Chicken, Quinoa, Chickpeas, Spinach, Broccoli, Cherry Tomatoes, Avocado, with Olive Oil &amp; Balsamic Vinaigrette",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Regular Superfood Salad",
+          "price": 18,
+          "section": "Small Salads",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25227ed2fbc2-3614-5917-8ea4-2e2f6c81d27d%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Garlic Bread",
+          "price": 9,
+          "section": "Small Bites",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25220d95c311-084a-55b4-944d-11a674275ac4%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Pizza Small Bites",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "SMALL BITES Cheese Pi",
+          "price": 11,
+          "section": "Small Bites",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25223c72d343-fdf4-50ce-a1bf-4b569f7f458f%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Pizza Small Bites",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "SMALL BITES Margherita",
+          "price": 11,
+          "section": "Small Bites",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%252291cada31-6b50-5c75-bcc1-db7c41161927%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "description": "Pizza Small Bites",
+          "imageUrl": null,
+          "name": "SMALL BITES Colborne",
+          "price": 12,
+          "section": "Small Bites"
+        },
+        {
+          "description": "Pizza Small Bites",
+          "imageUrl": null,
+          "name": "SMALL BITES Pepperoni",
+          "price": 12,
+          "section": "Small Bites"
+        },
+        {
+          "calories": null,
+          "description": "Pizza Small Bites",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "SMALL BITES Yorkville",
+          "price": 13,
+          "section": "Small Bites",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522c6eb5755-0887-54b7-b271-7116b652497c%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "San Marzano Sauce, Mozzarella Cheese, Mushrooms, Green Peppers, Roasted Red Peppers &amp; Red Onions.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Veggie Small Bite",
+          "price": 12,
+          "section": "Small Bites",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522cd07de9e-ff99-5c61-b66d-a8f4a1d4219d%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Naya Water",
+          "price": 3,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Pepsi",
+          "price": 3,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Diet Pepsi",
+          "price": 3,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "7 UP",
+          "price": 3,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Mountain Dew",
+          "price": 3,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Mug RootBeer",
+          "price": 3,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Bubly Blackberry",
+          "price": 3,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Bubly Cherry",
+          "price": 3,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Bubly Lime",
+          "price": 3,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Schweppes Ginger Ale",
+          "price": 3,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "San Pellegrino Limonata",
+          "price": 4.5,
+          "section": "Drinks"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "San Pellegrino Blood Orange",
+          "price": 4.5,
+          "section": "Drinks",
+          "url": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%2522a53fc3a9-ef0f-500f-b6f4-542753299402%2522%252C%2522sectionUuid%2522%253A%2522c757af45-f354-5c1e-aed3-41704c685681%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522a436f33d-e0da-582e-b282-73a5de6cc162%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMlNlcnZpY2UlMjBPbnRhcmlvJTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNzdhMjkxNDEtM2FlYS1hZWY5LTBhNjItMWJjOTQ1NTFlMTM1JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0E0My41OTQzNDUxJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjczMDE3MTIlN0Q%3D&ps=1"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "San Pellegrino Orange",
+          "price": 4.5,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Pure Leaf Lemon",
+          "price": 4.5,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Pure Leaf Peach",
+          "price": 4.5,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Pure Leaf Raspberry",
+          "price": 4.5,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Evian Water",
+          "price": 4.5,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Tropicana Lemonade",
+          "price": 4.5,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Tropicana Orange Juice",
+          "price": 4.5,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "BOTTLED MOUNTAIN DEW",
+          "price": 4.5,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Black Cherry",
+          "price": 4.5,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Montellier Sparkling Water",
+          "price": 4.5,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "BOTTLED PEPSI",
+          "price": 4.5,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Bottled Diet Pepsi",
+          "price": 4.5,
+          "section": "Drinks"
+        }
+      ],
+      "rating": 4.7,
+      "restaurant": "Salad Bar by Pi Co (Parkside Village)",
+      "storeUrl": "https://www.ubereats.com/ca/store/salad-bar-by-pi-co-parkside-village/pT_Dqe8PUA-29FQnUymUAg",
+      "promos": [],
+      "bogo": false,
+      "foundVia": [
+        "salad",
+        "@Streetsville / Meadowvale"
+      ],
+      "itemCount": 59,
+      "capturedAt": "2026-10-25T06:34:06.339Z"
     }
   ],
   "points": [
