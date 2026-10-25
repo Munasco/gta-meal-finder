@@ -81,7 +81,7 @@ export const Outro: React.FC = () => {
     <AbsoluteFill style={{ background: COLORS.bg }}>
       {f < s(5.4) && (
         <>
-          <Device src={CLIPS.dishes} startFrom={2.0} width={1500} enter={10} exit={s(4.6)} zoom={[0, s(5), 1, 1.05]} origin={[0.5, 0.55]} />
+          <Device src={CLIPS.dishes} startFrom={5.6} width={1500} enter={10} exit={s(4.6)} zoom={[0, s(5), 1, 1.05]} origin={[0.5, 0.55]} />
           <Headline text="Eat better. Pay less." accent="Pay less." from={s(0.4)} out={s(4.4)} size={96} y={-380} />
         </>
       )}

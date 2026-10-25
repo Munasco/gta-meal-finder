@@ -43,6 +43,8 @@ export interface MealIntent {
   dishWord: string | null;
   /** 0-1: price matters a lot ("cheap", "budget", "broke"). */
   valueFocus: number;
+  /** Ingredients the user asked for ("with avocado", "lots of veggies", "extra rice"). */
+  wantedIngredients: string[];
   detectedAllergens: AllergenTag[];
   detectedIngredientExclusions: string[];
   /** Short search phrase for Uber Eats, e.g. "nandos grilled chicken". */
@@ -174,6 +176,32 @@ export function parseMaxCalories(text: string): number | null {
   const m = text.toLowerCase().match(/(?:under|below|max(?:imum)?|less than|no more than|at most|<)\s*(\d{3,4})\s*(?:k?cal(?:orie)?s?)\b|(\d{3,4})\s*(?:k?cal(?:orie)?s?)\s*(?:or less|max|tops|cap)/);
   const n = m ? Number(m[1] ?? m[2]) : NaN;
   return Number.isFinite(n) && n >= 200 && n <= 3000 ? n : null;
+}
+
+const INGREDIENTS = [
+  "avocado", "rice", "brown rice", "quinoa", "kale", "spinach", "broccoli", "sweet potato", "lentils", "chickpeas", "hummus", "egg", "eggs", "cheese", "mushroom", "mushrooms",
+  "garlic", "lemon", "mango", "pineapple", "peanut", "peanuts", "tofu", "shrimp", "salmon", "tuna", "beef", "lamb", "noodles", "bread", "naan", "pita", "tortilla", "salsa",
+  "guacamole", "beans", "black beans", "corn", "olives", "feta", "yogurt", "honey", "coconut", "curry", "ginger", "lime", "cilantro", "basil", "mint", "cucumber", "tomato",
+  "tomatoes", "onion", "onions", "pickles", "jalapeno", "jalapeño", "sriracha", "tahini", "sesame", "cabbage", "slaw", "carrots", "peppers", "zucchini", "eggplant", "cauliflower",
+  "veggies", "vegetables", "greens", "salad", "fries", "plantain", "jollof", "paneer", "halloumi", "bacon", "sausage", "turkey", "chicken", "pork", "fish", "crab", "lobster",
+];
+const WANT_CUE = /(?:\bwith\b|\bextra\b|lots of|loads of|plenty of|\bwant(?:s|ing)?\b|\blove\b|\bcraving\b|\bneed\b|\bmore\b|\badd\b|\bsome\b)\s+([a-z\s,&-]{3,60}?)(?=[.;!?]|$|\b(?:and|but|for|under|around|near|no|without)\b)/g;
+
+/** Ingredients the user asked for. Exclusions ("no onions") are handled separately and win. */
+export function parseWantedIngredients(text: string, exclusions: string[]): string[] {
+  const lower = text.toLowerCase();
+  const found = new Set<string>();
+  let m: RegExpExecArray | null;
+  const cue = new RegExp(WANT_CUE.source, "g");
+  while ((m = cue.exec(lower)) !== null) {
+    const phrase = m[1];
+    for (const ing of INGREDIENTS) if (new RegExp(`\\b${ing}\\b`).test(phrase)) found.add(ing);
+  }
+  // Bare mentions of produce-type words count too ("avocado chicken bowl").
+  for (const ing of ["avocado", "quinoa", "kale", "spinach", "broccoli", "sweet potato", "lentils", "chickpeas", "hummus", "mango", "plantain", "jollof", "paneer", "halloumi", "guacamole", "veggies"]) {
+    if (new RegExp(`\\b${ing}\\b`).test(lower)) found.add(ing);
+  }
+  return [...found].filter((i) => !exclusions.some((x) => i.includes(x) || x.includes(i))).slice(0, 6);
 }
 
 export function parseBudgetCad(text: string): number | null {
@@ -493,6 +521,7 @@ export async function analyzeIntent(
     cuisineHint,
     dishWord,
     valueFocus: round(a.wants_cheap?.noul ?? (/\bcheap|budget|broke|affordable|deal/.test(lower) ? 0.85 : 0.2)),
+    wantedIngredients: parseWantedIngredients(queryText, customExclusions),
     detectedAllergens: allergens,
     detectedIngredientExclusions: customExclusions,
     searchTerm: buildSearchTerm({ restaurantHint, cuisineHint, protein, queryText }),

@@ -495,6 +495,12 @@ export function scoreOption(
   // The literal dish the user typed ("jerk", "pho") on the item itself is the strongest fit signal there is.
   if (intent.dishWord && new RegExp(`\\b${intent.dishWord.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&")}`, "i").test(input.name)) { fit += 20; reasons.unshift(`It's ${intent.dishWord}`); }
   if (intent.valueFocus > 0.6 && input.priceCad !== null && kind === "main") fit += Math.max(-10, Math.min(10, (18 - input.priceCad) * 1.2));
+  // Ingredients the user asked for, found in the item (name counts double).
+  for (const ing of intent.wantedIngredients) {
+    const re = new RegExp(`\\b${ing.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&")}`, "i");
+    if (re.test(input.name)) { fit += 12; reasons.push(`Has ${ing}`); }
+    else if (re.test(input.description)) { fit += 7; reasons.push(`Has ${ing}`); }
+  }
   if (intent.wantsSpicy >= 0.6 && SPICY.test(hay)) { fit += 6; reasons.push("Spicy"); }
   else if (intent.wantsSpicy <= 0.25 && SPICY.test(input.name)) fit -= 6;
   if (intent.protein !== "any" && est?.proteinBand === "over_30g") fit += 5;
@@ -738,6 +744,7 @@ function datasetTerms(intent: MealIntent): string[] {
     intent.protein !== "any" ? (intent.protein === "plant" ? "tofu" : intent.protein) : "",
     intent.cuisineHint ?? "",
     intent.dishWord ?? "",
+    ...intent.wantedIngredients,
     intent.diet === "halal" ? "halal" : intent.diet === "vegan" ? "vegan" : intent.diet === "vegetarian" ? "vegetarian" : intent.diet === "gluten_free" ? "gluten" : "",
     ...intent.queryText.toLowerCase().replace(/[^a-z\s]/g, " ").split(/\s+/).filter((w) => w.length >= 4 && !/^(healthy|enough|portions?|something|please|around|under|budget|dollars?|would|about|really|people|with|that|this|like|want|need|some|more|less|have|food|meal|lunch|dinner|night|date|cheap|good|nice|best)$/.test(w)),
   ].filter(Boolean);
