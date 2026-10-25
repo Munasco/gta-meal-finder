@@ -16,7 +16,8 @@
     "crawl": "OBU_SESSION=meal-finder-crawl bun run bridge/crawl.ts",
     "enrich": "bun run bridge/enrich.ts",
     "build:vercel": "next build",
-    "start:vercel": "next start"
+    "start:vercel": "next start",
+    "clean": "bun run bridge/clean-dataset.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

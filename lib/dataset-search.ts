@@ -13,6 +13,8 @@ export interface DsItem {
   likedPct?: number | null;
   health?: unknown;
 }
+import { isNonRestaurantName } from "./store-filter";
+
 export interface DsRestaurant {
   restaurant: string;
   storeUrl: string | null;
@@ -54,7 +56,7 @@ export function searchDataset(restaurants: DsRestaurant[], q: DatasetQuery): DsR
   const hint = q.hint ? norm(q.hint).replace(/[^a-z0-9]/g, "") : null;
   const scored: { r: DsRestaurant; score: number; km: number | null }[] = [];
   for (const r of restaurants) {
-    if (!r.items.length || /^view store$/i.test(r.restaurant.trim())) continue;
+    if (!r.items.length || isNonRestaurantName(r.restaurant)) continue;
     const km = q.origin && r.geo ? haversineKm(q.origin, r.geo) : null;
     if (q.rangeKm !== undefined && km !== null && km > q.rangeKm) continue;
     const name = norm(r.restaurant);
