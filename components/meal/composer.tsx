@@ -64,8 +64,10 @@ export function Composer(p: ComposerProps) {
 
   return (
     <div className="space-y-4">
+      {/* One panel: preferences on top, the prompt underneath. No inner borders. */}
+      <div className="rounded-2xl border bg-card shadow-sm transition-shadow focus-within:border-brand focus-within:ring-[3px] focus-within:ring-brand/20">
       {/* Preferences: location on the left, labelled fields on the right */}
-      <div className="grid gap-4 rounded-2xl border bg-card p-4 shadow-sm sm:grid-cols-[1.2fr_1fr]">
+      <div className="grid gap-4 p-4 sm:grid-cols-[1.2fr_1fr]" onKeyDown={(e) => e.stopPropagation()}>
         {p.googleMapsKey ? (
           <GoogleLocationMap apiKey={p.googleMapsKey} value={p.location} rangeKm={p.rangeKm} onChange={p.onLocationChange} />
         ) : (
@@ -139,8 +141,10 @@ export function Composer(p: ComposerProps) {
         </div>
       </div>
 
+      <div className="mx-4 my-1 h-px bg-border" />
+
       {/* Prompt */}
-      <div className="relative rounded-2xl border bg-card shadow-sm transition-shadow focus-within:border-brand focus-within:ring-[3px] focus-within:ring-brand/20">
+      <div className="relative">
         <Textarea
           value={p.value}
           onChange={(e) => p.onChange(e.target.value)}
@@ -157,6 +161,7 @@ export function Composer(p: ComposerProps) {
         <Button size="icon" className="absolute right-3 bottom-3 size-9 rounded-full" disabled={!canSubmit} onClick={p.onSubmit} aria-label="Find meals">
           <Icon icon={p.loading ? "lucide:loader-circle" : "lucide:arrow-up"} className={cn("size-4", p.loading && "animate-spin")} />
         </Button>
+      </div>
       </div>
 
       <div className="flex flex-wrap gap-1.5">

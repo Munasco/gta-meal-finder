@@ -12,3 +12,4 @@ tsconfig.tsbuildinfo
 .env*
 .dev.vars*
 .vercel
+launch-video

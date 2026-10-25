@@ -166,7 +166,7 @@ export function GoogleLocationMap({
   };
 
   return (
-    <div className={cn("overflow-hidden rounded-xl border bg-card", className)}>
+    <div className={cn("overflow-hidden rounded-xl bg-muted/40", className)}>
       <div className="relative">
         <div ref={mapEl} className="h-44 w-full bg-muted" aria-label="Map" />
         <div className="absolute inset-x-2 top-2 z-10 flex gap-1">
