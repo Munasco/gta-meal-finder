@@ -1,5 +1,0 @@
-{
-  "framework": "nextjs",
-  "buildCommand": "npm run build:vercel",
-  "installCommand": "npm install --no-audit --no-fund"
-}

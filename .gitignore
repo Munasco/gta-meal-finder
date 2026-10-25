@@ -1,55 +1,38 @@
 # Dependencies
 /node_modules/
-/.pnp
-.pnp.*
-# Keep authored Yarn tooling if the project adopts Yarn.
-/.yarn/*
-!/.yarn/patches/
-!/.yarn/plugins/
-!/.yarn/releases/
-!/.yarn/versions/
 
-# Generated builds and framework state
-/dist/
+# Builds and framework state
 /.next/
-/.vinext/
 /out/
 next-env.d.ts
 *.tsbuildinfo
 
-# Test output
-/coverage/
-
-# Package-manager logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# Local environment and keys
+# Local environment and keys (never commit these)
 .env*
+!.env.example
 .dev.vars*
 *.pem
 
-# Checkout-local tool state
-/.wrangler/
-/.sites-runtime/
+# Crawl dataset: hosted on Vercel Blob, pulled by `npm run data:pull` (see data/manifest.json)
+/data/ubereats-gta.json
+/data/health-estimates.json
 
-# Workspace scaffolding and publication archives
-/.agents/
-/.codex/
-/outputs/
-/work/
-
-# OS metadata
-.DS_Store
-
-# Local browser profile used by bridge/server.ts
+# Local Chrome profile used by bridge/server.ts
 /.bridge-profile/
 
 # Vercel
-/.vercel/
 .vercel
 
-# Parked code kept locally for later (Apify / official Uber MCP providers)
+# Logs and OS metadata
+*.log
+.DS_Store
+
+# Parked code kept locally (Apify / official Uber MCP providers)
 /later/
+
+# npm lockfile is the source of truth (Vercel and CI use npm); `bun install` works too
+/bun.lock
+
+# Written by `next dev` on every start; not part of the project
+/AGENTS.md
+/CLAUDE.md
