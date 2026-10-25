@@ -10,12 +10,13 @@ import { RestaurantCard } from "@/components/meal/restaurant-card";
 import { DishList } from "@/components/meal/dish-list";
 import { EMPTY_CREDENTIALS, SettingsDialog, fetchCaptured, type CapturedSummary, type Credentials, type ProviderStatus } from "@/components/meal/settings-dialog";
 import { Button } from "@/components/ui/button";
+import { Select, SelectContent, SelectItem, SelectTrigger } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import type { FindResponse } from "@/app/api/find/route";
 import type { BiomarkerLensId } from "@/lib/models";
 import { BIOMARKER_LENS_LIST } from "@/lib/studies-and-lenses";
-import type { MenuOption } from "@/lib/uber-eats";
+import type { MenuOption, RestaurantGroup } from "@/lib/uber-eats";
 import { LENS_META } from "@/lib/ui-meta";
 import { cn } from "@/lib/utils";
 
@@ -28,6 +29,33 @@ const NAV: { id: View; icon: string; label: string }[] = [
 ];
 
 const STORAGE_KEY = "gta-meal-finder:v4";
+
+type SortKey = "match" | "health" | "price" | "distance" | "calories";
+const SORTS: { id: SortKey; icon: string; label: string }[] = [
+  { id: "match", icon: "lucide:sparkles", label: "Best match" },
+  { id: "health", icon: "lucide:leaf", label: "Healthiest" },
+  { id: "price", icon: "lucide:wallet", label: "Cheapest" },
+  { id: "distance", icon: "lucide:navigation", label: "Nearest" },
+  { id: "calories", icon: "lucide:flame", label: "Fewest calories" },
+];
+
+function sortGroups(groups: RestaurantGroup[], key: SortKey): RestaurantGroup[] {
+  const best = (g: RestaurantGroup) => g.options[0];
+  const num = (v: number | null | undefined, fallback: number) => (v === null || v === undefined ? fallback : v);
+  const byKey: Record<SortKey, (a: RestaurantGroup, b: RestaurantGroup) => number> = {
+    match: (a, b) => b.rankScore - a.rankScore,
+    health: (a, b) => num(best(b)?.healthScore, 0) - num(best(a)?.healthScore, 0),
+    price: (a, b) => num(a.combo.items.length ? a.combo.netCad : null, 1e9) - num(b.combo.items.length ? b.combo.netCad : null, 1e9),
+    distance: (a, b) => num(a.distanceKm, 1e9) - num(b.distanceKm, 1e9),
+    calories: (a, b) => num(best(a)?.calories, 1e9) - num(best(b)?.calories, 1e9),
+  };
+  const sorted = [...groups].sort(byKey[key]);
+  if (key === "health" || key === "calories") {
+    const optionSort = key === "health" ? (a: MenuOption, b: MenuOption) => b.healthScore - a.healthScore : (a: MenuOption, b: MenuOption) => num(a.calories, 1e9) - num(b.calories, 1e9);
+    return sorted.map((g) => ({ ...g, options: [...g.options].sort(optionSort) }));
+  }
+  return sorted;
+}
 
 interface Persisted {
   query: string;
@@ -72,6 +100,7 @@ export default function MealFinderPage() {
   const [selected, setSelected] = useState<MenuOption | null>(null);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [resultsView, setResultsView] = useState<"restaurants" | "dishes">("restaurants");
+  const [sortBy, setSortBy] = useState<SortKey>("match");
   const [status, setStatus] = useState<ProviderStatus | null>(null);
   const [captured, setCaptured] = useState<CapturedSummary | null>(null);
 
@@ -262,6 +291,21 @@ export default function MealFinderPage() {
                     <div className="min-w-0 flex-1">
                       <IntentStrip intent={result.intent} search={result.search} dealsOnly={state.bogo} targetScore={state.targetScore ? Number(state.targetScore) : null} />
                     </div>
+                    <Select value={sortBy} onValueChange={(v) => setSortBy(v as SortKey)}>
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <SelectTrigger size="sm" className="h-8 w-9 shrink-0 justify-center rounded-full px-0 [&>svg:last-child]:hidden" aria-label="Sort results">
+                            <Icon icon={SORTS.find((x) => x.id === sortBy)?.icon ?? "lucide:arrow-up-down"} />
+                          </SelectTrigger>
+                        </TooltipTrigger>
+                        <TooltipContent>Sort · {SORTS.find((x) => x.id === sortBy)?.label}</TooltipContent>
+                      </Tooltip>
+                      <SelectContent align="end">
+                        {SORTS.map((o) => (
+                          <SelectItem key={o.id} value={o.id}><Icon icon={o.icon} /> {o.label}</SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                     <div className="flex shrink-0 rounded-full border p-0.5">
                       {(["restaurants", "dishes"] as const).map((v) => (
                         <Tooltip key={v}>
@@ -288,9 +332,9 @@ export default function MealFinderPage() {
                       {state.bogo ? "No deals nearby for this. Turn off BOGO to see everything." : "Nothing matched."}
                     </div>
                   ) : resultsView === "dishes" ? (
-                    <DishList groups={result.search.groups} targetScore={state.targetScore ? Number(state.targetScore) : null} onSelect={setSelected} />
+                    <DishList groups={sortGroups(result.search.groups, sortBy)} sortBy={sortBy} targetScore={state.targetScore ? Number(state.targetScore) : null} onSelect={setSelected} />
                   ) : (
-                    result.search.groups.slice(0, 8).map((g) => (
+                    sortGroups(result.search.groups, sortBy).slice(0, 8).map((g) => (
                       <RestaurantCard key={g.restaurant} group={g} onSelect={setSelected} />
                     ))
                   )}
