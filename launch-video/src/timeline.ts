@@ -6,7 +6,7 @@ export const s = (sec: number) => Math.round(sec * FPS);
 // Music (public/audio/music.wav, 115 BPM, bar ≈ 2.09 s): drop at 14.5 s, steady beat to ~45 s, a quiet
 // breakdown 46–52 s, the final section from ~56 s, ending on a button at 79.5 s.
 export const DROP = 14.5;
-export const END = 79.5;
+export const END = 79.04;
 
 export const T = {
   intro: { from: 0, to: 16.2 },        // icon, food grid, Introducing, kinetic headline, slam on the drop

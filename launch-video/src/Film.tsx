@@ -41,7 +41,7 @@ export const Film: React.FC = () => {
           title="Just say it."
           kicker="Describe the meal. Budget included."
           clip={CLIPS.prompt}
-          clipStart={0.6}
+          clipStart={3.6}
           length={T.prompt.to - T.prompt.from}
           titleFor={1.8}
           zoom={[s(6.5), s(10.5), 1, 1.12]}
@@ -60,7 +60,7 @@ export const Film: React.FC = () => {
           accent="the math."
           kicker="Net cost before tax and fees. BOGO built in."
           clip={CLIPS.combo}
-          clipStart={1.2}
+          clipStart={4.5}
           length={T.combo.to - T.combo.from}
           titleFor={1.9}
           zoom={[s(4), s(9), 1, 1.16]}
@@ -68,7 +68,7 @@ export const Film: React.FC = () => {
           callouts={[
             { text: "Built for big backs", x: 1430, y: 260, at: 3.4, until: 6.4, icon: "🍽️", tone: "warn" },
             { text: "BOGO: cheaper main is free", x: 1430, y: 350, at: 5.2, until: 8.4, icon: "🏷️", tone: "brand" },
-            { text: "$29.99 net · $36.88 all in", x: 1430, y: 440, at: 7.0, until: 10.0, icon: "💸" },
+            { text: "Net cost · all-in with fees", x: 1430, y: 440, at: 7.0, until: 10.0, icon: "💸" },
           ]}
         />
       </Sequence>
@@ -79,7 +79,7 @@ export const Film: React.FC = () => {
           accent="reads the menu."
           kicker="USDA components + Decision-1, scored like the catalogue."
           clip={CLIPS.sheet}
-          clipStart={1.6}
+          clipStart={5.6}
           length={T.menu.to - T.menu.from}
           titleFor={1.8}
           zoom={[s(3), s(8), 1, 1.18]}
@@ -98,7 +98,7 @@ export const Film: React.FC = () => {
           accent="the GTA."
           kicker="300+ restaurants from 46 points, nearest first."
           clip={CLIPS.map}
-          clipStart={0.8}
+          clipStart={3.8}
           length={T.gta.to - T.gta.from}
           titleFor={1.8}
           zoom={[s(2), s(6), 1, 1.14]}
