@@ -22,10 +22,10 @@ const BigBacks: React.FC<{ f: number }> = ({ f }) => {
   const line3 = rise(f, from + s(2.6), from + s(3.1));
   return (
     <AbsoluteFill style={{ background: COLORS.ink, opacity: a * (1 - out), alignItems: "center", justifyContent: "center", fontFamily: SANS, color: "#fff" }}>
-      <div style={{ fontSize: 150, fontWeight: 800, letterSpacing: -7, transform: `translateY(${(1 - a) * 40}px)` }}>Big back era: over.</div>
-      <div style={{ fontSize: 72, fontWeight: 600, color: COLORS.brand, marginTop: 10, opacity: line2, transform: `translateY(${(1 - line2) * 24}px)` }}>Same portions. Half the damage.</div>
+      <div style={{ fontSize: 150, fontWeight: 800, letterSpacing: -7, transform: `translateY(${(1 - a) * 40}px)` }}>Cut the big back.</div>
+      <div style={{ fontSize: 72, fontWeight: 600, color: COLORS.brand, marginTop: 10, opacity: line2, transform: `translateY(${(1 - line2) * 24}px)` }}>Keep the portions. Lose the damage.</div>
       <div style={{ fontSize: 34, fontWeight: 500, color: "rgba(255,255,255,0.6)", marginTop: 40, opacity: line3 }}>
-        2 mains · 1 side · under $40 · scored by the numbers
+        2 mains · 1 side · under $40 · gently
       </div>
     </AbsoluteFill>
   );
@@ -50,7 +50,7 @@ const GridReprise: React.FC<{ f: number }> = ({ f }) => {
         );
       })}
       <AbsoluteFill style={{ background: "rgba(251,252,254,0.72)" }} />
-      <Headline text="Every menu. Every dish. Scored." accent="Scored." from={from + 6} size={112} />
+      <Headline text="Every menu. Every dish. Scored. Even the fries." accent="Even the fries." from={from + 6} size={104} />
     </AbsoluteFill>
   );
 };
@@ -69,7 +69,7 @@ const EndCard: React.FC<{ f: number }> = ({ f }) => {
       </div>
       <div style={{ fontSize: 56, fontWeight: 600, color: COLORS.brand, marginTop: 36, opacity: url, transform: `translateY(${(1 - url) * 16}px)` }}>{URL}</div>
       <div style={{ fontSize: 32, fontWeight: 500, color: COLORS.muted, marginTop: 26, opacity: tag, letterSpacing: 2, textTransform: "uppercase" }}>
-        Free · Open source · Greater Toronto Area
+        Free · Open source · Side effects: smaller back
       </div>
     </AbsoluteFill>
   );

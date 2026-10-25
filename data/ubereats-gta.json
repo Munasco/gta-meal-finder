@@ -4,7 +4,7 @@
     "pl": "JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjIwMCUyMEJheSUyMFN0JTJDJTIwVG9yb250byUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNjQ3NyUyQyUyMmxvbmdpdHVkZSUyMiUzQS03OS4zNzk3JTdE"
   },
   "startedAt": "2026-10-25T03:43:28.876Z",
-  "updatedAt": "2026-10-25T06:24:46.798Z",
+  "updatedAt": "2026-10-25T06:29:41.157Z",
   "queriesDone": [
     "healthy",
     "salad",
@@ -177,7 +177,11 @@
     "Port Credit|sushi",
     "Port Credit|mediterranean",
     "Port Credit|shawarma",
-    "Port Credit|indian"
+    "Port Credit|indian",
+    "Port Credit|thai",
+    "Port Credit|vietnamese",
+    "Port Credit|mexican",
+    "Port Credit|vegan"
   ],
   "restaurants": [
     {
@@ -83251,7 +83255,8 @@
         "@King West / Liberty Village",
         "@Yorkville / Midtown",
         "@Vaughan Metropolitan Centre",
-        "@Mississauga Square One"
+        "@Mississauga Square One",
+        "@Port Credit"
       ],
       "itemCount": 169,
       "capturedAt": "2026-10-25T03:56:23.158Z"
@@ -110763,7 +110768,8 @@
         "@Thornhill",
         "@Vaughan Metropolitan Centre",
         "@Woodbridge",
-        "@Mississauga Square One"
+        "@Mississauga Square One",
+        "@Port Credit"
       ],
       "itemCount": 81,
       "capturedAt": "2026-10-25T04:00:13.621Z"
@@ -199872,7 +199878,8 @@
         "@Yorkville / Midtown",
         "@Vaughan Metropolitan Centre",
         "@Woodbridge",
-        "@Mississauga Square One"
+        "@Mississauga Square One",
+        "@Port Credit"
       ],
       "itemCount": 134,
       "capturedAt": "2026-10-25T05:02:36.181Z"
@@ -403520,7 +403527,8 @@
       "bogo": false,
       "foundVia": [
         "thai",
-        "@Mississauga Square One"
+        "@Mississauga Square One",
+        "@Port Credit"
       ],
       "itemCount": 60,
       "capturedAt": "2026-10-25T06:20:02.085Z"
@@ -407956,7 +407964,8 @@
       "bogo": false,
       "foundVia": [
         "vegan",
-        "@Mississauga Square One"
+        "@Mississauga Square One",
+        "@Port Credit"
       ],
       "itemCount": 82,
       "capturedAt": "2026-10-25T06:20:51.283Z"
@@ -429433,6 +429442,1396 @@
       ],
       "itemCount": 61,
       "capturedAt": "2026-10-25T06:24:45.488Z"
+    },
+    {
+      "address": "3077 Mavis Road, Mississauga",
+      "geo": {
+        "lat": 43.567894,
+        "lng": -79.6348597
+      },
+      "items": [
+        {
+          "calories": null,
+          "description": "Fried rice served with egg, green onions, carrots, and your choice of flavour.",
+          "imageUrl": null,
+          "likedPct": 66,
+          "name": "Fried Rice",
+          "price": 16.99,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25220e076bf3-e32c-559c-a49d-8270b7e20869%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Thin rice noodles stir-fried with sweet-and-sour sauce, eggs, bean sprouts, green onions, tofu, and salted radish.",
+          "imageUrl": null,
+          "likedPct": 71,
+          "name": "Pad Thaï",
+          "price": 16.99,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522c4dc5553-04d6-582e-9968-58950e76a577%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Large rice noodles served with house brand soy sauce, eggs, and Chinese broccoli.",
+          "imageUrl": null,
+          "likedPct": 79,
+          "name": "Pad See Ew",
+          "price": 16.99,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522e9c04e72-5ac5-5b81-a615-0c193d36afc8%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Battered chicken or beef tossed in a sweet and spicy sriracha-based sauce with peppers, onions, and carrots. Served on steamed rice.",
+          "imageUrl": null,
+          "likedPct": 77,
+          "name": "General Thaïracha™",
+          "price": 18.79,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522fd63807d-978b-52da-a6f8-4f478863d31c%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Battered chicken or beef tossed in sweet chilli sauce with peppers, onions, carrots, and mango. Served on steamed rice.",
+          "imageUrl": null,
+          "likedPct": 77,
+          "name": "General Thai™ Mango",
+          "price": 18.79,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522ef4b66c1-713d-570d-b35b-24e38190fc1a%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Crunchy Calamari",
+          "price": 11.99,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522829926ce-1b70-540d-94ba-2a0be7e5db3e%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "A sweet, sour and spicy lemongrass infused chicken broth with noodles and vegetables.",
+          "imageUrl": null,
+          "likedPct": 60,
+          "name": "Tom Yum Soup",
+          "price": 16.99,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522084a1225-4e04-52a5-88a0-815c35eadd51%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Your choice of flavour for our fresh, crisp wok-tossed vegetables (including carrots, peppers, and onions), served with Thaï Express' savoury sauces on steamed rice.",
+          "imageUrl": null,
+          "likedPct": 71,
+          "name": "Stir-Fry",
+          "price": 16.99,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25229df842d6-23dc-5e80-bc05-7dd0778f9fa0%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Chicken wrapped in savory dough, steamed and served with peanut sauce, green onions and crushed peanuts. Each order comes with four dumplings.",
+          "imageUrl": null,
+          "likedPct": 70,
+          "name": "Steamed Chicken Dumplings (4 pcs)",
+          "price": 6.8,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522dd63d3fb-e855-58a4-be0c-1b456a836d64%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Your choice of curry with battered chicken or beef on steamed rice.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "General Curry™",
+          "price": 18.79,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522c356959e-9c9c-5ee7-b871-7ff65dcc2343%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "A sweet, sour and spicy lemongrass infused chicken broth with noodles and vegetables.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Mini Tom Yum Soup",
+          "price": 7.75,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%252295763855-0a0a-5beb-8ab1-90d696419d4d%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Thin rice noodles stir-fried with a milder and gluten-friendly version of our sweet-and-sour sauce , eggs, bean sprouts, green onions, and salted radish.",
+          "imageUrl": null,
+          "likedPct": 80,
+          "name": "Gluten-Friendly Pad Thaï",
+          "price": 16.99,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522e1c67a58-895a-527b-8da5-341704843ab4%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Your choice of silky, creamy, and spicy curry made with coconut milk.",
+          "imageUrl": null,
+          "likedPct": 65,
+          "name": "Curry",
+          "price": 16.99,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25222132350f-9dc6-52e0-b4b2-92ff202391a6%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "description": "4 Fried Chicken Dumplings with a bottled beverage of your choosing.",
+          "imageUrl": null,
+          "name": "Fried Dumplings &amp; Bottled Drink Trio",
+          "price": 8.8,
+          "section": "Featured items"
+        },
+        {
+          "calories": null,
+          "description": "Large rice noodles served with a milder and gluten-friendly version of our house brand soy sauce, eggs, and Chinese broccoli.",
+          "imageUrl": null,
+          "likedPct": 66,
+          "name": "Gluten-Friendly Pad See Ew",
+          "price": 16.99,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25222a136f17-13da-5f48-9067-1c77b5b046d7%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "A fragrant, homemade, Thaï chicken broth filled with noodles, vegetables, and topped with crispy fried red shallots.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Thaï Soup",
+          "price": 16.99,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522d99657c1-4972-595e-b446-9c082edc3401%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "A fragrant, homemade, Thaï chicken broth filled with noodles, vegetables, and topped with crispy fried red shallots.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Mini Thaï Soup",
+          "price": 7.75,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25220ee732c2-a2ee-5fcb-b216-d8264248341b%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Calamari Fried Rice",
+          "price": 22.69,
+          "section": "Seasonal Specials",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%2522e71bba97-e073-5840-8e95-c9d4d763b017%2522%252C%2522itemUuid%2522%253A%2522f248e9d7-028e-527a-92dd-94d2630a4a85%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Crunchy Calamari",
+          "price": 11.99,
+          "section": "Seasonal Specials",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522829926ce-1b70-540d-94ba-2a0be7e5db3e%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "PopBok with Sauce",
+          "price": 7.55,
+          "section": "Seasonal Specials",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%2522e71bba97-e073-5840-8e95-c9d4d763b017%2522%252C%2522itemUuid%2522%253A%25223067c51e-ef0d-5ad5-af17-e169ed0d5879%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "description": "Enjoy this crispy roll filled with vegetables and served with plum sauce.",
+          "imageUrl": null,
+          "name": "Imperial Roll (hot) (1pc)",
+          "price": 3.1,
+          "section": "Appetizers"
+        },
+        {
+          "calories": null,
+          "description": "Chicken wrapped in savory dough, steamed and served with peanut sauce, green onions and crushed peanuts. Each order comes with four dumplings.",
+          "imageUrl": null,
+          "likedPct": 70,
+          "name": "Steamed Chicken Dumplings (4 pcs)",
+          "price": 6.8,
+          "section": "Appetizers",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522dd63d3fb-e855-58a4-be0c-1b456a836d64%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "description": "Crispy pieces of our signature General Thaï™ chicken served with a choice of Sweet Chilli sauce or Spicy Thaïracha Sauce.",
+          "imageUrl": null,
+          "name": "Pok Bok Bag",
+          "price": 7.55,
+          "section": "Appetizers"
+        },
+        {
+          "description": "Crispy lightly seasoned  chicken wings served with sweet chili dipping sauce.",
+          "imageUrl": null,
+          "name": "3 pcs Thaï Chicken Wings",
+          "price": 7.15,
+          "section": "Appetizers"
+        },
+        {
+          "description": "Crispy lightly seasoned  chicken wings served with sweet chili dipping sauce.",
+          "imageUrl": null,
+          "name": "9 pcs Thaï Chicken Wings",
+          "price": 17.3,
+          "section": "Appetizers"
+        },
+        {
+          "description": "Crispy lightly seasoned  chicken wings served with sweet chili dipping sauce.",
+          "imageUrl": null,
+          "name": "6 Pcs Thaï Chicken Wings",
+          "price": 11.5,
+          "section": "Appetizers"
+        },
+        {
+          "description": "Tiny bites big flavour. Popcorn chicken tossed in lemongrass, kafir lime leaf and chilis.",
+          "imageUrl": null,
+          "name": "Spiced Pop Bok",
+          "price": 6.58,
+          "section": "Appetizers"
+        },
+        {
+          "calories": null,
+          "description": "A fragrant, homemade, Thaï chicken broth filled with noodles, vegetables, and topped with crispy fried red shallots.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Mini Thaï Soup",
+          "price": 7.75,
+          "section": "Soups",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25220ee732c2-a2ee-5fcb-b216-d8264248341b%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "A sweet, sour and spicy lemongrass infused chicken broth with noodles and vegetables.",
+          "imageUrl": null,
+          "likedPct": 60,
+          "name": "Tom Yum Soup",
+          "price": 16.99,
+          "section": "Soups",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522084a1225-4e04-52a5-88a0-815c35eadd51%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "A sweet, sour and spicy lemongrass infused chicken broth with noodles and vegetables.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Mini Tom Yum Soup",
+          "price": 7.75,
+          "section": "Soups",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%252295763855-0a0a-5beb-8ab1-90d696419d4d%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "A fragrant, homemade, Thaï chicken broth filled with noodles, vegetables, and topped with crispy fried red shallots.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Thaï Soup",
+          "price": 16.99,
+          "section": "Soups",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522d99657c1-4972-595e-b446-9c082edc3401%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "description": "Mango, lettuce, coriander, shallots, red pepper, and mint, served with Thaï dressing",
+          "imageUrl": null,
+          "name": "Mango Salad",
+          "price": 7.58,
+          "section": "Salads"
+        },
+        {
+          "description": "Eat better not less. This all-new salad option is something to shake for: a bed of fresh veggies and vermicelli noodles. Pick your own protein, shake, and enjoy!",
+          "imageUrl": null,
+          "name": "Shak-a-Bowl",
+          "price": 16.99,
+          "section": "Salads"
+        },
+        {
+          "calories": null,
+          "description": "Fried rice served with egg, green onions, carrots, and your choice of flavour.",
+          "imageUrl": null,
+          "likedPct": 66,
+          "name": "Fried Rice",
+          "price": 16.99,
+          "section": "Signature Thai Dishes",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25220e076bf3-e32c-559c-a49d-8270b7e20869%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Large rice noodles served with house brand soy sauce, eggs, and Chinese broccoli.",
+          "imageUrl": null,
+          "likedPct": 79,
+          "name": "Pad See Ew",
+          "price": 16.99,
+          "section": "Signature Thai Dishes",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522e9c04e72-5ac5-5b81-a615-0c193d36afc8%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Your choice of silky, creamy, and spicy curry made with coconut milk.",
+          "imageUrl": null,
+          "likedPct": 65,
+          "name": "Curry",
+          "price": 16.99,
+          "section": "Signature Thai Dishes",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25222132350f-9dc6-52e0-b4b2-92ff202391a6%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Your choice of flavour for our fresh, crisp wok-tossed vegetables (including carrots, peppers, and onions), served with Thaï Express' savoury sauces on steamed rice.",
+          "imageUrl": null,
+          "likedPct": 71,
+          "name": "Stir-Fry",
+          "price": 16.99,
+          "section": "Signature Thai Dishes",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25229df842d6-23dc-5e80-bc05-7dd0778f9fa0%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Thin rice noodles stir-fried with sweet-and-sour sauce, eggs, bean sprouts, green onions, tofu, and salted radish.",
+          "imageUrl": null,
+          "likedPct": 71,
+          "name": "Pad Thaï",
+          "price": 16.99,
+          "section": "Signature Thai Dishes",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522c4dc5553-04d6-582e-9968-58950e76a577%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Battered chicken or beef tossed in a sweet and spicy sriracha-based sauce with peppers, onions, and carrots. Served on steamed rice.",
+          "imageUrl": null,
+          "likedPct": 77,
+          "name": "General Thaïracha™",
+          "price": 18.79,
+          "section": "Signature Thai Dishes",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522fd63807d-978b-52da-a6f8-4f478863d31c%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Battered chicken or beef tossed in sweet chilli sauce with peppers, onions, carrots, and mango. Served on steamed rice.",
+          "imageUrl": null,
+          "likedPct": 77,
+          "name": "General Thai™ Mango",
+          "price": 18.79,
+          "section": "Signature Thai Dishes",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522ef4b66c1-713d-570d-b35b-24e38190fc1a%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Your choice of curry with battered chicken or beef on steamed rice.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "General Curry™",
+          "price": 18.79,
+          "section": "Signature Thai Dishes",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522c356959e-9c9c-5ee7-b871-7ff65dcc2343%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "description": "Your choice of flavour for our fresh, crisp wok-tossed vegetables (including carrots, peppers, and onions), served with a milder and gluten friendly version of Thaï Express' savoury sauces on steamed rice.",
+          "imageUrl": null,
+          "name": "Gluten-Friendly Stir-Fry",
+          "price": 16.99,
+          "section": "Gluten-Friendly Dishes"
+        },
+        {
+          "calories": null,
+          "description": "Large rice noodles served with a milder and gluten-friendly version of our house brand soy sauce, eggs, and Chinese broccoli.",
+          "imageUrl": null,
+          "likedPct": 66,
+          "name": "Gluten-Friendly Pad See Ew",
+          "price": 16.99,
+          "section": "Gluten-Friendly Dishes",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25222a136f17-13da-5f48-9067-1c77b5b046d7%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "description": "Fried rice served with egg, green onions, carrots, and your choice of our milder and gluten-friendly flavour.",
+          "imageUrl": null,
+          "name": "Gluten Friendly Fried Rice",
+          "price": 16.99,
+          "section": "Gluten-Friendly Dishes"
+        },
+        {
+          "calories": null,
+          "description": "Thin rice noodles stir-fried with a milder and gluten-friendly version of our sweet-and-sour sauce , eggs, bean sprouts, green onions, and salted radish.",
+          "imageUrl": null,
+          "likedPct": 80,
+          "name": "Gluten-Friendly Pad Thaï",
+          "price": 16.99,
+          "section": "Gluten-Friendly Dishes",
+          "url": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%252253bd20b1-1a18-46df-a687-bd430cc77501%2522%252C%2522sectionUuid%2522%253A%2522550aa8b6-d21d-5a38-8b09-6292582a9e09%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522e1c67a58-895a-527b-8da5-341704843ab4%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "description": "Large rice noodles served with vegan house brand soy sauce and Chinese broccoli.",
+          "imageUrl": null,
+          "name": "Vegan Pad See Ew",
+          "price": 16.99,
+          "section": "Vegan Dishes"
+        },
+        {
+          "description": "Thin rice noodles stir-fried with vegan sweet-and-sour sauce, bean sprouts, green onions, and salted radish.",
+          "imageUrl": null,
+          "name": "Vegan Pad Thaï",
+          "price": 16.99,
+          "section": "Vegan Dishes"
+        },
+        {
+          "description": "Vegan Fried Rice served with green onions, carrots, and your choice of flavour.",
+          "imageUrl": null,
+          "name": "Vegan Fried Rice",
+          "price": 16.99,
+          "section": "Vegan Dishes"
+        },
+        {
+          "description": "Your choice of flavour for our fresh, crisp wok-tossed vegetables (including carrots, peppers, and onions), served with vegan Thaï Express' savoury sauces on steamed rice.",
+          "imageUrl": null,
+          "name": "Vegan Stir-Fry",
+          "price": 16.99,
+          "section": "Vegan Dishes"
+        },
+        {
+          "description": "Individual serving of steamed rice.",
+          "imageUrl": null,
+          "name": "Bowl of Rice",
+          "price": 3.2,
+          "section": "Side order"
+        },
+        {
+          "description": "Mango, lettuce, coriander, shallots, red pepper, and mint, served with Thaï dressing and with a bottled beverage of your choosing.",
+          "imageUrl": null,
+          "name": "Mango Salad &amp; Bottled Drink Trio",
+          "price": 9.2,
+          "section": "Trio"
+        },
+        {
+          "description": "Fresh Veggie rice paper roll filled with vegetables, with a bottled beverage of your choosing.",
+          "imageUrl": null,
+          "name": "Fresh Veggie Roll &amp; Bottled Drink Trio",
+          "price": 8.9,
+          "section": "Trio"
+        },
+        {
+          "description": "Mini Chicken Soup with a bottled  beverage of your choosing.",
+          "imageUrl": null,
+          "name": "Mini Chicken Soup &amp; Bottled Drink Trio",
+          "price": 10.2,
+          "section": "Trio"
+        },
+        {
+          "description": "Mini Beef Soup with a bottled beverage of your choosing.",
+          "imageUrl": null,
+          "name": "Mini Beef Soup &amp; Bottled Drink Trio",
+          "price": 10.5,
+          "section": "Trio"
+        },
+        {
+          "description": "4 Steamed Chicken Dumplings with a bottled beverage of your choosing.",
+          "imageUrl": null,
+          "name": "Steamed Dumplings &amp; Bottled Drink Trio",
+          "price": 8.8,
+          "section": "Trio"
+        },
+        {
+          "description": "4 Fried Chicken Dumplings with a bottled beverage of your choosing.",
+          "imageUrl": null,
+          "name": "Fried Dumplings &amp; Bottled Drink Trio",
+          "price": 8.8,
+          "section": "Trio"
+        },
+        {
+          "description": "Crispy vegetable Imperial Roll with a bottled beverage of your choosing.",
+          "imageUrl": null,
+          "name": "Imperial Roll &amp; Bottled Drink Trio",
+          "price": 5.85,
+          "section": "Trio"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Soft Drink Bottle (591ml)",
+          "price": 3.8,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Pure Leaf® Iced Tea",
+          "price": 4.85,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Bottled Water",
+          "price": 3.45,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Bottled Juice",
+          "price": 3.95,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Asian Drink",
+          "price": 4.6,
+          "section": "Drinks"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Red Bull",
+          "price": 4.2,
+          "section": "Drinks"
+        }
+      ],
+      "rating": 4.2,
+      "restaurant": "Thai Express (Mavis &amp; Dundas)",
+      "storeUrl": "https://www.ubereats.com/ca/store/thai-express-mavis-%26-dundas/U70gsRoYRt-mh71DDMd1AQ",
+      "promos": [],
+      "bogo": false,
+      "foundVia": [
+        "thai",
+        "@Port Credit"
+      ],
+      "itemCount": 63,
+      "capturedAt": "2026-10-25T06:25:39.862Z"
+    },
+    {
+      "address": "3700 Eglinton Ave W, Unit 61, Mississauga",
+      "geo": {
+        "lat": 43.5381125,
+        "lng": -79.7286525
+      },
+      "items": [
+        {
+          "calories": null,
+          "description": "Soft corn tortilla filled with your choice of protein.",
+          "imageUrl": null,
+          "likedPct": 75,
+          "name": "Tacos Classic",
+          "price": 8,
+          "section": "Antojitos",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%252201a49e85-2af4-43da-bc6a-f22e3f67c7ff%2522%252C%2522itemUuid%2522%253A%25224674c063-b498-4c3d-a7cf-2a08c948a8e7%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Tender fillings wrapped in a large tortilla.",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "premium burrito",
+          "price": 24,
+          "section": "Antojitos",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%252201a49e85-2af4-43da-bc6a-f22e3f67c7ff%2522%252C%2522itemUuid%2522%253A%2522c4272c58-89f3-455d-acf2-36d8d2f9794b%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Soft corn tortilla filled with your choice of protein.",
+          "imageUrl": null,
+          "likedPct": 86,
+          "name": "Tacos Premium",
+          "price": 9,
+          "section": "Antojitos",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%252201a49e85-2af4-43da-bc6a-f22e3f67c7ff%2522%252C%2522itemUuid%2522%253A%2522002d697e-7a2e-48ed-affd-71b0840ae84e%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Crunchy handmade thick corn shell spread with refried beans, sour cream, shredded cheese and lettuce.",
+          "imageUrl": null,
+          "likedPct": 60,
+          "name": "Sopes Classic",
+          "price": 8,
+          "section": "Antojitos",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%252201a49e85-2af4-43da-bc6a-f22e3f67c7ff%2522%252C%2522itemUuid%2522%253A%252251de7d7f-3777-44d1-95b6-592dd5e0a7be%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Crunchy handmade thick corn shell spread with refried beans, sour cream, shredded cheese, and lettuce.",
+          "imageUrl": null,
+          "likedPct": 84,
+          "name": "Sopes Premium",
+          "price": 9,
+          "section": "Antojitos",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%252201a49e85-2af4-43da-bc6a-f22e3f67c7ff%2522%252C%2522itemUuid%2522%253A%25224a0765b1-14d7-4b48-87cd-c5d7bef61bc1%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Crispy corn tortilla spread with refried beans, topped with lettuce, sour cream, and crumbled cheese.",
+          "imageUrl": null,
+          "likedPct": 66,
+          "name": "Tostadas Classic",
+          "price": 8,
+          "section": "Antojitos",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%252201a49e85-2af4-43da-bc6a-f22e3f67c7ff%2522%252C%2522itemUuid%2522%253A%25229b0d4a76-df2f-4073-bf77-576ca906574c%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Crispy corn tortilla spread with refried beans, topped with lettuce, sour cream, and crumbled cheese.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Tostadas Premium",
+          "price": 9,
+          "section": "Antojitos",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%252201a49e85-2af4-43da-bc6a-f22e3f67c7ff%2522%252C%2522itemUuid%2522%253A%2522650c51f4-7afe-4e48-b2b5-b20e8b211021%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Soft corn tortilla filled with your choice of protein.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Corona Tacos Classic",
+          "price": 90,
+          "section": "Antojitos",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%252201a49e85-2af4-43da-bc6a-f22e3f67c7ff%2522%252C%2522itemUuid%2522%253A%252239f1643d-f3ee-41a5-877f-e1a6d65e29cb%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Soft corn tortilla filled with your choice of protein.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Corona Tacos Premium",
+          "price": 105,
+          "section": "Antojitos",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%252201a49e85-2af4-43da-bc6a-f22e3f67c7ff%2522%252C%2522itemUuid%2522%253A%2522707a9ba2-5a4a-42fc-8cfa-818626404495%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "A flour tortilla wrapped filled with refried beans, Mexican rice, cheese, cilantro, and onions.",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "classic Burrito",
+          "price": 20,
+          "section": "Antojitos",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%252201a49e85-2af4-43da-bc6a-f22e3f67c7ff%2522%252C%2522itemUuid%2522%253A%25223016d672-b81e-4cfc-b521-074c45b39dd5%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Tortilla filled with melted cheese and served hot.",
+          "imageUrl": null,
+          "likedPct": 66,
+          "name": "classic quesadillas",
+          "price": 11,
+          "section": "Antojitos",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%252201a49e85-2af4-43da-bc6a-f22e3f67c7ff%2522%252C%2522itemUuid%2522%253A%2522d19ca01b-bb58-4c05-969b-c3415161488b%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Tortilla filled with melted cheese and savory fillings.",
+          "imageUrl": null,
+          "likedPct": 92,
+          "name": "premium quesadilla",
+          "price": 13,
+          "section": "Antojitos",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%252201a49e85-2af4-43da-bc6a-f22e3f67c7ff%2522%252C%2522itemUuid%2522%253A%252259b8fe32-a346-43ce-84a3-9723bc08afd2%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Traditional Mexican sandwich filled with meats and toppings.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "classic torta",
+          "price": 21,
+          "section": "Antojitos",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%252201a49e85-2af4-43da-bc6a-f22e3f67c7ff%2522%252C%2522itemUuid%2522%253A%25221e2eb6e1-4bed-4a21-bb99-4ce996a8bd2a%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Traditional Mexican sandwich filled with meats and toppings.",
+          "imageUrl": null,
+          "likedPct": 87,
+          "name": "premium torta",
+          "price": 23,
+          "section": "Antojitos",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%252201a49e85-2af4-43da-bc6a-f22e3f67c7ff%2522%252C%2522itemUuid%2522%253A%25226497d23d-eb6a-491e-b2d2-7d97585fd22a%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "flour tortilla filled with steak and melted cheese cilantro and onion",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Classic Gringa",
+          "price": 23,
+          "section": "Antojitos",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%252201a49e85-2af4-43da-bc6a-f22e3f67c7ff%2522%252C%2522itemUuid%2522%253A%2522ed665fd3-53a4-44b9-a971-9523bdf146c7%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "three tightly rolled crunchy tacos with chicken filling, garnished with lettuce, sour cream and cheese",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "chicken flautas",
+          "price": 23,
+          "section": "Antojitos",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%252201a49e85-2af4-43da-bc6a-f22e3f67c7ff%2522%252C%2522itemUuid%2522%253A%25221c3da8f9-2697-407c-b96b-1696fea96a8e%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Flour tortilla filled with melted cheese and meat, a classic gringa.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Premium Gringa",
+          "price": 25,
+          "section": "Antojitos",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%252201a49e85-2af4-43da-bc6a-f22e3f67c7ff%2522%252C%2522itemUuid%2522%253A%2522afe29255-fcc8-49a5-8824-33916e49e84d%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Traditional mexican stew made with lamb meat cooked at a low heat with a chili pepper adobo. Birria comes with tortillas, consommé, onions, cilantro, lime, and salsa.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "lamb Birria by Lt",
+          "price": 60,
+          "section": "Mexican Traditional",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%25224d2484a7-a067-4338-b04b-e7cb3dc70a6d%2522%252C%2522itemUuid%2522%253A%2522db8f5c55-1587-4344-a2f8-eeef460cdd44%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Corn tortillas filled with your choice of meat and sauce garnished with sour cream and crumbled cheese. Served with a side of rice and refried beans.",
+          "imageUrl": null,
+          "likedPct": 88,
+          "name": "Enchiladas",
+          "price": 20,
+          "section": "Mexican Traditional",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%25224d2484a7-a067-4338-b04b-e7cb3dc70a6d%2522%252C%2522itemUuid%2522%253A%25220f0c00ff-ca3a-4154-ba02-8c24829287df%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Deep-fried corn tortilla chips covered with and garnished with sour cream, and crumbled cheese. Served with a side of rice and refried beans.",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "Chilaquiles",
+          "price": 20,
+          "section": "Mexican Traditional",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%25224d2484a7-a067-4338-b04b-e7cb3dc70a6d%2522%252C%2522itemUuid%2522%253A%25221cb00c0d-d660-473d-9511-4a1c2b86fdf6%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Chicken covered with a traditional thick mole sauce made with a mix of various kinds of dry chiles, nuts, seeds, fruits, and chocolate. Served with a side of rice and refried beans.",
+          "imageUrl": null,
+          "likedPct": 66,
+          "name": "Chicken Mole",
+          "price": 28,
+          "section": "Mexican Traditional",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%25224d2484a7-a067-4338-b04b-e7cb3dc70a6d%2522%252C%2522itemUuid%2522%253A%25226bbb33e5-a563-469f-a16c-a8e125a8dbfa%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "traditional mexican stew made with beef meat cooked at low heat with a chili pepper adobo. comes with tortillas, consomme, onions, cilantro, lime and salsa.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Beef Birria by Lt",
+          "price": 60,
+          "section": "Mexican Traditional",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%25224d2484a7-a067-4338-b04b-e7cb3dc70a6d%2522%252C%2522itemUuid%2522%253A%25226f9e68bb-5422-42d2-acc7-86b836ab0252%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "shredded chicken breast with chili pepper adobo. comes with tortillas, onions, cilantro, lime and salsas",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Chicken Birria by Lt",
+          "price": 50,
+          "section": "Mexican Traditional",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%25224d2484a7-a067-4338-b04b-e7cb3dc70a6d%2522%252C%2522itemUuid%2522%253A%25229c181228-c9fb-4237-afb3-558454220041%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "shredded chicken cooked in a chipotle and tomato sauce. comes with tortillas, onions, cilantro, lime and salsa.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Chicken Tinga by Lt",
+          "price": 50,
+          "section": "Mexican Traditional",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%25224d2484a7-a067-4338-b04b-e7cb3dc70a6d%2522%252C%2522itemUuid%2522%253A%25222086b352-f4e9-4c20-9d52-258060c3912b%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Shredded chicken cooked in a chipotle and tomato sauce served with a side of rice and refried beans.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Chicken Tinga Plate",
+          "price": 25,
+          "section": "Plates",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%25224291b605-dd47-4b1c-b0c3-e5e4a9e0c1f4%2522%252C%2522itemUuid%2522%253A%25225e4c486f-bf65-4e15-89cb-887c70e4eca8%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Sirloin steak served wit a side of salad, Mexican rice, tortillas, and refried beans.",
+          "imageUrl": null,
+          "likedPct": 77,
+          "name": "Steak Plate",
+          "price": 28,
+          "section": "Plates",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%25224291b605-dd47-4b1c-b0c3-e5e4a9e0c1f4%2522%252C%2522itemUuid%2522%253A%2522633516fc-a3aa-4f64-8eff-7faf2bac87f5%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Traditional Mexican broth made with Birria.",
+          "imageUrl": null,
+          "likedPct": 90,
+          "name": "Consomme (Birria Broth)",
+          "price": 6,
+          "section": "Extras",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%25220d6cd7b0-251b-4e0a-98c0-5e5d06694390%2522%252C%2522itemUuid%2522%253A%25222ca72f1b-ea8b-4f98-8157-c826235a457c%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Flavourful Mexican-style rice.",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "Mexican Rice",
+          "price": 4,
+          "section": "Extras",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%25220d6cd7b0-251b-4e0a-98c0-5e5d06694390%2522%252C%2522itemUuid%2522%253A%2522608bae4a-8769-4490-91f1-0c42184d53a5%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Freshly made dip of ripe avocados served with crispy tortilla chips.",
+          "imageUrl": null,
+          "likedPct": 80,
+          "name": "Guacamole and Chips",
+          "price": 12,
+          "section": "Extras",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%25220d6cd7b0-251b-4e0a-98c0-5e5d06694390%2522%252C%2522itemUuid%2522%253A%2522d71c8ee2-d982-4c11-ad3c-8fba37a93538%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Fresh and tangy condiment to add flavor to your meal.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "salsa",
+          "price": 4,
+          "section": "Extras",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%25220d6cd7b0-251b-4e0a-98c0-5e5d06694390%2522%252C%2522itemUuid%2522%253A%25225d841657-c5f3-40d5-9a30-7ef5543368c2%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Chunky pico de gallo salsa with crispy tortilla chips for dipping.",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Pico de Gallo/chips",
+          "price": 4,
+          "section": "Extras",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%25220d6cd7b0-251b-4e0a-98c0-5e5d06694390%2522%252C%2522itemUuid%2522%253A%252287558126-7cf5-45f8-ae8d-95a53b072e30%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Fruity and bubbly Mexican soda.",
+          "imageUrl": null,
+          "likedPct": 60,
+          "name": "Jarritos (Mexican Pop)",
+          "price": 4,
+          "section": "Drinks",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%25220a0994fa-4ab4-423e-9a7f-1bfee6f178b3%2522%252C%2522itemUuid%2522%253A%25227994c41d-1cd6-4df0-bb37-bdd367ec061c%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Jumex-Mexican Nectar",
+          "price": 4,
+          "section": "Drinks",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%25220a0994fa-4ab4-423e-9a7f-1bfee6f178b3%2522%252C%2522itemUuid%2522%253A%2522f200d787-cc78-4392-a67f-919631ef6326%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Traditional Mexican drink made with water and fruit or flowers, served chilled.",
+          "imageUrl": null,
+          "likedPct": 70,
+          "name": "Agua Fresca",
+          "price": 6,
+          "section": "Drinks",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%25220a0994fa-4ab4-423e-9a7f-1bfee6f178b3%2522%252C%2522itemUuid%2522%253A%2522e980618a-e293-4e6b-851c-2366d6fbc685%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "A variety of canned and bottled soft drinks.",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "Soft Drinks",
+          "price": 2.5,
+          "section": "Drinks",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%25220a0994fa-4ab4-423e-9a7f-1bfee6f178b3%2522%252C%2522itemUuid%2522%253A%25228e91ce4e-1600-4046-8cec-d0e2c649e972%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Boing (Small)",
+          "price": 4,
+          "section": "Drinks",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%25220a0994fa-4ab4-423e-9a7f-1bfee6f178b3%2522%252C%2522itemUuid%2522%253A%252273e8eec4-9e87-4c69-81dc-0363dcce0ef8%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Sweet, crispy fried dough pastries sprinkled with sugar.",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "Churros (3 pcs)",
+          "price": 6,
+          "section": "Desserts",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%2522e04973b7-2398-40c5-99f4-793bf5008f4f%2522%252C%2522itemUuid%2522%253A%25222fcf60da-9587-4ad1-99b2-d9c99b3bdd40%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Moist sponge cake soaked in three types of milk.",
+          "imageUrl": null,
+          "likedPct": 92,
+          "name": "Tres Leches",
+          "price": 9,
+          "section": "Desserts",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%2522e04973b7-2398-40c5-99f4-793bf5008f4f%2522%252C%2522itemUuid%2522%253A%252228e7048b-994a-4a67-bda4-4a11a4cad10a%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Rich and creamy Mexican dessert.",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "Choco Flan",
+          "price": 8,
+          "section": "Desserts",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%2522e04973b7-2398-40c5-99f4-793bf5008f4f%2522%252C%2522itemUuid%2522%253A%2522ce6d7145-7950-4b1c-8057-dfbc42d05ec6%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Sweet, crispy fried dough pastry.",
+          "imageUrl": null,
+          "likedPct": 88,
+          "name": "single churro",
+          "price": 2,
+          "section": "Desserts",
+          "url": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25228f540feb-48cd-44ab-beea-f501b95b8ac5%2522%252C%2522sectionUuid%2522%253A%252231d4d331-235a-4f1b-bac8-174b207e84b3%2522%252C%2522subsectionUuid%2522%253A%2522e04973b7-2398-40c5-99f4-793bf5008f4f%2522%252C%2522itemUuid%2522%253A%2522d716ce98-b41c-43ec-bbc8-9bc85468f82d%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        }
+      ],
+      "rating": 4.7,
+      "restaurant": "Mount Sinai -True Mexican Taste",
+      "storeUrl": "https://www.ubereats.com/ca/store/mount-sinai-true-mexican-taste/j1QP60jNRKu-6vUBuVuKxQ",
+      "promos": [],
+      "bogo": false,
+      "foundVia": [
+        "mexican",
+        "@Port Credit"
+      ],
+      "itemCount": 40,
+      "capturedAt": "2026-10-25T06:28:05.287Z"
+    },
+    {
+      "address": "576 Danforth Ave, Toronto",
+      "geo": {
+        "lat": 43.6786695,
+        "lng": -79.3468958
+      },
+      "items": [
+        {
+          "calories": null,
+          "description": "Layered with bolognese, bechamel &amp; tofu ricotta",
+          "imageUrl": null,
+          "likedPct": 93,
+          "name": "Plant-Based Lasagna",
+          "price": 28.5,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25226cd66239-c225-4ce0-86d2-3183d5793c3a%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "With wild arugula &amp; Violife parmesan.\n(made with Impossible plant-based ground)\n*contains nuts",
+          "imageUrl": null,
+          "likedPct": 94,
+          "name": "Plant-Based Spaghetti Bolognese",
+          "price": 25.3,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%252236900837-ec8b-45b8-ba7e-86e2501d0f81%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Tomato sauce, plant-based mozzarella, and fresh basil",
+          "imageUrl": null,
+          "likedPct": 88,
+          "name": "Plant-Based Pizza Margherita",
+          "price": 19.91,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25227d9d5dfb-c439-4b71-8ff0-46cc87933120%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Cashew truffle cheese with a plant-based cream sauce, sautéed spinach, wild mushrooms, Violife parmesan.\n*contains nuts",
+          "imageUrl": null,
+          "likedPct": 93,
+          "name": "Plant-Based Orecchiette Funghi",
+          "price": 26.5,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522c4d06be7-eb05-4b0d-b941-f9b178a1923b%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Crispy romaine with an avocado, cashew, lemon-based dressing topped with Violife parmesan cheese, croutons &amp; capers *contains nuts",
+          "imageUrl": null,
+          "likedPct": 92,
+          "name": "Avocado Cashew Caesar Large",
+          "price": 22.7,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%252267415bc8-b87b-4438-8349-473b5e8d9643%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Plant-based chicken, pesto, plant-based cream, cherry tomatoes, and Violife parmesan.\n*contains nuts*",
+          "imageUrl": null,
+          "likedPct": 81,
+          "name": "Plant-Based Penne Pollo Pesto",
+          "price": 27.45,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25221de67c41-6288-4b71-9dec-2b4509da3793%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "With a rustic tomato sauce and fresh basil",
+          "imageUrl": null,
+          "likedPct": 93,
+          "name": "Spaghetti Pomodoro",
+          "price": 20.9,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25221c3d284f-f990-43ac-b225-48c6f704891a%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Three Impossible meatballs, plant-based mozzarella cheese, panko breaded &amp; fried, pomodoro, basil, Violife parmesan, served with garlic bread",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "Plant-based  Mozzarella Stuffed Meatballs with Garlic Bread",
+          "price": 19.8,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522e79f4a98-47df-42f7-b295-a3248fda2b95%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Plant-based chicken, wild mushrooms, spinach, tomato, olive oil, garlic, and Violife parmesan.\n*contains nuts",
+          "imageUrl": null,
+          "likedPct": 89,
+          "name": "Plant-Based Spaghetti Capri",
+          "price": 27.5,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522729da3b3-f18b-4095-8b35-c6afd56f28c0%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Pizza bianco with mushrooms, caramelized onions, plant-based mozzarella, arugula, truffle oil \n*contains nuts",
+          "imageUrl": null,
+          "likedPct": 90,
+          "name": "Plant-Based Mushroom Pizza",
+          "price": 25.2,
+          "section": "Featured items",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522e9603a15-8aa1-46d5-b5ae-9927ded7cf8b%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Toasted herb and garlic buttered bread topped with vegan mozzarella",
+          "imageUrl": null,
+          "likedPct": 96,
+          "name": "Garlic Bread with Vegan Cheese 2pcs",
+          "price": 6.05,
+          "section": "Appetizers",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%2522a6eb90bd-3e74-487b-8ae0-1fe4d6bfc44f%2522%252C%2522itemUuid%2522%253A%25223acdc923-f1e8-439c-98db-749e0702b58d%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Crispy romaine with an avocado, cashew, lemon-based dressing topped with Violife parmesan cheese, croutons &amp; capers *contains nuts",
+          "imageUrl": null,
+          "likedPct": 92,
+          "name": "Avocado Cashew Caesar Large",
+          "price": 22.7,
+          "section": "Appetizers",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%252267415bc8-b87b-4438-8349-473b5e8d9643%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": 97,
+          "name": "Bread and Plant-Based Butter",
+          "price": 3,
+          "section": "Appetizers",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%2522a6eb90bd-3e74-487b-8ae0-1fe4d6bfc44f%2522%252C%2522itemUuid%2522%253A%252292c3841d-1e0e-4410-96fb-3567808099c9%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Crispy romaine with an avocado, cashew, lemon-based dressing topped with Violife parmesan cheese, croutons &amp; capers *contains nuts",
+          "imageUrl": null,
+          "likedPct": 90,
+          "name": "Avocado Cashew Caesar Small",
+          "price": 15.35,
+          "section": "Appetizers",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%2522a6eb90bd-3e74-487b-8ae0-1fe4d6bfc44f%2522%252C%2522itemUuid%2522%253A%25229226d531-6099-44f4-9462-6d59d923b388%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Grilled ciabatta topped with olive oil, garlic, tomatoes, and basil",
+          "imageUrl": null,
+          "likedPct": 96,
+          "name": "Bruschetta Pomodoro",
+          "price": 11.3,
+          "section": "Appetizers",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%2522a6eb90bd-3e74-487b-8ae0-1fe4d6bfc44f%2522%252C%2522itemUuid%2522%253A%2522af2b8000-7fcc-48ba-810b-760cc650f46e%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "Bread and Olive Oil and Balsamic",
+          "price": 3,
+          "section": "Appetizers",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%2522a6eb90bd-3e74-487b-8ae0-1fe4d6bfc44f%2522%252C%2522itemUuid%2522%253A%2522840c80d6-5900-4295-b930-497c198b7978%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "description": "",
+          "imageUrl": null,
+          "name": "Garlic Bread &amp; Plant-Based Cheese 4pcs",
+          "price": 11.33,
+          "section": "Appetizers"
+        },
+        {
+          "calories": null,
+          "description": "Three Impossible meatballs, plant-based mozzarella cheese, panko breaded &amp; fried, pomodoro, basil, Violife parmesan, served with garlic bread",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "Plant-based  Mozzarella Stuffed Meatballs with Garlic Bread",
+          "price": 19.8,
+          "section": "Appetizers",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522e79f4a98-47df-42f7-b295-a3248fda2b95%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Tomato sauce, plant-based mozzarella, and fresh basil",
+          "imageUrl": null,
+          "likedPct": 88,
+          "name": "Plant-Based Pizza Margherita",
+          "price": 19.91,
+          "section": "Pizza",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25227d9d5dfb-c439-4b71-8ff0-46cc87933120%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Pizza bianco with mushrooms, caramelized onions, plant-based mozzarella, arugula, truffle oil \n*contains nuts",
+          "imageUrl": null,
+          "likedPct": 90,
+          "name": "Plant-Based Mushroom Pizza",
+          "price": 25.2,
+          "section": "Pizza",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522e9603a15-8aa1-46d5-b5ae-9927ded7cf8b%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Tomato sauce, plant-based mozzarella, artichoke hearts, roasted red peppers, black olives, basi.",
+          "imageUrl": null,
+          "likedPct": 95,
+          "name": "Plant-Based Pizza Carciofi",
+          "price": 25.2,
+          "section": "Pizza",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%252212608222-d684-4b21-9edd-a980734f95c4%2522%252C%2522itemUuid%2522%253A%2522dde892ee-9535-44fd-99b3-de0470a7b9f1%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Tomato sauce, plant-based mozzarella, pinto bean sausage, roasted red peppers, basil.",
+          "imageUrl": null,
+          "likedPct": 85,
+          "name": "Plant-Based Sausage Pizza",
+          "price": 25.2,
+          "section": "Pizza",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%252212608222-d684-4b21-9edd-a980734f95c4%2522%252C%2522itemUuid%2522%253A%25227891278e-a002-460b-a0f3-0bb31280fe27%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Cashew truffle cheese with a plant-based cream sauce, sautéed spinach, wild mushrooms, Violife parmesan.\n*contains nuts",
+          "imageUrl": null,
+          "likedPct": 93,
+          "name": "Plant-Based Orecchiette Funghi",
+          "price": 26.5,
+          "section": "Pasta",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522c4d06be7-eb05-4b0d-b941-f9b178a1923b%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "With wild arugula &amp; Violife parmesan.\n(made with Impossible plant-based ground)\n*contains nuts",
+          "imageUrl": null,
+          "likedPct": 94,
+          "name": "Plant-Based Spaghetti Bolognese",
+          "price": 25.3,
+          "section": "Pasta",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%252236900837-ec8b-45b8-ba7e-86e2501d0f81%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Plant-based chicken, wild mushrooms, spinach, tomato, olive oil, garlic, and Violife parmesan.\n*contains nuts",
+          "imageUrl": null,
+          "likedPct": 89,
+          "name": "Plant-Based Spaghetti Capri",
+          "price": 27.5,
+          "section": "Pasta",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%2522729da3b3-f18b-4095-8b35-c6afd56f28c0%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "With a rustic tomato sauce and fresh basil",
+          "imageUrl": null,
+          "likedPct": 93,
+          "name": "Spaghetti Pomodoro",
+          "price": 20.9,
+          "section": "Pasta",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25221c3d284f-f990-43ac-b225-48c6f704891a%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Plant-based chicken, pesto, plant-based cream, cherry tomatoes, and Violife parmesan.\n*contains nuts*",
+          "imageUrl": null,
+          "likedPct": 81,
+          "name": "Plant-Based Penne Pollo Pesto",
+          "price": 27.45,
+          "section": "Pasta",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25221de67c41-6288-4b71-9dec-2b4509da3793%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Layered with bolognese, bechamel &amp; tofu ricotta",
+          "imageUrl": null,
+          "likedPct": 93,
+          "name": "Plant-Based Lasagna",
+          "price": 28.5,
+          "section": "Pasta",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%25220379a62a-1156-4ddb-a09a-7e1dc45d5dfb%2522%252C%2522itemUuid%2522%253A%25226cd66239-c225-4ce0-86d2-3183d5793c3a%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "Slowly cooked arborio rice with roasted squash, Violife parmesan &amp; fried sage",
+          "imageUrl": null,
+          "likedPct": null,
+          "name": "Plant-Based Risotto",
+          "price": 27.1,
+          "section": "Pasta",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%252285ae256b-402e-471a-a139-78129992f3cc%2522%252C%2522itemUuid%2522%253A%2522221f531f-b63a-42d3-929b-e1b77b066a01%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "Sparkling Water San Pellegrino (750 ml)",
+          "price": 6,
+          "section": "Drinks",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%2522fc6d6d60-96c8-4ffb-a54d-55711934f06c%2522%252C%2522itemUuid%2522%253A%252294c740a3-42d2-40eb-82fd-c23f7d88b5f5%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": 96,
+          "name": "Ginger Ale",
+          "price": 2.5,
+          "section": "Drinks",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%2522fc6d6d60-96c8-4ffb-a54d-55711934f06c%2522%252C%2522itemUuid%2522%253A%2522365cd1a8-66a2-4e95-9f29-9f10ac41331d%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "Diet Coca Cola",
+          "price": 2.5,
+          "section": "Drinks",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%2522fc6d6d60-96c8-4ffb-a54d-55711934f06c%2522%252C%2522itemUuid%2522%253A%2522c839bc64-8766-48f4-8d58-bd53716f5c0a%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "Coca Cola",
+          "price": 2.5,
+          "section": "Drinks",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%2522fc6d6d60-96c8-4ffb-a54d-55711934f06c%2522%252C%2522itemUuid%2522%253A%2522a7d5cebc-147a-4f3b-bb69-4211e3298e2c%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "Iced Tea",
+          "price": 2.5,
+          "section": "Drinks",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%2522fc6d6d60-96c8-4ffb-a54d-55711934f06c%2522%252C%2522itemUuid%2522%253A%252271c3987f-b864-4612-9b25-63665c3fca8e%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "Acqua Panna Still Water (1 lt)",
+          "price": 6,
+          "section": "Drinks",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%2522fc6d6d60-96c8-4ffb-a54d-55711934f06c%2522%252C%2522itemUuid%2522%253A%25222ca0be83-d2fc-4dfb-83ef-f11278288d0e%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "San Pellegrino Aranciata",
+          "price": 3,
+          "section": "Drinks",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%2522fc6d6d60-96c8-4ffb-a54d-55711934f06c%2522%252C%2522itemUuid%2522%253A%252257dedfee-1c30-4053-8916-e125c6854256%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "San Pellegrino Aranciata Rossa",
+          "price": 3,
+          "section": "Drinks",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%2522fc6d6d60-96c8-4ffb-a54d-55711934f06c%2522%252C%2522itemUuid%2522%253A%2522111a0a97-68cf-47d8-87de-b0d5e659c8f1%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "Brio",
+          "price": 3,
+          "section": "Drinks",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%2522fc6d6d60-96c8-4ffb-a54d-55711934f06c%2522%252C%2522itemUuid%2522%253A%252225e4fb7e-2db1-4651-9d4a-8d26d18f7e28%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        },
+        {
+          "calories": null,
+          "description": "",
+          "imageUrl": null,
+          "likedPct": 100,
+          "name": "Sprite",
+          "price": 2.5,
+          "section": "Drinks",
+          "url": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ?diningMode=DELIVERY&mod=quickView&modctx=%257B%2522storeUuid%2522%253A%25223e1b7cb3-41fd-403e-9f5c-c96f2928f44d%2522%252C%2522sectionUuid%2522%253A%2522d8a6596e-9aec-4af4-bc08-70f307064395%2522%252C%2522subsectionUuid%2522%253A%2522fc6d6d60-96c8-4ffb-a54d-55711934f06c%2522%252C%2522itemUuid%2522%253A%2522f6adcee2-15cc-4a97-bac3-6e66f8bc2ef5%2522%252C%2522showSeeDetailsCTA%2522%253Atrue%257D&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjcwJTIwUGFyayUyMFN0JTIwRSUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMjkyNjdlMjY5LWZjNDQtYzg3ZC1kNjI3LTllYzI1NDgxNDc1MSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJ1YmVyX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDMuNTU1OTYzJTJDJTIybG9uZ2l0dWRlJTIyJTNBLTc5LjU4NTc1NyU3RA%3D%3D&ps=1"
+        }
+      ],
+      "rating": 4.8,
+      "restaurant": "Italian for Vegan (Danforth)",
+      "storeUrl": "https://www.ubereats.com/ca/store/italian-for-vegan-danforth/Pht8s0H9QD6fXMlvKSj0TQ",
+      "promos": [],
+      "bogo": false,
+      "foundVia": [
+        "vegan",
+        "@Port Credit"
+      ],
+      "itemCount": 39,
+      "capturedAt": "2026-10-25T06:29:19.312Z"
     }
   ],
   "points": [
