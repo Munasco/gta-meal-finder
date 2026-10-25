@@ -2,7 +2,7 @@
  * Crawl Uber Eats near a location through your own Chrome and build a dataset:
  * unique restaurants, store links, promos / BOGO status, and every menu item with price.
  *
- *   bun run bridge/crawl.ts [--pl <encoded location>] [--out data/ubereats-gta.json] [--max-stores 8] [--queries a,b,c]
+ *   bun run bridge/crawl.ts [--points-file data/gta-points.json | --pl <encoded location>] [--out data/ubereats-gta.json] [--max-stores 8] [--queries a,b,c]
  *
  * Progress is written to the output file after every store, so it is safe to stop and resume:
  * stores already in the file are skipped. Results are also posted to the app's /api/ingest.
@@ -21,8 +21,24 @@ const APP = (process.env.APP_URL ?? "http://127.0.0.1:5173").replace(/\/$/, "");
 const OUT = path.resolve(args.get("out") ?? "data/ubereats-gta.json");
 const MAX_STORES = Number(args.get("max-stores") ?? 8);
 const PL_RAW = args.get("pl") ?? process.env.UBER_EATS_PL ?? null;
-const PL = PL_RAW && PL_RAW.includes("%") ? decodeURIComponent(PL_RAW) : PL_RAW;
+const PL_SINGLE = PL_RAW && PL_RAW.includes("%") ? decodeURIComponent(PL_RAW) : PL_RAW;
 const ADDRESS = args.get("address") ?? process.env.UBER_EATS_ADDRESS ?? null;
+const POINTS_FILE = args.get("points-file") ?? (PL_SINGLE ? null : "data/gta-points.json");
+
+interface Point { name: string; lat: number; lng: number }
+const encodePl = (p: Point) => btoa(encodeURIComponent(JSON.stringify({ address: p.name, latitude: p.lat, longitude: p.lng })));
+
+async function loadPoints(): Promise<{ name: string; pl: string | null }[]> {
+  if (POINTS_FILE) {
+    try {
+      const { points } = JSON.parse(await readFile(path.resolve(POINTS_FILE), "utf8")) as { points: Point[] };
+      return points.map((p) => ({ name: p.name, pl: encodePl(p) }));
+    } catch (e) {
+      console.warn(`[crawl] could not read ${POINTS_FILE}: ${e instanceof Error ? e.message : e}`);
+    }
+  }
+  return [{ name: ADDRESS ?? "default", pl: PL_SINGLE }];
+}
 /** Revisit stores captured before item links / calories were collected. */
 const REVISIT = args.has("revisit");
 
@@ -44,6 +60,7 @@ interface DatasetRestaurant extends Restaurant {
 }
 interface Dataset {
   location: { address: string | null; pl: string | null };
+  points?: string[];
   startedAt: string;
   updatedAt: string;
   queriesDone: string[];
@@ -54,7 +71,7 @@ async function load(): Promise<Dataset> {
   try {
     return JSON.parse(await readFile(OUT, "utf8")) as Dataset;
   } catch {
-    return { location: { address: ADDRESS, pl: PL }, startedAt: new Date().toISOString(), updatedAt: new Date().toISOString(), queriesDone: [], restaurants: [] };
+    return { location: { address: ADDRESS, pl: PL_SINGLE }, startedAt: new Date().toISOString(), updatedAt: new Date().toISOString(), queriesDone: [], restaurants: [] };
   }
 }
 
@@ -66,7 +83,7 @@ async function save(ds: Dataset) {
 
 async function postToApp(restaurants: Restaurant[]) {
   try {
-    await fetch(`${APP}/api/ingest`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ source: "crawl", capturedAt: new Date().toISOString(), pl: PL, restaurants }) });
+    await fetch(`${APP}/api/ingest`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ source: "crawl", capturedAt: new Date().toISOString(), restaurants }) });
   } catch {
     /* app not running; file is the source of truth */
   }
@@ -76,14 +93,20 @@ const isBogo = (promos: string[]) => promos.some((p) => /buy \d+,? get \d+|\bbog
 
 const ds = await load();
 const known = new Map(ds.restaurants.map((r) => [r.storeUrl ?? r.restaurant, r]));
-console.log(`[crawl] ${ds.restaurants.length} restaurants already in ${OUT}; ${QUERIES.length} queries; location ${ADDRESS ?? PL ?? "(Uber default)"}`);
+const points = await loadPoints();
+ds.points = [...new Set([...(ds.points ?? []), ...points.map((p) => p.name)])];
+console.log(`[crawl] ${ds.restaurants.length} restaurants already in ${OUT}; ${QUERIES.length} queries × ${points.length} points`);
 
 const driver = await getDriver();
 const h = await driver.open("https://www.ubereats.com/ca");
 let newStores = 0;
 try {
+  for (const point of points) {
+  const PL = point.pl;
+  console.log(`[crawl] === ${point.name} ===`);
   for (const q of QUERIES) {
-    if (ds.queriesDone.includes(q) && !REVISIT) continue;
+    const doneKey = points.length > 1 ? `${point.name}|${q}` : q;
+    if (ds.queriesDone.includes(doneKey) && !REVISIT) continue;
     const url = `https://www.ubereats.com/ca/search?q=${encodeURIComponent(q)}${PL ? `&pl=${encodeURIComponent(PL)}` : ""}`;
     console.log(`[crawl] "${q}"`);
     try {
@@ -96,6 +119,7 @@ try {
         const stale = existing && REVISIT && !existing.items.some((i) => i.url);
         if (existing && !stale) {
           if (!existing.foundVia.includes(q)) existing.foundVia.push(q);
+          if (points.length > 1 && !existing.foundVia.includes(`@${point.name}`)) existing.foundVia.push(`@${point.name}`);
           for (const p of store.promos) if (!existing.promos.includes(p)) existing.promos.push(p);
           existing.bogo = isBogo(existing.promos);
           continue;
@@ -116,7 +140,7 @@ try {
             storeUrl: store.url,
             promos: [...new Set([...(existing?.promos ?? []), ...store.promos])],
             bogo: isBogo([...(existing?.promos ?? []), ...store.promos]),
-            foundVia: [...new Set([...(existing?.foundVia ?? []), q])],
+            foundVia: [...new Set([...(existing?.foundVia ?? []), q, ...(points.length > 1 ? [`@${point.name}`] : [])])],
             itemCount: r.items.length,
             capturedAt: new Date().toISOString(),
           };
@@ -131,11 +155,12 @@ try {
           console.warn(`[crawl]   ${store.name}: ${e instanceof Error ? e.message : e}`);
         }
       }
-      ds.queriesDone.push(q);
+      ds.queriesDone.push(doneKey);
       await save(ds);
     } catch (e) {
       console.warn(`[crawl] "${q}" failed: ${e instanceof Error ? e.message : e}`);
     }
+  }
   }
 } finally {
   await h.close();
