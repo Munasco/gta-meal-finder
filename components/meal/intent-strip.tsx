@@ -41,6 +41,16 @@ export function IntentStrip({ intent, dealsOnly = false, targetScore = null }: {
           {intent.protein}
         </Pill>
       )}
+      {intent.diet !== "none" && (
+        <Pill icon="lucide:shield-check" tip="Hard dietary rule applied to every result">
+          {intent.diet.replace(/_/g, " ")}
+        </Pill>
+      )}
+      {intent.wantsSpicy >= 0.6 && (
+        <Pill icon="lucide:flame" tip="Spicy preferred">
+          spicy
+        </Pill>
+      )}
       {intent.budgetCad !== null && (
         <Pill icon="lucide:wallet" tip="Budget incl. tax and fees">
           {cad(intent.budgetCad)}

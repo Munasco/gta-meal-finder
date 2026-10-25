@@ -160,6 +160,16 @@ export function RestaurantCard({ group, onSelect }: { group: RestaurantGroup; on
               <span className="inline-flex items-center gap-1"><Icon icon="lucide:navigation" className="size-3" />{group.distanceKm} km</span>
             )}
             <span>{group.options.length} options</span>
+            {group.otherLocations.length > 0 && (
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <span className="inline-flex items-center gap-1"><Icon icon="lucide:map-pinned" className="size-3" />+{group.otherLocations.length}</span>
+                </TooltipTrigger>
+                <TooltipContent className="max-w-72">
+                  {group.otherLocations.slice(0, 6).map((l) => `${l.restaurant}${l.distanceKm !== null ? ` · ${l.distanceKm} km` : ""}`).join("\n")}
+                </TooltipContent>
+              </Tooltip>
+            )}
             {group.promos.slice(0, 2).map((pr) => (
               <span key={pr} className="inline-flex items-center gap-1 rounded-full bg-brand/10 px-1.5 py-0.5 text-[11px] font-medium text-brand">
                 <Icon icon="lucide:badge-percent" className="size-3" />
