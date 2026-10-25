@@ -1,0 +1,46 @@
+[
+ [
+  "01-intro",
+  "Here's a question that sounds simple. What is the healthiest thing you can order from Chipotle? The menu gives you prices and a few adjectives. It almost never gives you numbers. So how could a piece of software even begin to answer that? Let's build the answer from scratch."
+ ],
+ [
+  "02-intent",
+  "Step one is understanding the sentence. We don't hand it to a chatbot and hope. We ask a small decision model a fixed set of multiple-choice questions. Which health lens? Which protein? Any diet, any budget, how many people? Each answer comes back with a confidence, and anything below a threshold falls back to plain keyword rules. Here, 'healthiest' sets the lens, and 'Chipotle' becomes a restaurant hint."
+ ],
+ [
+  "03-search",
+  "Step two is finding candidates. We crawled five hundred and forty nine restaurants across the G T A, about fifty five thousand menu items, once, and built an index. A search takes a few milliseconds. The restaurant hint pulls Chipotle to the front, but every Mexican-leaning kitchen stays in the running. That is how a Taco Bell bowl can end up right beside it."
+ ],
+ [
+  "04-decompose",
+  "Now the real problem. A menu item is text, not nutrients. The trick is to decompose it. Take the High Protein, High Fibre Bowl: adobo chicken, light brown rice, black beans, fajita veggies. We never ask the model for calories; models are bad at that. We ask what is in it, and roughly how much. It answers with three reference foods and three weights. Grilled chicken breast, a hundred and fifty grams. Brown rice, a hundred and eighty. Greens, eighty."
+ ],
+ [
+  "05-arithmetic",
+  "From there, nutrition is just arithmetic. Each reference food is a row in a public food table: nutrients per hundred grams. Multiply each row by its weight, add them up, and you get a vector. Four hundred and eighty calories, fifty two grams of protein, about five grams of fibre. Two honest corrections. Restaurant food is saltier than a table assumes, so when the model thinks an item is salty, we add sodium in proportion to how sure it is. And the model also guessed a calorie band, five to seven hundred, so we nudge the total thirty percent of the way toward it. That lands the bowl at five hundred and eighteen calories, fifty six grams of protein, and about nine hundred and thirty milligrams of sodium."
+ ],
+ [
+  "06-score",
+  "Now the score. Every dish starts at fifty. Three things earn points. Protein, up to eighteen. Fibre, up to seventeen. Whole foods, like whole grains, greens and healthy fats, up to fifteen. Three things cost points. Sodium past five hundred and fifty milligrams. Saturated fat past three and a half grams. Sugar past nine. Every one of these is a straight line that stops at a cap, so no single nutrient can dominate. Plug in the bowl. Plus eighteen. Plus eight. Plus seven and a half. Minus ten and a half for the salt. Seventy three."
+ ],
+ [
+  "07-compare",
+  "Now compare the burrito. More fibre, decent protein. But two and a half grams of salt and twelve grams of saturated fat hit both caps at once, and it lands at fifty five. The quesadilla loses the same way, with less protein to buy it back. Forty two. Nothing here is a judgement about taste. It is six lines, and where you land on them."
+ ],
+ [
+  "08-lens",
+  "That is the baseline, and it is not the whole story. If you told it you are watching your blood pressure, or your iron, or a fatty liver, a lens reweights those same six components and adds take-more-of and take-less-of checks, each with a citation. The same bowl scores differently for different people. That is the point."
+ ],
+ [
+  "09-indices",
+  "And because our score is ours, we also run the very same nutrients through three public rulers. The Nutri Score letter. The Harvard healthy eating index. And Health Canada's front-of-pack warnings. For this bowl: an A, fifty six out of a hundred and ten, and a warning for sodium. When the rulers agree, trust it more. When they disagree, the tooltip tells you why."
+ ],
+ [
+  "10-rank",
+  "Finally, the restaurant. Each dish also gets a fit score. Does it have the protein you asked for, is the portion right, is it within budget. A restaurant is ranked by its best three mains, sixty percent health and forty percent fit, plus a bonus when you named it. Then we build the cheapest combo that feeds everyone within budget, with buy-one-get-one math applied."
+ ],
+ [
+  "11-close",
+  "Everything in there is an estimate, and the app says so. But that is the whole idea. Turn a sentence into a structured question. Turn a menu into a weighted sum. Rank with a formula you can read. So, the healthiest thing at Chipotle? The high-protein, high-fibre bowl. Seventy three, Nutri Score A, with one honest footnote. Watch the salt."
+ ]
+]

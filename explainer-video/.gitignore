@@ -1,0 +1,7 @@
+media/
+qa/
+*.wav
+!vo/*.wav
+*.mp4
+concat.txt
+timeline.json
