@@ -39,7 +39,7 @@ export const Film: React.FC = () => {
       <Sequence from={s(T.prompt.from)} durationInFrames={s(T.prompt.to) - s(T.prompt.from)}>
         <Chapter
           title="Just say it."
-          kicker="Describe the meal. Budget included."
+          kicker="Describe the meal. Budget included. Shame optional."
           clip={CLIPS.prompt}
           clipStart={3.6}
           length={T.prompt.to - T.prompt.from}
@@ -48,8 +48,8 @@ export const Film: React.FC = () => {
           origin={[0.5, 0.62]}
           callouts={[
             { text: "Decision-1 reads it", x: 1500, y: 300, at: 6.4, until: 9.2, icon: "🧠", tone: "brand" },
-            { text: "chicken · $40 · big portions", x: 1500, y: 390, at: 7.6, until: 10.4, icon: "🍗" },
-            { text: "Ranked by health first", x: 440, y: 760, at: 8.8, until: 11.0, icon: "🥦", tone: "brand" },
+            { text: "chicken · $40 · hungry hungry", x: 1500, y: 390, at: 7.6, until: 10.4, icon: "🍗" },
+            { text: "Health first. Fries last.", x: 440, y: 760, at: 8.8, until: 11.0, icon: "🥦", tone: "brand" },
           ]}
         />
       </Sequence>
@@ -58,7 +58,7 @@ export const Film: React.FC = () => {
         <Chapter
           title="AI that does the math."
           accent="the math."
-          kicker="Net cost before tax and fees. BOGO built in."
+          kicker="Net cost before tax and fees. Tip your driver."
           clip={CLIPS.combo}
           clipStart={4.5}
           length={T.combo.to - T.combo.from}
@@ -67,8 +67,8 @@ export const Film: React.FC = () => {
           origin={[0.82, 0.3]}
           callouts={[
             { text: "Big back? We got you", x: 1430, y: 260, at: 3.4, until: 6.4, icon: "🍽️", tone: "warn" },
-            { text: "BOGO: cheaper main is free", x: 1430, y: 350, at: 5.2, until: 8.4, icon: "🏷️", tone: "brand" },
-            { text: "Net cost · all-in with fees", x: 1430, y: 440, at: 7.0, until: 10.0, icon: "💸" },
+            { text: "BOGO: second main free. Cardio not included.", x: 1430, y: 350, at: 5.2, until: 8.4, icon: "🏷️", tone: "brand" },
+            { text: "Math done. Wallet alive.", x: 1430, y: 440, at: 7.0, until: 10.0, icon: "💸" },
           ]}
         />
       </Sequence>
@@ -77,7 +77,7 @@ export const Film: React.FC = () => {
         <Chapter
           title="AI that reads the menu."
           accent="reads the menu."
-          kicker="USDA components + Decision-1, scored like the catalogue."
+          kicker="USDA components + Decision-1. Scored like the lab, not the vibes."
           clip={CLIPS.sheet}
           clipStart={5.6}
           length={T.menu.to - T.menu.from}
@@ -86,8 +86,8 @@ export const Film: React.FC = () => {
           origin={[0.9, 0.35]}
           callouts={[
             { text: "Calories · protein · sodium · fibre", x: 500, y: 300, at: 3.2, until: 6.2, icon: "🧪", tone: "brand" },
-            { text: "Score drivers, not a mystery number", x: 500, y: 390, at: 4.6, until: 7.6, icon: "📈" },
-            { text: "Bilirubin lens", x: 500, y: 480, at: 6.0, until: 8.0, icon: "🩸", tone: "warn" },
+            { text: "Why the score, not just the score", x: 500, y: 390, at: 4.6, until: 7.6, icon: "📈" },
+            { text: "Bilirubin lens (ask your doctor)", x: 500, y: 480, at: 6.0, until: 8.6, icon: "🩸", tone: "warn" },
           ]}
         />
       </Sequence>
@@ -96,7 +96,7 @@ export const Film: React.FC = () => {
         <Chapter
           title="AI that knows the GTA."
           accent="the GTA."
-          kicker="300+ restaurants from 46 points, nearest first."
+          kicker="400+ restaurants from 46 points. Nearest first."
           clip={CLIPS.map}
           clipStart={3.8}
           length={T.gta.to - T.gta.from}
@@ -106,7 +106,7 @@ export const Film: React.FC = () => {
           callouts={[
             { text: "Range in km", x: 1380, y: 260, at: 2.6, until: 5.0, icon: "📍", tone: "brand" },
             { text: "Etobicoke to Oshawa", x: 1380, y: 350, at: 4.2, until: 7.0, icon: "🗺️" },
-            { text: "Deep link to the dish", x: 1380, y: 440, at: 6.4, until: 9.0, icon: "🔗", tone: "brand" },
+            { text: "Deep link. No 1 a.m. scrolling.", x: 1380, y: 440, at: 6.4, until: 8.4, icon: "🔗", tone: "brand" },
           ]}
         />
       </Sequence>
