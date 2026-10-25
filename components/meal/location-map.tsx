@@ -132,7 +132,7 @@ export function LocationMap({
   };
 
   return (
-    <div className={cn("overflow-hidden rounded-xl border bg-card", className)}>
+    <div className={cn("overflow-hidden rounded-xl bg-muted/40", className)}>
       <div className="relative">
         <div ref={container} className="h-44 w-full bg-muted" aria-label="Map" />
         <div className="absolute inset-x-2 top-2 z-[400] flex gap-1">
