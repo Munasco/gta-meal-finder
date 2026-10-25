@@ -66,7 +66,7 @@ export const Film: React.FC = () => {
           zoom={[s(4), s(9), 1, 1.16]}
           origin={[0.82, 0.3]}
           callouts={[
-            { text: "Built for big backs", x: 1430, y: 260, at: 3.4, until: 6.4, icon: "🍽️", tone: "warn" },
+            { text: "Big back? We got you", x: 1430, y: 260, at: 3.4, until: 6.4, icon: "🍽️", tone: "warn" },
             { text: "BOGO: cheaper main is free", x: 1430, y: 350, at: 5.2, until: 8.4, icon: "🏷️", tone: "brand" },
             { text: "Net cost · all-in with fees", x: 1430, y: 440, at: 7.0, until: 10.0, icon: "💸" },
           ]}
