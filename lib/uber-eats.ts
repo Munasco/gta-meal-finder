@@ -481,16 +481,20 @@ export function scoreOption(
     if (hasProtein) { fit += 25; reasons.unshift(`Has ${intent.protein}`); }
     else if (kind === "main") { fit -= 25; cautions.push(`No ${intent.protein}`); }
   }
-  // Portion: when calories are known, judge fullness by energy instead of words.
+  // Portion: estimated mass (USDA component grams) beats calories, which beat words. A 900 kcal brownie is not a big plate.
+  const grams = est?.components.length ? est.components.reduce((n, c) => n + c.grams, 0) : null;
   const kcal = input.calories ?? est?.caloriesEst ?? null;
-  if (kcal !== null && kind !== "extra") {
-    const [lo, hi] = intent.wantsLargePortions > 0.6 ? [650, 1000] : [400, 750];
-    portion = kcal < lo ? Math.max(10, 50 - (lo - kcal) / 6) : kcal > hi ? Math.max(30, 70 - (kcal - hi) / 10) : 70 + Math.min(30, (kcal - lo) / ((hi - lo) / 30));
-  }
+  const band = (v: number, lo: number, hi: number, slopeLo: number, slopeHi: number) =>
+    v < lo ? Math.max(10, 50 - (lo - v) / slopeLo) : v > hi ? Math.max(30, 70 - (v - hi) / slopeHi) : 70 + Math.min(30, (v - lo) / ((hi - lo) / 30));
+  if (grams !== null && kind !== "extra") portion = intent.wantsLargePortions > 0.6 ? band(grams, 450, 800, 5, 12) : band(grams, 300, 600, 4, 8);
+  else if (kcal !== null && kind !== "extra") portion = intent.wantsLargePortions > 0.6 ? band(kcal, 650, 1000, 6, 10) : band(kcal, 400, 750, 6, 10);
   fit += (portion - 50) * (intent.wantsLargePortions > 0.6 ? 0.5 : 0.2);
   // Taste, cuisine and spice from the request.
   if (intent.tasteConfidence >= 0.5 && TASTE_WORDS[intent.tasteProfile].test(hay)) { fit += 8; reasons.push("Matches your taste"); }
   if (intent.cuisineHint && new RegExp(intent.cuisineHint.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&"), "i").test(hay)) fit += 6;
+  // The literal dish the user typed ("jerk", "pho") on the item itself is the strongest fit signal there is.
+  if (intent.dishWord && new RegExp(`\\b${intent.dishWord.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&")}`, "i").test(input.name)) { fit += 20; reasons.unshift(`It's ${intent.dishWord}`); }
+  if (intent.valueFocus > 0.6 && input.priceCad !== null && kind === "main") fit += Math.max(-10, Math.min(10, (18 - input.priceCad) * 1.2));
   if (intent.wantsSpicy >= 0.6 && SPICY.test(hay)) { fit += 6; reasons.push("Spicy"); }
   else if (intent.wantsSpicy <= 0.25 && SPICY.test(input.name)) fit -= 6;
   if (intent.protein !== "any" && est?.proteinBand === "over_30g") fit += 5;
@@ -544,11 +548,13 @@ const FEE_RATE = 0.13; // HST on food
 const SERVICE_FEE = 2.99;
 
 export function buildCombo(options: MenuOption[], intent: MealIntent, deals: Deal[] = []): ComboPlan {
-  const budget = intent.budgetCad;
+  // No stated budget: build a sane plate for the party (about $25 a head) instead of stacking everything.
+  const budget = intent.budgetCad ?? Math.max(1, intent.servings) * 25;
   const hasBogo = deals.some((d) => d.kind === "bogo");
   const priced = options.filter((o) => o.priceCad !== null && o.kind !== "extra");
   const rank = (o: MenuOption) => o.healthScore * 0.6 + o.fitScore * 0.4;
-  const mains = priced.filter((o) => o.kind === "main").sort((a, b) => rank(b) - rank(a));
+  // Bundles sized for far more people than asked for do not belong in a plate.
+  const mains = priced.filter((o) => o.kind === "main" && !(/\b(for|serves)\s+(ten|eight|six|five|four|\d{1,2})\b/i.test(o.name) && !new RegExp(`\\b(for|serves)\\s+(${intent.servings}|two|three)\\b`, "i").test(o.name))).sort((a, b) => rank(b) - rank(a));
   const sides = priced.filter((o) => o.kind === "side").sort((a, b) => rank(b) - rank(a));
 
   const items: MenuOption[] = [];
@@ -590,8 +596,8 @@ export function buildCombo(options: MenuOption[], intent: MealIntent, deals: Dea
     netCad: Number(net.toFixed(2)),
     estimatedFeesCad: Number(fees.toFixed(2)),
     estimatedTotalCad: Number(total.toFixed(2)),
-    budgetCad: budget,
-    fitsBudget: budget === null ? true : total <= budget && items.length > 0,
+    budgetCad: intent.budgetCad,
+    fitsBudget: intent.budgetCad === null ? true : total <= intent.budgetCad && items.length > 0,
   };
 }
 
@@ -653,7 +659,12 @@ function finalizeGroup(
   const unhealthyPenalty = bestHealth < 45 ? 40 : bestHealth < 55 ? 15 : 0;
   const nameHit = intent.restaurantHint && slug(restaurant).includes(slug(intent.restaurantHint).split("-")[0]) ? 25 : 0;
   const restaurantText = `${restaurant} ${options.slice(0, 20).map((o) => `${o.name} ${o.description}`).join(" ")}`;
-  const cuisineHit = intent.cuisineHint && new RegExp(intent.cuisineHint.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&"), "i").test(restaurantText) ? 10 : 0;
+  const esc = (v: string) => v.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
+  const dishRe = intent.dishWord ? new RegExp(`\\b${esc(intent.dishWord)}`, "i") : null;
+  const cuisineRe = intent.cuisineHint ? new RegExp(esc(intent.cuisineHint), "i") : null;
+  // A named dish or cuisine is what the user came for: big bonus when the restaurant serves it, a penalty when it does not.
+  const cuisineHit = (dishRe && dishRe.test(restaurantText)) || (cuisineRe && cuisineRe.test(restaurantText)) ? 25 : intent.dishWord || intent.cuisineHint ? -15 : 0;
+  const valueHit = intent.valueFocus > 0.6 && combo.items.length ? Math.max(-10, Math.min(12, (38 - combo.netCad) * 0.5)) : 0;
   const tasteHit = intent.tasteConfidence >= 0.5 && TASTE_WORDS[intent.tasteProfile].test(restaurant) ? 6 : 0;
   const halalMiss = intent.diet === "halal" && !/\bhalal\b/i.test(restaurantText) ? 60 : 0;
   return {
@@ -669,7 +680,7 @@ function finalizeGroup(
     otherLocations: [],
     options: sorted.slice(0, 5),
     combo,
-    rankScore: Math.round(base + nameHit + cuisineHit + tasteHit - unhealthyPenalty - halalMiss + (combo.fitsBudget ? 10 : -20) + (promos.length || sorted.some((o) => o.promo) ? 5 : 0) - (top.length === 0 ? 50 : 0)),
+    rankScore: Math.round(base + nameHit + cuisineHit + tasteHit + valueHit - unhealthyPenalty - halalMiss + (combo.fitsBudget ? 10 : -20) + (promos.length || sorted.some((o) => o.promo) ? 5 : 0) - (top.length === 0 ? 50 : 0)),
   };
 }
 
@@ -726,8 +737,9 @@ function datasetTerms(intent: MealIntent): string[] {
     ...intent.searchTerm.split(/\s+/),
     intent.protein !== "any" ? (intent.protein === "plant" ? "tofu" : intent.protein) : "",
     intent.cuisineHint ?? "",
+    intent.dishWord ?? "",
     intent.diet === "halal" ? "halal" : intent.diet === "vegan" ? "vegan" : intent.diet === "vegetarian" ? "vegetarian" : intent.diet === "gluten_free" ? "gluten" : "",
-    ...intent.queryText.toLowerCase().replace(/[^a-z\s]/g, " ").split(/\s+/).filter((w) => w.length > 4 && !/healthy|enough|portions|something|please|around|under|budget|dollars|would|about|really|people/.test(w)),
+    ...intent.queryText.toLowerCase().replace(/[^a-z\s]/g, " ").split(/\s+/).filter((w) => w.length >= 4 && !/^(healthy|enough|portions?|something|please|around|under|budget|dollars?|would|about|really|people|with|that|this|like|want|need|some|more|less|have|food|meal|lunch|dinner|night|date|cheap|good|nice|best)$/.test(w)),
   ].filter(Boolean);
   return [...new Set(terms)].slice(0, 12);
 }
