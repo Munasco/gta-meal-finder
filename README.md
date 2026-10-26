@@ -11,7 +11,7 @@ Live: **https://eat-healthier.vercel.app**
 ```bash
 git clone https://github.com/Munasco/gta-meal-finder && cd gta-meal-finder
 npm install
-npm run data:pull        # 43 MB dataset, checksum-verified
+npm run data:pull        # 66 MB dataset, checksum-verified
 npm run dev              # http://localhost:5173
 ```
 
@@ -31,7 +31,7 @@ That is the whole app, with no keys: 549 restaurants, 54,821 menu items, 24,203 
 - **A decision model, not a chat model.** The job is classification with confidence, not generation. One call, a fixed schema, a confidence per field the code can act on.
 - **USDA reference foods, not model calories.** Models guess calories badly. Asking for foods and grams and looking up real values is auditable: every estimate can show what it assumed.
 - **One score for verified and estimated dishes.** They are compared on the same scale with the same lens rules; the estimate is labelled, not ranked differently.
-- **Dataset outside git.** The two JSON files are 43 MB and change wholesale; `data/manifest.json` records where they live and their checksums, and the build pulls and verifies them.
+- **Dataset outside git.** The two JSON files are 66 MB and change wholesale; `data/manifest.json` records where they live and their checksums, and the build pulls and verifies them.
 
 ## Layout
 

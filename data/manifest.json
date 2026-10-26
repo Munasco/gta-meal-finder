@@ -1,7 +1,7 @@
 {
   "note": "The dataset is too large for git. These files live in a public Vercel Blob store under content-addressed paths; `npm run data:pull` downloads and verifies them before the build.",
   "baseUrl": "https://qr1nifgptifxenva.public.blob.vercel-storage.com",
-  "updatedAt": "2026-10-25T17:40:00.000Z",
+  "updatedAt": "2026-10-26T02:47:26.306Z",
   "files": [
     {
       "name": "ubereats-gta.json",
@@ -12,9 +12,9 @@
     },
     {
       "name": "health-estimates.json",
-      "path": "datasets/debaa71255d9/health-estimates.json",
-      "sha256": "debaa71255d9f4cad37be3fd47d3399bf886d74dfa11c7d09280d356db2e87b2",
-      "bytes": 17701111,
+      "path": "datasets/3b34915e592f/health-estimates.json",
+      "sha256": "3b34915e592fe0c509c698aed32896819da3d4b72b7b2ba6a5ee1856422aef5e",
+      "bytes": 40010451,
       "about": "Decision-1 + USDA nutrition estimates keyed by restaurant|item (scripts/enrich.ts)"
     }
   ]

@@ -28,7 +28,7 @@ PRs get a `size:*` label automatically; it is context, not a rule. New issues ge
 git clone https://github.com/Munasco/gta-meal-finder && cd gta-meal-finder
 npm install            # or bun install
 cp .env.example .env.local   # optional: Azure keys for the intent model
-npm run data:pull      # 43 MB dataset from Vercel Blob, verified by sha256
+npm run data:pull      # 66 MB dataset from Vercel Blob, verified by sha256
 npm run dev            # http://localhost:5173
 ```
 
