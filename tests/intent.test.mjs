@@ -16,6 +16,8 @@ test('prefers the longer dish name over the cuisine inside it', () => {
 
 test('still falls back to cuisine words and returns null otherwise', () => {
   assert.equal(parseDishWord('something mexican'), 'mexican');
-  assert.equal(parseDishWord('jerk chicken'), 'jerk');
+  assert.equal(parseDishWord('jerk chicken'), 'jerk chicken');
+  assert.equal(parseDishWord('fish & chips'), 'fish and chips');
+  assert.equal(parseDishWord('a double cheeseburger'), 'burger');
   assert.equal(parseDishWord('something light for lunch'), null);
 });

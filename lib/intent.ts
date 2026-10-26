@@ -1,4 +1,5 @@
 import type { AllergenTag, BiomarkerLensId, DecisionApiNoulWeights } from "./models";
+import { parseDish } from "./dish-words";
 
 export type ProteinPreference = "chicken" | "fish" | "plant" | "beef" | "any";
 export type DietConstraint = "none" | "vegetarian" | "vegan" | "pescatarian" | "gluten_free" | "dairy_free" | "halal" | "keto_low_carb";
@@ -254,19 +255,10 @@ export function parseCuisineHint(text: string): string | null {
   return alias ? CUISINE_ALIASES[alias] : null;
 }
 
-/** Dishes people type on their own ("burger", "wings", "pizza"); plurals are read as the singular. Longer names come first so "pad thai" wins over "thai". */
-const DISH_WORDS = [
-  "fish and chips", "butter chicken", "pad thai", "banh mi", "dim sum", "hot dog",
-  "burger", "pizza", "wing", "wrap", "sandwich", "pasta", "noodle", "curry", "bowl", "dumpling", "momo", "poutine", "fries",
-  "steak", "schnitzel", "salad", "soup", "taco", "burrito", "quesadilla", "nacho", "kebab", "kabab", "souvlaki", "gyro",
-  "shawarma", "donair", "falafel", "sushi", "ramen", "pho", "poke", "biryani", "tandoori", "tikka", "roti", "jerk", "patty",
-  "bibimbap", "pierogi", "paella", "risotto", "lasagna",
-];
-
 /** The dish or cuisine word the user actually typed (e.g. "burger", "jerk", "pho"), for matching menu text. */
 export function parseDishWord(text: string): string | null {
   const lower = text.toLowerCase();
-  const dish = DISH_WORDS.find((d) => new RegExp(`\\b${d}(?:e?s)?\\b`).test(lower));
+  const dish = parseDish(lower);
   if (dish) return dish;
   const alias = Object.keys(CUISINE_ALIASES).find((k) => new RegExp(`\\b${k}\\b`).test(lower));
   if (alias) return alias;

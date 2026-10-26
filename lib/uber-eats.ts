@@ -5,6 +5,7 @@ import { compositionFromComponents, compositionFromDish, computeIndices, type Di
 import { evaluateDish } from "./scoring-engine";
 import { COMPONENT_LABEL, readEstimate, toSyntheticDish, type ItemHealthEstimate } from "./health-estimate";
 import { searchLocalDataset } from "./dataset-local";
+import { dishPattern, isDish } from "./dish-words";
 
 /* ---------------------------------- types --------------------------------- */
 
@@ -511,7 +512,7 @@ export function scoreOption(
   if (intent.tasteConfidence >= 0.5 && TASTE_WORDS[intent.tasteProfile].test(hay)) { fit += 8; reasons.push("Matches your taste"); }
   if (intent.cuisineHint && new RegExp(intent.cuisineHint.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&"), "i").test(hay)) fit += 6;
   // The literal dish the user typed ("jerk", "pho") on the item itself is the strongest fit signal there is.
-  if (intent.dishWord && new RegExp(`\\b${intent.dishWord.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&")}`, "i").test(input.name)) { fit += 20; reasons.unshift(`It's ${intent.dishWord}`); }
+  if (intent.dishWord && dishPattern(intent.dishWord).test(input.name)) { fit += 20; reasons.unshift(`It's ${intent.dishWord}`); }
   if (intent.valueFocus > 0.6 && input.priceCad !== null && kind === "main") fit += Math.max(-10, Math.min(10, (18 - input.priceCad) * 1.2));
   // Ingredients the user asked for, found in the item (name counts double).
   for (const ing of intent.wantedIngredients) {
@@ -681,12 +682,14 @@ function finalizeGroup(
   promos: string[] = []
 ): RestaurantGroup {
   const esc = (v: string) => v.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
-  const dishRe = intent.dishWord ? new RegExp(`\\b${esc(intent.dishWord)}`, "i") : null;
+  const dishRe = intent.dishWord ? dishPattern(intent.dishWord) : null;
   const cuisineRe = intent.cuisineHint ? new RegExp(esc(intent.cuisineHint), "i") : null;
   // Health leads (60 %); fit (protein, portion, deal) breaks ties. Items under 45 health never lift a restaurant.
-  // When the user named a dish, items that are that dish lead the card ahead of anything healthier that is not.
-  const isDish = (o: MenuOption) => Boolean(dishRe && dishRe.test(o.name));
-  const value = (o: MenuOption) => o.healthScore * 0.6 + o.fitScore * 0.4 + (o.promo ? 5 : 0) + (isDish(o) ? 30 : 0);
+  // When the user named a dish, mains that are that dish lead the card ahead of anything healthier that is not.
+  // A cuisine word ("mexican") does not get this: it would put "Mexican Coke" ahead of the burrito bowl.
+  const named = Boolean(dishRe && intent.dishWord && isDish(intent.dishWord));
+  const servesIt = (o: MenuOption) => Boolean(dishRe && dishRe.test(o.name));
+  const value = (o: MenuOption) => o.healthScore * 0.6 + o.fitScore * 0.4 + (o.promo ? 5 : 0) + (named && o.kind === "main" && servesIt(o) ? 30 : 0);
   const sorted = [...options].sort((a, b) => value(b) - value(a));
   const combo = buildCombo(sorted, intent, parseDeals(promos));
   const top = sorted.filter((o) => o.kind === "main").slice(0, 3);
@@ -698,7 +701,7 @@ function finalizeGroup(
   // A named dish or cuisine is what the user came for: big bonus when the restaurant serves it (the dish must be in
   // an item name or the restaurant name, not just a description), and a miss costs more than any health lead can
   // recover, so a "burger" search never opens with quinoa bowls.
-  const servesDish = Boolean(dishRe && (dishRe.test(restaurant) || options.some(isDish)));
+  const servesDish = Boolean(dishRe && (dishRe.test(restaurant) || (named ? options.some(servesIt) : dishRe.test(restaurantText))));
   const cuisineHit = servesDish || (cuisineRe && cuisineRe.test(restaurantText)) ? 25 : intent.dishWord || intent.cuisineHint ? -40 : 0;
   const valueHit = intent.valueFocus > 0.6 && combo.items.length ? Math.max(-10, Math.min(12, (38 - combo.netCad) * 0.5)) : 0;
   const tasteHit = intent.tasteConfidence >= 0.5 && TASTE_WORDS[intent.tasteProfile].test(restaurant) ? 6 : 0;
