@@ -680,8 +680,13 @@ function finalizeGroup(
   intent: MealIntent,
   promos: string[] = []
 ): RestaurantGroup {
+  const esc = (v: string) => v.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
+  const dishRe = intent.dishWord ? new RegExp(`\\b${esc(intent.dishWord)}`, "i") : null;
+  const cuisineRe = intent.cuisineHint ? new RegExp(esc(intent.cuisineHint), "i") : null;
   // Health leads (60 %); fit (protein, portion, deal) breaks ties. Items under 45 health never lift a restaurant.
-  const value = (o: MenuOption) => o.healthScore * 0.6 + o.fitScore * 0.4 + (o.promo ? 5 : 0);
+  // When the user named a dish, items that are that dish lead the card ahead of anything healthier that is not.
+  const isDish = (o: MenuOption) => Boolean(dishRe && dishRe.test(o.name));
+  const value = (o: MenuOption) => o.healthScore * 0.6 + o.fitScore * 0.4 + (o.promo ? 5 : 0) + (isDish(o) ? 30 : 0);
   const sorted = [...options].sort((a, b) => value(b) - value(a));
   const combo = buildCombo(sorted, intent, parseDeals(promos));
   const top = sorted.filter((o) => o.kind === "main").slice(0, 3);
@@ -690,11 +695,11 @@ function finalizeGroup(
   const unhealthyPenalty = bestHealth < 45 ? 40 : bestHealth < 55 ? 15 : 0;
   const nameHit = intent.restaurantHint && slug(restaurant).includes(slug(intent.restaurantHint).split("-")[0]) ? 25 : 0;
   const restaurantText = `${restaurant} ${options.slice(0, 20).map((o) => `${o.name} ${o.description}`).join(" ")}`;
-  const esc = (v: string) => v.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
-  const dishRe = intent.dishWord ? new RegExp(`\\b${esc(intent.dishWord)}`, "i") : null;
-  const cuisineRe = intent.cuisineHint ? new RegExp(esc(intent.cuisineHint), "i") : null;
-  // A named dish or cuisine is what the user came for: big bonus when the restaurant serves it, a penalty when it does not.
-  const cuisineHit = (dishRe && dishRe.test(restaurantText)) || (cuisineRe && cuisineRe.test(restaurantText)) ? 25 : intent.dishWord || intent.cuisineHint ? -15 : 0;
+  // A named dish or cuisine is what the user came for: big bonus when the restaurant serves it (the dish must be in
+  // an item name or the restaurant name, not just a description), and a miss costs more than any health lead can
+  // recover, so a "burger" search never opens with quinoa bowls.
+  const servesDish = Boolean(dishRe && (dishRe.test(restaurant) || options.some(isDish)));
+  const cuisineHit = servesDish || (cuisineRe && cuisineRe.test(restaurantText)) ? 25 : intent.dishWord || intent.cuisineHint ? -40 : 0;
   const valueHit = intent.valueFocus > 0.6 && combo.items.length ? Math.max(-10, Math.min(12, (38 - combo.netCad) * 0.5)) : 0;
   const tasteHit = intent.tasteConfidence >= 0.5 && TASTE_WORDS[intent.tasteProfile].test(restaurant) ? 6 : 0;
   const halalMiss = intent.diet === "halal" && !/\bhalal\b/i.test(restaurantText) ? 60 : 0;
