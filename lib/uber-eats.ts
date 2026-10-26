@@ -689,7 +689,9 @@ function finalizeGroup(
   // A cuisine word ("mexican") does not get this: it would put "Mexican Coke" ahead of the burrito bowl.
   const named = Boolean(dishRe && intent.dishWord && isDish(intent.dishWord));
   const servesIt = (o: MenuOption) => Boolean(dishRe && dishRe.test(o.name));
-  const value = (o: MenuOption) => o.healthScore * 0.6 + o.fitScore * 0.4 + (o.promo ? 5 : 0) + (named && o.kind === "main" && servesIt(o) ? 30 : 0);
+  // An item with no nutrition estimate yet has nothing to show for Nutri-Score, AHEI or Health Canada, so a
+  // scored item of the same dish leads the card over it.
+  const value = (o: MenuOption) => o.healthScore * 0.6 + o.fitScore * 0.4 + (o.promo ? 5 : 0) + (named && o.kind === "main" && servesIt(o) ? 30 : 0) - (o.indices ? 0 : 15);
   const sorted = [...options].sort((a, b) => value(b) - value(a));
   const combo = buildCombo(sorted, intent, parseDeals(promos));
   const top = sorted.filter((o) => o.kind === "main").slice(0, 3);
