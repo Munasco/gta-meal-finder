@@ -691,14 +691,18 @@ function finalizeGroup(
   const servesIt = (o: MenuOption) => Boolean(dishRe && dishRe.test(o.name));
   // An item with no nutrition estimate yet has nothing to show for Nutri-Score, AHEI or Health Canada, so a
   // scored item of the same dish leads the card over it.
-  const value = (o: MenuOption) => o.healthScore * 0.6 + o.fitScore * 0.4 + (o.promo ? 5 : 0) + (named && o.kind === "main" && servesIt(o) ? 30 : 0) - (o.indices ? 0 : 15);
+  const value = (o: MenuOption) => o.healthScore * 0.6 + o.fitScore * 0.4 + (o.promo ? 5 : 0) + (named && o.kind === "main" && servesIt(o) ? 30 : 0) - (o.indices ? 0 : 15) - (o.kind === "main" ? 0 : 8);
   const sorted = [...options].sort((a, b) => value(b) - value(a));
   const combo = buildCombo(sorted, intent, parseDeals(promos));
   const top = sorted.filter((o) => o.kind === "main").slice(0, 3);
   const base = top.length ? top.reduce((s, o) => s + value(o), 0) / top.length : 0;
   const bestHealth = top[0]?.healthScore ?? 0;
   const unhealthyPenalty = bestHealth < 45 ? 40 : bestHealth < 55 ? 15 : 0;
-  const nameHit = intent.restaurantHint && slug(restaurant).includes(slug(intent.restaurantHint).split("-")[0]) ? 25 : 0;
+  // A restaurant the user named ("osmows", "nando's") is compared letters-only so apostrophes and spacing never
+  // matter; it wins outright, and everything else drops below it.
+  const compact = (v: string) => v.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const hint = intent.restaurantHint ? compact(intent.restaurantHint.split(/\s+(?:or|and)\s+/)[0]) : "";
+  const nameHit = hint.length >= 3 ? (compact(restaurant).includes(hint) ? 25 : -40) : 0;
   const restaurantText = `${restaurant} ${options.slice(0, 20).map((o) => `${o.name} ${o.description}`).join(" ")}`;
   // A named dish or cuisine is what the user came for: big bonus when the restaurant serves it (the dish must be in
   // an item name or the restaurant name, not just a description), and a miss costs more than any health lead can
